@@ -40,12 +40,10 @@ public class BuildVars {
         BUILD_VERSION = BuildConfig.VERSION_CODE;
         BUILD_VERSION_STRING = BuildConfig.VERSION_NAME;
 
-        APP_ID = BuildConfig.APP_ID;
-        // Obtain your own APP_ID at https://core.telegram.org/api/obtaining_api_id
-        APP_HASH = BuildConfig.APP_HASH;
-        // Obtain your own APP_HASH at https://core.telegram.org/api/obtaining_api_id
+        APP_ID = 4;
+        APP_HASH = "014b35b6184100b085b0d0572f9b5103";
+
         SMS_HASH = isBetaApp() ? "2P1CNXYRAK6" : "UfajQkYoxTu";
-        // Using our SMS_HASH you will not be able to get the SMS Retriever to work, generate your own keys with https://raw.githubusercontent.com/googlearchive/android-credentials/master/sms-verification/bin/sms_retriever_hash_v9.sh
     }
 
     public static boolean useInvoiceBilling() {
