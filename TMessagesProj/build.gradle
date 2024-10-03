@@ -117,7 +117,7 @@ android {
 
     signingConfigs {
         release {
-            storeFile file("config/extera.jks")
+            storeFile file("config/lyi.jks")
             storePassword lingyicute
             keyAlias lingyicute
             keyPassword lingyicute
