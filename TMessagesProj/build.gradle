@@ -86,8 +86,6 @@ android {
         targetSdkVersion 33
         versionName APP_VERSION_NAME
 
-        buildConfigField 'String', 'YANDEX_METRICA_KEY', localProperties.getProperty("YANDEX_METRICA_KEY")
-
         externalNativeBuild {
             cmake {
                 version '3.10.2'
