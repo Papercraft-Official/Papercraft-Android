@@ -118,9 +118,9 @@ android {
     signingConfigs {
         release {
             storeFile file("config/lyi.jks")
-            storePassword lingyicute
-            keyAlias lingyicute
-            keyPassword lingyicute
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
         }
     }
 
