@@ -1299,7 +1299,7 @@ public class StickersActivity extends BaseFragment implements NotificationCenter
                         }
                     };
                     view.setBackgroundColor(getThemedColor(Theme.key_windowBackgroundWhite));
-                    ((FeaturedStickerSetCell2) view).getTextView().setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_MEDIUM));
+                    ((FeaturedStickerSetCell2) view).getTextView().setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR));
                     break;
                 case TYPE_STICKER_SET:
                     view = new StickerSetCell(mContext, 1) {

@@ -73,7 +73,7 @@ public class UpdaterBottomSheet extends BottomSheet {
 
         SimpleTextView nameView = new SimpleTextView(context);
         nameView.setTextSize(20);
-        nameView.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_MEDIUM));
+        nameView.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR));
         nameView.setTextColor(Theme.getColor(Theme.key_windowBackgroundWhiteBlackText));
         nameView.setGravity(Gravity.LEFT | Gravity.CENTER_VERTICAL);
         nameView.setText(available ? LocaleController.getString("UpdateAvailable", R.string.UpdateAvailable) : LocaleUtils.getAppName());
@@ -136,7 +136,7 @@ public class UpdaterBottomSheet extends BottomSheet {
             doneButton.setGravity(Gravity.CENTER);
             doneButton.setTextColor(Theme.getColor(Theme.key_featuredStickers_buttonText));
             doneButton.setBackground(Theme.AdaptiveRipple.filledRect(Theme.getColor(Theme.key_featuredStickers_addButton), 6));
-            doneButton.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_MEDIUM));
+            doneButton.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR));
             doneButton.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
             doneButton.setText(LocaleController.getString("AppUpdateDownloadNow", R.string.AppUpdateDownloadNow));
             doneButton.setOnClickListener(v -> {
@@ -152,7 +152,7 @@ public class UpdaterBottomSheet extends BottomSheet {
             scheduleButton.setGravity(Gravity.CENTER);
             scheduleButton.setTextColor(Theme.getColor(Theme.key_featuredStickers_addButton));
             scheduleButton.setBackground(null);
-            scheduleButton.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_MEDIUM));
+            scheduleButton.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR));
             scheduleButton.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
             scheduleButton.setText(LocaleController.getString("AppUpdateRemindMeLater", R.string.AppUpdateRemindMeLater));
             scheduleButton.setOnClickListener(v -> {
@@ -201,7 +201,7 @@ public class UpdaterBottomSheet extends BottomSheet {
             checkUpdates.setAnimationProperties(.5f, 0, 450, CubicBezierInterpolator.EASE_OUT_QUINT);
             checkUpdates.setGravity(Gravity.CENTER);
             checkUpdates.setTextColor(Theme.getColor(Theme.key_featuredStickers_buttonText));
-            checkUpdates.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_MEDIUM));
+            checkUpdates.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR));
             checkUpdates.setTextSize(AndroidUtilities.dp(14));
             checkUpdates.setIgnoreRTL(!LocaleController.isRTL);
             checkUpdates.adaptWidth = false;

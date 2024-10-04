@@ -202,14 +202,8 @@ public class AndroidUtilities {
     public final static int REPLACING_TAG_TYPE_LINK = 0;
     public final static int REPLACING_TAG_TYPE_BOLD = 1;
 
-    public final static String TYPEFACE_ROBOTO_CONDENSED_BOLD = "fonts/rregular.ttf";
     public final static String TYPEFACE_ROBOTO_REGULAR = "fonts/rregular.ttf";
-    public final static String TYPEFACE_ROBOTO_ITALIC = "fonts/rregular.ttf";
-    public final static String TYPEFACE_ROBOTO_MEDIUM = "fonts/rregular.ttf";
-    public final static String TYPEFACE_ROBOTO_MEDIUM_ITALIC = "fonts/rregular.ttf";
     public final static String TYPEFACE_ROBOTO_MONO = "fonts/rmono.ttf";
-    public final static String TYPEFACE_MERRIWEATHER_BOLD = "fonts/rregular.ttf";
-    public final static String TYPEFACE_COURIER_NEW_BOLD = "fonts/rregular.ttf";
 
     private static final Hashtable<String, Typeface> typefaceCache = new Hashtable<>();
     public static float touchSlop;
@@ -486,7 +480,7 @@ public class AndroidUtilities {
                 spannableStringBuilder.setSpan(new CharacterStyle() {
                     @Override
                     public void updateDrawState(TextPaint textPaint) {
-                        textPaint.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_MEDIUM));
+                        textPaint.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR));
                         int wasAlpha = textPaint.getAlpha();
                         textPaint.setColor(Theme.getColor(Theme.key_windowBackgroundWhiteBlueText));
                         textPaint.setAlpha(wasAlpha);
@@ -1740,22 +1734,6 @@ public class AndroidUtilities {
                             case TYPEFACE_ROBOTO_MONO:
                                 t = Typeface.MONOSPACE;
                                 break;
-                            case TYPEFACE_ROBOTO_CONDENSED_BOLD:
-                                t = Typeface.create("sans-serif-condensed", Typeface.BOLD);
-                                break;
-                            case TYPEFACE_ROBOTO_MEDIUM_ITALIC:
-                                if (FontUtils.isMediumWeightSupported()) {
-                                    t = Typeface.create("sans-serif", Typeface.BOLD_ITALIC);
-                                }
-                                break;
-                            case TYPEFACE_ROBOTO_MEDIUM:
-                                if (FontUtils.isMediumWeightSupported()) {
-                                    t = Typeface.create("sans-serif", Typeface.BOLD);
-                                }
-                                break;
-                            case TYPEFACE_ROBOTO_ITALIC:
-                                t = Build.VERSION.SDK_INT >= 28 ? Typeface.create(Typeface.SANS_SERIF, 400, true) : Typeface.create("sans-serif", Typeface.ITALIC);
-                                break;
                             default:
                                 t = Build.VERSION.SDK_INT >= 28 ? Typeface.create(Typeface.SANS_SERIF, 400, false) : Typeface.create("sans-serif", Typeface.NORMAL);
                                 break;
@@ -2666,7 +2644,7 @@ public class AndroidUtilities {
             }
             SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(stringBuilder);
             for (int a = 0; a < bolds.size() / 2; a++) {
-                spannableStringBuilder.setSpan(new TypefaceSpan(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_MEDIUM)), bolds.get(a * 2), bolds.get(a * 2 + 1), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                spannableStringBuilder.setSpan(new TypefaceSpan(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR)), bolds.get(a * 2), bolds.get(a * 2 + 1), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
             }
             return spannableStringBuilder;
         } catch (Exception e) {

@@ -2116,7 +2116,7 @@ public class FilterCreateActivity extends BaseFragment {
             button = new TextView(getContext());
             button.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
             button.setTextColor(Theme.getColor(Theme.key_featuredStickers_buttonText));
-            button.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_MEDIUM));
+            button.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR));
             button.setBackground(Theme.AdaptiveRipple.filledRectByKey(Theme.key_featuredStickers_addButton, 8));
             button.setText(LocaleController.getString("FolderLinkShareButton", R.string.FolderLinkShareButton));
             button.setGravity(Gravity.CENTER);
@@ -2275,7 +2275,7 @@ public class FilterCreateActivity extends BaseFragment {
                     } else {
                         view = new HeaderView(getContext());
 //                        TextView textView = new TextView(getContext());
-//                        textView.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_MEDIUM));
+//                        textView.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR));
 //                        textView.setTextColor(Theme.getColor(Theme.key_windowBackgroundWhiteBlackText));
 //                        textView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 19);
 //                        textView.setPadding(AndroidUtilities.dp(21), AndroidUtilities.dp(16), AndroidUtilities.dp(21), AndroidUtilities.dp(8));
@@ -2343,7 +2343,7 @@ public class FilterCreateActivity extends BaseFragment {
 
                 titleView = new TextView(context);
                 titleView.setText(getTitle());
-                titleView.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_MEDIUM));
+                titleView.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR));
                 titleView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 20);
                 titleView.setTextColor(Theme.getColor(Theme.key_dialogTextBlack));
                 titleView.setGravity(Gravity.CENTER_HORIZONTAL);

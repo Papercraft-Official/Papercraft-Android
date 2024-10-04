@@ -36,7 +36,7 @@ public class TextPaintView extends EntityView {
     private int baseFontSize;
     private int align;
 
-    private PaintTypeface typeface = PaintTypeface.ROBOTO_MEDIUM;
+    private PaintTypeface typeface = PaintTypeface.ROBOTO_REGULAR;
 
     public TextPaintView(Context context, Point position, int fontSize, CharSequence text, Swatch swatch, int type) {
         super(context, position);

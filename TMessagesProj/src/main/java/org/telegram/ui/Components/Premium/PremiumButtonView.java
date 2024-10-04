@@ -73,7 +73,7 @@ public class PremiumButtonView extends FrameLayout {
         buttonTextView.setGravity(Gravity.CENTER);
         buttonTextView.setTextColor(Color.WHITE);
         buttonTextView.setTextSize(AndroidUtilities.dp(14));
-        buttonTextView.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_MEDIUM));
+        buttonTextView.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR));
 
         iconView = new RLottieImageView(context);
         iconView.setColorFilter(Color.WHITE);

@@ -992,7 +992,7 @@ public class FilterChatlistActivity extends BaseFragment {
             copyButton.setGravity(Gravity.CENTER);
             copyButton.setTextColor(Theme.getColor(Theme.key_featuredStickers_buttonText));
             copyButton.setBackground(Theme.createRadSelectorDrawable(0x30ffffff, 8, 8));
-            copyButton.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_MEDIUM));
+            copyButton.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR));
             copyButton.setTextSize(14);
             SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder();
             spannableStringBuilder.append("..").setSpan(new ColoredImageSpan(ContextCompat.getDrawable(context, R.drawable.msg_copy_filled)), 0, 1, 0);
@@ -1017,7 +1017,7 @@ public class FilterChatlistActivity extends BaseFragment {
             shareButton.setGravity(Gravity.CENTER);
             shareButton.setTextColor(Theme.getColor(Theme.key_featuredStickers_buttonText));
             shareButton.setBackground(Theme.createRadSelectorDrawable(0x30ffffff, 8, 8));
-            shareButton.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_MEDIUM));
+            shareButton.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR));
             shareButton.setTextSize(14);
             spannableStringBuilder = new SpannableStringBuilder();
             spannableStringBuilder.append("..").setSpan(new ColoredImageSpan(ContextCompat.getDrawable(context, R.drawable.msg_share_filled)), 0, 1, 0);
@@ -1034,7 +1034,7 @@ public class FilterChatlistActivity extends BaseFragment {
             generateButton.setGravity(Gravity.CENTER);
             generateButton.setTextColor(Theme.getColor(Theme.key_featuredStickers_buttonText));
             generateButton.setBackground(Theme.createRadSelectorDrawable(0x30ffffff, 8, 8));
-            generateButton.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_MEDIUM));
+            generateButton.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR));
             generateButton.setTextSize(14);
             generateButton.setText("Generate Invite Link");
             generateButton.setOnClickListener(e -> generate());

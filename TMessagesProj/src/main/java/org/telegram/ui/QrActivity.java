@@ -845,7 +845,7 @@ public class QrActivity extends BaseFragment {
             };
             timerTextDrawable.setAnimationProperties(.35f, 0, 300, CubicBezierInterpolator.EASE_OUT_QUINT);
             timerTextDrawable.setCallback(this);
-            timerTextDrawable.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_CONDENSED_BOLD));
+            timerTextDrawable.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR));
             timerTextDrawable.getPaint().setShader(gradientTextShader);
             timerTextDrawable.setGravity(Gravity.CENTER);
             timerTextDrawable.setTextSize(AndroidUtilities.dp(35));
@@ -865,7 +865,7 @@ public class QrActivity extends BaseFragment {
                     shareUsernameLayoutPaint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
                 }
                 shareUsernameLayoutPaint.setShader(gradientTextShader);
-                shareUsernameLayoutPaint.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_CONDENSED_BOLD));
+                shareUsernameLayoutPaint.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR));
                 shareUsernameLayoutPaint.setTextSize(AndroidUtilities.dp(25));
                 CharSequence text = this.username == null ? "" : this.username;
                 text = Emoji.replaceEmoji(text, shareUsernameLayoutPaint.getFontMetricsInt(), AndroidUtilities.dp(20), false);
@@ -1130,7 +1130,7 @@ public class QrActivity extends BaseFragment {
             int backgroundColor = 0x00ffffff;
             TextPaint textPaint = new TextPaint(Paint.ANTI_ALIAS_FLAG | Paint.LINEAR_TEXT_FLAG);
             textPaint.setColor(qrColor);
-            textPaint.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_CONDENSED_BOLD));
+            textPaint.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR));
             StaticLayout staticLayout = null;
             Drawable drawable;
             int attemptsCount = 2;

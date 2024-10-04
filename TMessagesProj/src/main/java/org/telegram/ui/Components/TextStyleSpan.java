@@ -88,11 +88,11 @@ public class TextStyleSpan extends MetricAffectingSpan {
             if ((flags & FLAG_STYLE_MONO) != 0 || (flags & FLAG_STYLE_QUOTE) != 0) {
                 return Typeface.MONOSPACE;
             } else if ((flags & FLAG_STYLE_BOLD) != 0 && (flags & FLAG_STYLE_ITALIC) != 0 && FontUtils.isMediumWeightSupported() && FontUtils.isItalicSupported()) {
-                return AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_MEDIUM_ITALIC);
+                return AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR);
             } else if ((flags & FLAG_STYLE_BOLD) != 0 && FontUtils.isMediumWeightSupported()) {
                 return AndroidUtilities.getTypeface("fonts/rregular.ttf");
             } else if ((flags & FLAG_STYLE_ITALIC) != 0 && FontUtils.isItalicSupported()) {
-                return AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_ITALIC);
+                return AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR);
             } else {
                 return null;
             }
@@ -167,11 +167,11 @@ public class TextStyleSpan extends MetricAffectingSpan {
     }
 
     public boolean isItalic() {
-        return style.getTypeface() == AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_ITALIC);
+        return style.getTypeface() == AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR);
     }
 
     public boolean isBoldItalic() {
-        return style.getTypeface() == AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_MEDIUM_ITALIC);
+        return style.getTypeface() == AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR);
     }
 
     @Override

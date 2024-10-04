@@ -603,21 +603,21 @@ public class PhotoViewer implements NotificationCenter.NotificationCenterDelegat
             left.setAnimationProperties(.3f, 0, 320, CubicBezierInterpolator.EASE_OUT_QUINT);
             left.setTextColor(0xffffffff);
             left.setTextSize(AndroidUtilities.dp(14));
-            left.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_MEDIUM));
+            left.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR));
             left.setCallback(this);
             left.setText("0");
             left.setOverrideFullWidth(AndroidUtilities.displaySize.x);
 
             paint.setColor(0xffffffff);
             paint.setTextSize(AndroidUtilities.dp(14));
-            paint.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_MEDIUM));
+            paint.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR));
             setCenterText();
 
             right = new AnimatedTextView.AnimatedTextDrawable(false, true, true);
             right.setAnimationProperties(.3f, 0, 320, CubicBezierInterpolator.EASE_OUT_QUINT);
             right.setTextColor(0xffffffff);
             right.setTextSize(AndroidUtilities.dp(14));
-            right.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_MEDIUM));
+            right.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR));
             right.setCallback(this);
             right.setText("0");
             right.setOverrideFullWidth(AndroidUtilities.displaySize.x);

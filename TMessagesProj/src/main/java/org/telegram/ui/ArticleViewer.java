@@ -2387,11 +2387,11 @@ public class ArticleViewer implements NotificationCenter.NotificationCenterDeleg
                     }
                 } else {
                     if ((flags & TEXT_FLAG_MEDIUM) != 0 && (flags & TEXT_FLAG_ITALIC) != 0) {
-                        paint.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_MEDIUM_ITALIC));
+                        paint.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR));
                     } else if ((flags & TEXT_FLAG_MEDIUM) != 0) {
                         paint.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
                     } else if ((flags & TEXT_FLAG_ITALIC) != 0) {
-                        paint.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_ITALIC));
+                        paint.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR));
                     }
                 }
             }
@@ -2870,9 +2870,9 @@ public class ArticleViewer implements NotificationCenter.NotificationCenterDeleg
     private void updatePaintFonts() {
         ApplicationLoader.applicationContext.getSharedPreferences("articles", Activity.MODE_PRIVATE).edit().putInt("font_type", selectedFont).apply();
         Typeface typefaceNormal = selectedFont == 0 ? Typeface.DEFAULT : Typeface.SERIF;
-        Typeface typefaceItalic = selectedFont == 0 ? AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_ITALIC) : Typeface.create("serif", Typeface.ITALIC);
+        Typeface typefaceItalic = selectedFont == 0 ? AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR) : Typeface.create("serif", Typeface.ITALIC);
         Typeface typefaceBold = selectedFont == 0 ? AndroidUtilities.getTypeface("fonts/rregular.ttf") : Typeface.create("serif", Typeface.BOLD);
-        Typeface typefaceBoldItalic = selectedFont == 0 ? AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_MEDIUM_ITALIC) : Typeface.create("serif", Typeface.BOLD_ITALIC);
+        Typeface typefaceBoldItalic = selectedFont == 0 ? AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR) : Typeface.create("serif", Typeface.BOLD_ITALIC);
 
         for (int a = 0; a < quoteTextPaints.size(); a++) {
             updateFontEntry(quoteTextPaints.keyAt(a), quoteTextPaints.valueAt(a), typefaceNormal, typefaceBoldItalic, typefaceBold, typefaceItalic);

@@ -62,7 +62,7 @@ public class AltSeekbar extends FrameLayout {
 
         TextView headerTextView = new TextView(context);
         headerTextView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 15);
-        headerTextView.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_MEDIUM));
+        headerTextView.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR));
         headerTextView.setTextColor(Theme.getColor(Theme.key_windowBackgroundWhiteBlueHeader));
         headerTextView.setGravity(LocaleController.isRTL ? Gravity.RIGHT : Gravity.LEFT);
         headerTextView.setText(title);
@@ -80,7 +80,7 @@ public class AltSeekbar extends FrameLayout {
             }
         };
         headerValue.setAnimationProperties(.45f, 0, 240, CubicBezierInterpolator.EASE_OUT_QUINT);
-        headerValue.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_MEDIUM));
+        headerValue.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR));
         headerValue.setPadding(AndroidUtilities.dp(5.33f), AndroidUtilities.dp(2), AndroidUtilities.dp(5.33f), AndroidUtilities.dp(2));
         headerValue.setTextSize(AndroidUtilities.dp(12));
         headerValue.setTextColor(Theme.getColor(Theme.key_windowBackgroundWhiteBlueHeader));

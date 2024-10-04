@@ -272,22 +272,11 @@ public class UpdaterUtils {
             int end;
             StringBuilder stringBuilder = new StringBuilder(str);
             SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(str);
-            String symbol = "", font = AndroidUtilities.TYPEFACE_ROBOTO_REGULAR;
-            for (int i = 0; i < 3; i++) {
-                switch (i) {
-                    case 0:
-                        symbol = "**";
-                        font = AndroidUtilities.TYPEFACE_ROBOTO_MEDIUM;
-                        break;
-                    case 1:
-                        symbol = "_";
-                        font = AndroidUtilities.TYPEFACE_ROBOTO_ITALIC;
-                        break;
-                    case 2:
-                        symbol = "`";
-                        font = AndroidUtilities.TYPEFACE_ROBOTO_MONO;
-                        break;
-                }
+
+            String[] symbols = {"**", "_", "`"};
+            String font = AndroidUtilities.TYPEFACE_ROBOTO_REGULAR;
+
+            for (String symbol : symbols) {
                 while ((start = stringBuilder.indexOf(symbol)) != -1) {
                     stringBuilder.replace(start, start + symbol.length(), "");
                     spannableStringBuilder.replace(start, start + symbol.length(), "");
@@ -295,10 +284,14 @@ public class UpdaterUtils {
                     if (end >= 0) {
                         stringBuilder.replace(end, end + symbol.length(), "");
                         spannableStringBuilder.replace(end, end + symbol.length(), "");
-                        spannableStringBuilder.setSpan(new TypefaceSpan(AndroidUtilities.getTypeface(font)), start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                        spannableStringBuilder.setSpan(
+                            new TypefaceSpan(AndroidUtilities.getTypeface(font)),
+                            start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+                        );
                     }
                 }
             }
+
             return spannableStringBuilder;
         } catch (Exception e) {
             FileLog.e(e);

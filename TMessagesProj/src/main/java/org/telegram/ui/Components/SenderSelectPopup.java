@@ -515,7 +515,7 @@ public class SenderSelectPopup extends ActionBarPopupWindow {
             title.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 16);
             title.setTag(this.title);
             title.setMaxLines(1);
-            title.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_MEDIUM));
+            title.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR));
             textRow.addView(title);
 
             subtitle = new TextView(context);

@@ -261,7 +261,7 @@ public class UpdaterBottomSheet2 extends BottomSheet {
         checkUpdates.setAnimationProperties(.5f, 0, 450, CubicBezierInterpolator.EASE_OUT_QUINT);
         checkUpdates.setGravity(Gravity.CENTER);
         checkUpdates.setTextColor(Theme.getColor(Theme.key_featuredStickers_buttonText));
-        checkUpdates.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_MEDIUM));
+        checkUpdates.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR));
         checkUpdates.setTextSize(AndroidUtilities.dp(14));
         checkUpdates.setIgnoreRTL(!LocaleController.isRTL);
         checkUpdates.adaptWidth = false;
