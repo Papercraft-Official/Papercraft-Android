@@ -732,7 +732,7 @@ void ConnectionsManager::onConnectionClosed(Connection *connection, int reason) 
                         } else {
                             requestingSecondAddress = 0;
                         }
-m                    } else {
+                    } else {
                         if (LOGS_ENABLED) DEBUG_D("connection has usefull data, don't request anything");
                     }
                     disconnectTimeoutAmount = 0;
