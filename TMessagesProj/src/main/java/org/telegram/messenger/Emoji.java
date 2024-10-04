@@ -29,7 +29,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.exteragram.messenger.ExteraUtils;
-import com.exteragram.messenger.premium.filter.ZalgoFilter;
+import com.exteragram.messenger.boost.filter.ZalgoFilter;
 
 import org.telegram.ui.Components.AnimatedEmojiSpan;
 
