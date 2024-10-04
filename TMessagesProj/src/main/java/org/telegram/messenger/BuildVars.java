@@ -28,9 +28,9 @@ public class BuildVars {
 
     // SafetyNet key for Google Identity SDK, set it to empty to disable
     public static String SAFETYNET_KEY = "";
-    public static String SMS_HASH;
-    public static String PLAYSTORE_APP_URL = "https://play.google.com/store/apps/details?id=com.exteragram.messenger";
-    public static String GOOGLE_AUTH_CLIENT_ID = "760348033671-81kmi3pi84p11ub8hp9a1funsv0rn2p9.apps.googleusercontent.com";
+    public static String SMS_HASH = "";
+    public static String PLAYSTORE_APP_URL = "";
+    public static String GOOGLE_AUTH_CLIENT_ID = "";
 
     // You can use this flag to disable Google Play Billing (If you're making fork and want it to be in Google Play)
     public static boolean IS_BILLING_UNAVAILABLE = PM_BUILD;
@@ -41,8 +41,6 @@ public class BuildVars {
 
         APP_ID = 4;
         APP_HASH = "014b35b6184100b085b0d0572f9b5103";
-
-        SMS_HASH = isBetaApp() ? "2P1CNXYRAK6" : "UfajQkYoxTu";
     }
 
     public static boolean useInvoiceBilling() {
