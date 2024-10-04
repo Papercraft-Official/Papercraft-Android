@@ -566,7 +566,7 @@ public class ColorPicker extends FrameLayout {
 
         resetButton = new TextView(context);
         resetButton.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 15);
-        resetButton.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        resetButton.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
         resetButton.setGravity(Gravity.CENTER);
         resetButton.setPadding(AndroidUtilities.dp(4), 0, AndroidUtilities.dp(4), 0);
         resetButton.setTextColor(getThemedColor(Theme.key_windowBackgroundWhiteBlackText));

@@ -638,7 +638,7 @@ public class LimitReachedBottomSheet extends BottomSheetWithRecyclerListView {
             addView(limitPreviewView, LayoutHelper.createLinear(LayoutHelper.MATCH_PARENT, LayoutHelper.WRAP_CONTENT, 0, 0, 0, 0, 0, 0));
 
             TextView title = new TextView(context);
-            title.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+            title.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
             if (type == TYPE_ADD_MEMBERS_RESTRICTED) {
                 if (canSendLink) {
                     title.setText(LocaleController.getString("ChannelInviteViaLink", R.string.ChannelInviteViaLink));

@@ -202,14 +202,14 @@ public class AndroidUtilities {
     public final static int REPLACING_TAG_TYPE_LINK = 0;
     public final static int REPLACING_TAG_TYPE_BOLD = 1;
 
-    public final static String TYPEFACE_ROBOTO_CONDENSED_BOLD = "fonts/rcondensedbold.ttf";
+    public final static String TYPEFACE_ROBOTO_CONDENSED_BOLD = "fonts/rregular.ttf";
     public final static String TYPEFACE_ROBOTO_REGULAR = "fonts/rregular.ttf";
-    public final static String TYPEFACE_ROBOTO_ITALIC = "fonts/ritalic.ttf";
-    public final static String TYPEFACE_ROBOTO_MEDIUM = "fonts/rmedium.ttf";
-    public final static String TYPEFACE_ROBOTO_MEDIUM_ITALIC = "fonts/rmediumitalic.ttf";
+    public final static String TYPEFACE_ROBOTO_ITALIC = "fonts/rregular.ttf";
+    public final static String TYPEFACE_ROBOTO_MEDIUM = "fonts/rregular.ttf";
+    public final static String TYPEFACE_ROBOTO_MEDIUM_ITALIC = "fonts/rregular.ttf";
     public final static String TYPEFACE_ROBOTO_MONO = "fonts/rmono.ttf";
-    public final static String TYPEFACE_MERRIWEATHER_BOLD = "fonts/mw_bold.ttf";
-    public final static String TYPEFACE_COURIER_NEW_BOLD = "fonts/courier_new_bold.ttf";
+    public final static String TYPEFACE_MERRIWEATHER_BOLD = "fonts/rregular.ttf";
+    public final static String TYPEFACE_COURIER_NEW_BOLD = "fonts/rregular.ttf";
 
     private static final Hashtable<String, Typeface> typefaceCache = new Hashtable<>();
     public static float touchSlop;

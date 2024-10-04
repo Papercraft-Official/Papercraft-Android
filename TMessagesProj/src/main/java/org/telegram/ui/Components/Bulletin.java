@@ -1143,7 +1143,7 @@ public class Bulletin {
             titleTextView.setSingleLine();
             titleTextView.setTextColor(undoInfoColor);
             titleTextView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
-            titleTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+            titleTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
             linearLayout.addView(titleTextView);
 
             subtitleTextView = new TextView(context);
@@ -1196,7 +1196,7 @@ public class Bulletin {
             titleTextView.setSingleLine();
             titleTextView.setTextColor(undoInfoColor);
             titleTextView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
-            titleTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+            titleTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
             linearLayout.addView(titleTextView);
 
             subtitleTextView = new LinkSpanDrawable.LinksTextView(context);
@@ -1514,7 +1514,7 @@ public class Bulletin {
                 undoTextView.setOnClickListener(v -> undo());
                 undoTextView.setBackground(Theme.createSelectorDrawable((undoCancelColor & 0x00ffffff) | 0x19000000, Theme.RIPPLE_MASK_ROUNDRECT_6DP));
                 undoTextView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
-                undoTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+                undoTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
                 undoTextView.setTextColor(undoCancelColor);
                 undoTextView.setText(LocaleController.getString("Undo", R.string.Undo));
                 undoTextView.setGravity(Gravity.CENTER_VERTICAL);
@@ -1625,7 +1625,7 @@ public class Bulletin {
 
             textPaint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
             textPaint.setTextSize(AndroidUtilities.dp(12));
-            textPaint.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+            textPaint.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
             textPaint.setColor(Theme.getColor(Theme.key_undo_infoColor, resourcesProvider));
 
             progressPaint = new Paint(Paint.ANTI_ALIAS_FLAG);

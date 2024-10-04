@@ -464,7 +464,7 @@ public class PremiumPreviewBottomSheet extends BottomSheetWithRecyclerListView i
                             };
                             titleView[a].setVisibility(a == 0 ? View.VISIBLE : View.GONE);
                             titleView[a].setTextSize(TypedValue.COMPLEX_UNIT_DIP, 16);
-                            titleView[a].setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+                            titleView[a].setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
                             titleView[a].setGravity(Gravity.CENTER_HORIZONTAL);
                             titleView[a].setTextColor(getThemedColor(Theme.key_windowBackgroundWhiteBlackText));
                             titleView[a].setLinkTextColor(getThemedColor(Theme.key_windowBackgroundWhiteLinkText));

@@ -3300,7 +3300,7 @@ public class EmojiView extends FrameLayout implements NotificationCenter.Notific
             addButtonTextView = new AnimatedTextView(getContext());
             addButtonTextView.setAnimationProperties(.3f, 0, 250, CubicBezierInterpolator.EASE_OUT_QUINT);
             addButtonTextView.setTextSize(AndroidUtilities.dp(14));
-            addButtonTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+            addButtonTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
             addButtonTextView.setTextColor(getThemedColor(Theme.key_featuredStickers_buttonText));
             addButtonTextView.setGravity(Gravity.CENTER);
 
@@ -3438,7 +3438,7 @@ public class EmojiView extends FrameLayout implements NotificationCenter.Notific
             headerView = new SimpleTextView(context);
             headerView.setTextSize(15);
             headerView.setTextColor(getThemedColor(Theme.key_chat_emojiPanelStickerSetName));
-            headerView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+            headerView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
             headerView.setOnClickListener(e -> {
                 if (this.pack != null && this.pack.set != null) {
                     openEmojiPackAlert(this.pack.set);
@@ -3463,7 +3463,7 @@ public class EmojiView extends FrameLayout implements NotificationCenter.Notific
 
             addButtonView = new TextView(context);
             addButtonView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
-            addButtonView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+            addButtonView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
             addButtonView.setText(LocaleController.getString("Add", R.string.Add));
             addButtonView.setTextColor(getThemedColor(Theme.key_featuredStickers_buttonText));
             addButtonView.setBackground(Theme.AdaptiveRipple.createRect(getThemedColor(Theme.key_featuredStickers_addButton), getThemedColor(Theme.key_featuredStickers_addButtonPressed), 16));
@@ -3518,7 +3518,7 @@ public class EmojiView extends FrameLayout implements NotificationCenter.Notific
 
             removeButtonView = new TextView(context);
             removeButtonView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
-            removeButtonView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+            removeButtonView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
             removeButtonView.setText(LocaleController.getString("StickersRemove", R.string.StickersRemove));
             removeButtonView.setTextColor(getThemedColor(Theme.key_featuredStickers_removeButtonText));
             removeButtonView.setBackground(Theme.AdaptiveRipple.createRect(0, getThemedColor(Theme.key_featuredStickers_addButton) & 0x1affffff, 16));
@@ -6385,7 +6385,7 @@ public class EmojiView extends FrameLayout implements NotificationCenter.Notific
             textView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 13);
             textView.setTextColor(Theme.getColor(Theme.key_windowBackgroundWhite, resourcesProvider));
             textView.setBackground(Theme.createRoundRectDrawable(AndroidUtilities.dp(11), ColorUtils.setAlphaComponent(Theme.getColor(Theme.key_chat_emojiPanelStickerSetName, resourcesProvider), 99)));
-            textView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+            textView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
             textView.setPadding(AndroidUtilities.dp(6), AndroidUtilities.dp(1.66f), AndroidUtilities.dp(6), AndroidUtilities.dp(2f));
             addView(textView, LayoutHelper.createFrame(LayoutHelper.WRAP_CONTENT, LayoutHelper.WRAP_CONTENT, Gravity.CENTER));
         }
@@ -7123,7 +7123,7 @@ public class EmojiView extends FrameLayout implements NotificationCenter.Notific
                             textView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 15);
                             textView.setTextColor(getThemedColor(Theme.key_dialogTextBlue2));
                             textView.setGravity(LocaleController.isRTL ? Gravity.RIGHT : Gravity.LEFT);
-                            textView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+                            textView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
                             linearLayout.addView(textView, LayoutHelper.createLinear(LayoutHelper.WRAP_CONTENT, LayoutHelper.WRAP_CONTENT, Gravity.LEFT | Gravity.TOP, 0, 24, 0, 0));
 
                             textView = new TextView(getContext());

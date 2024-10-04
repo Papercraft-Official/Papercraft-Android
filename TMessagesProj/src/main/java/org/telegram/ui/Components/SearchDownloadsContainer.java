@@ -629,7 +629,7 @@ public class SearchDownloadsContainer extends FrameLayout implements Notificatio
         buttonTextView.setPadding(AndroidUtilities.dp(34), 0, AndroidUtilities.dp(34), 0);
         buttonTextView.setGravity(Gravity.CENTER);
         buttonTextView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
-        buttonTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        buttonTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
         buttonTextView.setText(LocaleController.getString("ManageDeviceStorage", R.string.ManageDeviceStorage));
 
         buttonTextView.setTextColor(Theme.getColor(Theme.key_featuredStickers_buttonText));
@@ -642,7 +642,7 @@ public class SearchDownloadsContainer extends FrameLayout implements Notificatio
         buttonTextView2.setPadding(AndroidUtilities.dp(34), 0, AndroidUtilities.dp(34), 0);
         buttonTextView2.setGravity(Gravity.CENTER);
         buttonTextView2.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
-        buttonTextView2.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        buttonTextView2.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
         buttonTextView2.setText(LocaleController.getString("ClearDownloadsList", R.string.ClearDownloadsList));
 
         buttonTextView2.setTextColor(Theme.getColor(Theme.key_featuredStickers_addButton));

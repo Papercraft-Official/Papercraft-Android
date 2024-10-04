@@ -128,7 +128,7 @@ public class CounterView extends View {
                 circlePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
                 circlePaint.setColor(Color.BLACK);
             }
-            textPaint.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+            textPaint.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
             textPaint.setTextSize(AndroidUtilities.dp(13));
         }
 

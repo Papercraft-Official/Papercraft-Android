@@ -206,7 +206,7 @@ public abstract class PrivateVideoPreviewDialog extends FrameLayout implements V
         positiveButton.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
         positiveButton.setTextColor(Theme.getColor(Theme.key_voipgroup_nameText));
         positiveButton.setGravity(Gravity.CENTER);
-        positiveButton.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        positiveButton.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
         positiveButton.setText(LocaleController.getString("VoipShareVideo", R.string.VoipShareVideo));
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             positiveButton.setForeground(Theme.createSimpleSelectorRoundRectDrawable(AndroidUtilities.dp(6), Color.TRANSPARENT, ColorUtils.setAlphaComponent(Theme.getColor(Theme.key_voipgroup_nameText), (int) (255 * 0.3f))));
@@ -233,7 +233,7 @@ public abstract class PrivateVideoPreviewDialog extends FrameLayout implements V
             titles[a] = new TextView(context);
             titles[a].setTextSize(TypedValue.COMPLEX_UNIT_DIP, 12);
             titles[a].setTextColor(0xffffffff);
-            titles[a].setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+            titles[a].setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
             titles[a].setPadding(AndroidUtilities.dp(10), 0, AndroidUtilities.dp(10), 0);
             titles[a].setGravity(Gravity.CENTER_VERTICAL);
             titles[a].setSingleLine(true);
@@ -523,7 +523,7 @@ public abstract class PrivateVideoPreviewDialog extends FrameLayout implements V
                 textView.setLineSpacing(AndroidUtilities.dp(2), 1.0f);
                 textView.setTextColor(0xffffffff);
                 textView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 15);
-                textView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+                textView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
                 frameLayout.addView(textView, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, LayoutHelper.WRAP_CONTENT, Gravity.CENTER, 21, 28, 21, 0));
             } else {
                 ImageView imageView = new ImageView(getContext());

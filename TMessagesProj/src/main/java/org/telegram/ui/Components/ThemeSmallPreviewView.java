@@ -511,7 +511,7 @@ public class ThemeSmallPreviewView extends FrameLayout implements NotificationCe
         noThemeTextPaint = new TextPaint(Paint.ANTI_ALIAS_FLAG + TextPaint.SUBPIXEL_TEXT_FLAG);
         noThemeTextPaint.setColor(getThemedColor(Theme.key_chat_emojiPanelTrendingDescription));
         noThemeTextPaint.setTextSize(AndroidUtilities.dp(14));
-        noThemeTextPaint.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        noThemeTextPaint.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
         textLayout = StaticLayoutEx.createStaticLayout2(
                 LocaleController.getString("ChatNoTheme", R.string.ChatNoTheme),
                 noThemeTextPaint,

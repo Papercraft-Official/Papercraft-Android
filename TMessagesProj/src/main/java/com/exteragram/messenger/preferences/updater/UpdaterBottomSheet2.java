@@ -408,7 +408,7 @@ public class UpdaterBottomSheet2 extends BottomSheet {
 
             SimpleTextView nameView = new SimpleTextView(context);
             nameView.setTextSize(20);
-            nameView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+            nameView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
             nameView.setTextColor(Theme.getColor(Theme.key_windowBackgroundWhiteBlackText));
             nameView.setGravity(Gravity.LEFT | Gravity.CENTER_VERTICAL);
             nameView.setText(available ? LocaleController.getString("UpdateAvailable", R.string.UpdateAvailable) : LocaleUtils.getAppName());

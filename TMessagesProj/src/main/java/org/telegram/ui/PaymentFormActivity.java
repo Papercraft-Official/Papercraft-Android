@@ -2067,7 +2067,7 @@ public class PaymentFormActivity extends BaseFragment implements NotificationCen
                         String text = LocaleController.getInstance().formatCurrencyString(amount, paymentForm.invoice.currency);
                         TextView valueTextView = new TextView(context);
                         valueTextView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
-                        valueTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+                        valueTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
                         valueTextView.setLines(1);
                         valueTextView.setTag(amount);
                         valueTextView.setMaxLines(1);
@@ -2335,7 +2335,7 @@ public class PaymentFormActivity extends BaseFragment implements NotificationCen
                 payTextView.setText(LocaleController.formatString("PaymentCheckoutPay", R.string.PaymentCheckoutPay, totalPrice[0]));
                 payTextView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
                 payTextView.setGravity(Gravity.CENTER);
-                payTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+                payTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
                 bottomLayout.addView(payTextView, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, LayoutHelper.MATCH_PARENT));
 
                 progressViewButton = new ContextProgressView(context, 0, resourcesProvider);
@@ -2424,7 +2424,7 @@ public class PaymentFormActivity extends BaseFragment implements NotificationCen
                     int botIndex = str.indexOf(format);
                     if (botIndex != -1) {
                         sb.replace(botIndex, botIndex + format.length(), currentBotName);
-                        sb.setSpan(new TypefaceSpan(AndroidUtilities.getTypeface("fonts/rmedium.ttf")), botIndex, botIndex + currentBotName.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                        sb.setSpan(new TypefaceSpan(AndroidUtilities.getTypeface("fonts/rregular.ttf")), botIndex, botIndex + currentBotName.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                     }
 
                     recurrentAcceptCell.setText(sb);

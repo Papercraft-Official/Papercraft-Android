@@ -8016,7 +8016,7 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
             numberView = new TextView(context);
             numberView.setText(numberText);
             numberView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 18);
-            numberView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+            numberView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
             numberView.setSingleLine();
             popupLayout.addView(numberView, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, LayoutHelper.WRAP_CONTENT, LocaleController.isRTL ? Gravity.RIGHT : Gravity.LEFT, 24, 48, 24, 0));
 

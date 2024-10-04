@@ -206,7 +206,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
             }
         };
         tab.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
-        tab.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        tab.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
         tab.setTextColor(getThemedColor(Theme.key_chat_emojiPanelBackspace));
         tab.setFocusable(true);
         tab.setGravity(Gravity.CENTER);

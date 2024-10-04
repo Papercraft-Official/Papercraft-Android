@@ -547,7 +547,7 @@ public class RecyclerListView extends RecyclerView {
             } else {
                 isRtl = false;
                 letterPaint.setTextSize(AndroidUtilities.dp(13));
-                letterPaint.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+                letterPaint.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
                 paint2.setColor(Theme.getColor(Theme.key_windowBackgroundWhite));
                 fastScrollBackgroundDrawable = ContextCompat.getDrawable(context, R.drawable.calendar_date).mutate();
                 fastScrollBackgroundDrawable.setColorFilter(new PorterDuffColorFilter(ColorUtils.blendARGB(Theme.getColor(Theme.key_windowBackgroundWhite), Color.WHITE, 0.1f), PorterDuff.Mode.MULTIPLY));

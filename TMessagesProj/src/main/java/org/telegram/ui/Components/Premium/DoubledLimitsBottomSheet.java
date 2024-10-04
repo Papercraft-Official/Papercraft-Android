@@ -67,7 +67,7 @@ public class DoubledLimitsBottomSheet extends BottomSheetWithRecyclerListView im
         titleView.setGravity(Gravity.CENTER);
         titleView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 20);
         titleView.setTextColor(Theme.getColor(Theme.key_windowBackgroundWhiteBlackText));
-        titleView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        titleView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
         titleLayout.addView(titleView, LayoutHelper.createFrame(LayoutHelper.WRAP_CONTENT, LayoutHelper.WRAP_CONTENT, Gravity.CENTER_VERTICAL));
 
         titleImage = new ImageView(getContext());
@@ -206,7 +206,7 @@ public class DoubledLimitsBottomSheet extends BottomSheetWithRecyclerListView im
 
             title = new TextView(context);
             title.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 15);
-            title.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+            title.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
             title.setTextColor(Theme.getColor(Theme.key_windowBackgroundWhiteBlackText));
             addView(title, LayoutHelper.createLinear(LayoutHelper.MATCH_PARENT, LayoutHelper.WRAP_CONTENT, 0, 0, 16, 0, 16, 0));
 
@@ -366,7 +366,7 @@ public class DoubledLimitsBottomSheet extends BottomSheetWithRecyclerListView im
                         titleView.setGravity(Gravity.CENTER);
                         titleView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 20);
                         titleView.setTextColor(Theme.getColor(Theme.key_windowBackgroundWhiteBlackText));
-                        titleView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+                        titleView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
                         linearLayout.addView(titleView, LayoutHelper.createFrame(LayoutHelper.WRAP_CONTENT, LayoutHelper.WRAP_CONTENT, Gravity.CENTER_VERTICAL));
 
 

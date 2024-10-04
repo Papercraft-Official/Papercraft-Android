@@ -412,7 +412,7 @@ public class StatisticActivity extends BaseFragment implements NotificationCente
 
         TextView loadingTitle = new TextView(context);
         loadingTitle.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 20);
-        loadingTitle.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        loadingTitle.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
         loadingTitle.setTextColor(Theme.getColor(Theme.key_player_actionBarTitle));
         loadingTitle.setTag(Theme.key_player_actionBarTitle);
         loadingTitle.setText(LocaleController.getString("LoadingStats", R.string.LoadingStats));
@@ -2379,7 +2379,7 @@ public class StatisticActivity extends BaseFragment implements NotificationCente
                     secondary[i * 2 + j] = new TextView(context);
                     title[i * 2 + j] = new TextView(context);
 
-                    primary[i * 2 + j].setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+                    primary[i * 2 + j].setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
                     primary[i * 2 + j].setTextSize(TypedValue.COMPLEX_UNIT_DIP, 17);
                     title[i * 2 + j].setTextSize(TypedValue.COMPLEX_UNIT_DIP, 13);
                     secondary[i * 2 + j].setTextSize(TypedValue.COMPLEX_UNIT_DIP, 13);

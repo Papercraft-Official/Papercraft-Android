@@ -101,7 +101,7 @@ public class ReactionsLayoutInBubble {
         paint.setColor(Theme.getColor(Theme.key_chat_inLoader, resourcesProvider));
         textPaint.setColor(Theme.getColor(Theme.key_featuredStickers_buttonText, resourcesProvider));
         textPaint.setTextSize(AndroidUtilities.dp(12));
-        textPaint.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        textPaint.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
         touchSlop = ViewConfiguration.get(ApplicationLoader.applicationContext).getScaledTouchSlop();
     }
 

@@ -58,7 +58,7 @@ public class MessageContainsEmojiButton extends FrameLayout implements Notificat
     private class BoldAndAccent extends CharacterStyle {
         @Override
         public void updateDrawState(TextPaint textPaint) {
-            textPaint.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+            textPaint.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
             int wasAlpha = textPaint.getAlpha();
             textPaint.setColor(Theme.getColor(Theme.key_windowBackgroundWhiteBlueText, resourcesProvider));
             textPaint.setAlpha(wasAlpha);

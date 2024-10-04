@@ -101,7 +101,7 @@ public class ChatActivityMemberRequestsDelegate {
             requestsCountTextView.setSingleLine();
             requestsCountTextView.setText(null);
             requestsCountTextView.setTextColor(fragment.getThemedColor(Theme.key_chat_topPanelTitle));
-            requestsCountTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+            requestsCountTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
             requestsDataLayout.addView(requestsCountTextView, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, LayoutHelper.MATCH_PARENT, Gravity.TOP, 0, 0, 0, 0));
 
             closeView = new ImageView(fragment.getParentActivity());

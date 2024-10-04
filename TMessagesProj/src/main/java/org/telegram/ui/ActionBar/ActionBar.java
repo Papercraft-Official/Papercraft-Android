@@ -424,7 +424,7 @@ public class ActionBar extends FrameLayout {
         } else {
             titleTextView[i].setTextColor(getThemedColor(Theme.key_actionBarDefaultTitle));
         }
-        titleTextView[i].setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        titleTextView[i].setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
         titleTextView[i].setDrawablePadding(AndroidUtilities.dp(4));
         titleTextView[i].setPadding(0, AndroidUtilities.dp(8), 0, AndroidUtilities.dp(8));
         titleTextView[i].setRightDrawableTopPadding(-AndroidUtilities.dp(1));

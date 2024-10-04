@@ -134,7 +134,7 @@ public class MediaActivity extends BaseFragment implements SharedMediaLayout.Sha
 
         nameTextView.setTextSize(18);
         nameTextView.setGravity(Gravity.LEFT);
-        nameTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        nameTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
         nameTextView.setLeftDrawableTopPadding(-AndroidUtilities.dp(1.3f));
         nameTextView.setScrollNonFitText(true);
         nameTextView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);

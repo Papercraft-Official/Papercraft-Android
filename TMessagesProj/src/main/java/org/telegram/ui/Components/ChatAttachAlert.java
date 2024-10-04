@@ -1975,7 +1975,7 @@ public class ChatAttachAlert extends BottomSheet implements NotificationCenter.N
         selectedTextView = new TextView(context);
         selectedTextView.setTextColor(getThemedColor(Theme.key_dialogTextBlack));
         selectedTextView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 16);
-        selectedTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        selectedTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
         selectedTextView.setGravity(Gravity.LEFT | Gravity.CENTER_VERTICAL);
         selectedTextView.setMaxLines(1);
         selectedTextView.setEllipsize(TextUtils.TruncateAt.END);
@@ -2004,7 +2004,7 @@ public class ChatAttachAlert extends BottomSheet implements NotificationCenter.N
         mediaPreviewTextView = new TextView(context);
         mediaPreviewTextView.setTextColor(getThemedColor(Theme.key_dialogTextBlack));
         mediaPreviewTextView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 16);
-        mediaPreviewTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        mediaPreviewTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
         mediaPreviewTextView.setGravity(Gravity.LEFT | Gravity.CENTER_VERTICAL);
         mediaPreviewTextView.setText(LocaleController.getString("AttachMediaPreview", R.string.AttachMediaPreview));
         mediaPreviewView.setAlpha(0);
@@ -2191,7 +2191,7 @@ public class ChatAttachAlert extends BottomSheet implements NotificationCenter.N
         botMainButtonTextView.setAlpha(0f);
         botMainButtonTextView.setSingleLine();
         botMainButtonTextView.setGravity(Gravity.CENTER);
-        botMainButtonTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        botMainButtonTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
         int padding = AndroidUtilities.dp(16);
         botMainButtonTextView.setPadding(padding, 0, padding, 0);
         botMainButtonTextView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
@@ -2273,7 +2273,7 @@ public class ChatAttachAlert extends BottomSheet implements NotificationCenter.N
         captionLimitView.setVisibility(View.GONE);
         captionLimitView.setTextSize(15);
         captionLimitView.setTextColor(getThemedColor(Theme.key_windowBackgroundWhiteGrayText));
-        captionLimitView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        captionLimitView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
         captionLimitView.setCenterAlign(true);
         frameLayout2.addView(captionLimitView, LayoutHelper.createFrame(56, 20, Gravity.BOTTOM | Gravity.RIGHT, 3, 0, 14, 78));
 
@@ -2655,7 +2655,7 @@ public class ChatAttachAlert extends BottomSheet implements NotificationCenter.N
         });
 
         textPaint.setTextSize(AndroidUtilities.dp(12));
-        textPaint.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        textPaint.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
 
         selectedCountView = new View(context) {
             @Override

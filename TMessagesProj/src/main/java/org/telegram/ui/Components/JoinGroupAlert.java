@@ -120,7 +120,7 @@ public class JoinGroupAlert extends BottomSheet {
         }
 
         TextView textView = new TextView(context);
-        textView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        textView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
         textView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 17);
         textView.setTextColor(getThemedColor(Theme.key_dialogTextBlack));
         textView.setText(title);
@@ -171,7 +171,7 @@ public class JoinGroupAlert extends BottomSheet {
             requestTextView.setText(isChannel ? LocaleController.getString("RequestToJoinChannel", R.string.RequestToJoinChannel) : LocaleController.getString("RequestToJoinGroup", R.string.RequestToJoinGroup));
             requestTextView.setTextColor(getThemedColor(Theme.key_featuredStickers_buttonText));
             requestTextView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 15);
-            requestTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+            requestTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
             requestTextView.setOnClickListener((view) -> {
                 AndroidUtilities.runOnUIThread(() -> {
                     if (!isDismissed()) {

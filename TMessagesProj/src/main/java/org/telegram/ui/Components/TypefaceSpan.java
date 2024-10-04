@@ -64,7 +64,7 @@ public class TypefaceSpan extends MetricAffectingSpan {
     }
 
     public boolean isBold() {
-        return typeface == AndroidUtilities.getTypeface("fonts/rmedium.ttf");
+        return typeface == AndroidUtilities.getTypeface("fonts/rregular.ttf");
     }
 
     public boolean isItalic() {

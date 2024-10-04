@@ -1972,7 +1972,7 @@ public class FilterCreateActivity extends BaseFragment {
         public NewSpan(boolean outline) {
             this.outline = outline;
 
-            textPaint.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+            textPaint.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
             if (outline) {
                 bgPaint.setStyle(Paint.Style.STROKE);
                 bgPaint.setStrokeWidth(AndroidUtilities.dpf2(1.33f));

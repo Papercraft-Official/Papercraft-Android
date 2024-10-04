@@ -34,7 +34,7 @@ public class PremiumNotAvailableBottomSheet extends BottomSheet {
         title.setGravity(Gravity.START);
         title.setTextColor(Theme.getColor(Theme.key_dialogTextBlack));
         title.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 20);
-        title.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        title.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
 
         linearLayout.addView(title, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, LayoutHelper.WRAP_CONTENT, 0, 21, 16, 21, 0));
 
@@ -49,7 +49,7 @@ public class PremiumNotAvailableBottomSheet extends BottomSheet {
         buttonTextView.setGravity(Gravity.CENTER);
         buttonTextView.setTextColor(Theme.getColor(Theme.key_featuredStickers_buttonText));
         buttonTextView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
-        buttonTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        buttonTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
         buttonTextView.setBackground(Theme.AdaptiveRipple.filledRectByKey(Theme.key_featuredStickers_addButton, 8));
         buttonTextView.setText(LocaleController.getString(R.string.InstallOfficialApp));
         buttonTextView.setOnClickListener(v -> {
@@ -65,7 +65,7 @@ public class PremiumNotAvailableBottomSheet extends BottomSheet {
         buttonTextViewBot.setGravity(Gravity.CENTER);
         buttonTextViewBot.setTextColor(Theme.getColor(Theme.key_featuredStickers_addButton));
         buttonTextViewBot.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
-        buttonTextViewBot.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        buttonTextViewBot.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
         buttonTextViewBot.setBackground(Theme.AdaptiveRipple.filledRect(Theme.key_dialogBackground, 8));
         buttonTextViewBot.setText(LocaleController.getString(R.string.OpenPremiumBot));
         buttonTextViewBot.setOnClickListener(v -> {

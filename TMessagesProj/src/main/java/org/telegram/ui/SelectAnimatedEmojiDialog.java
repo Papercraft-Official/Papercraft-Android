@@ -2331,7 +2331,7 @@ public class SelectAnimatedEmojiDialog extends FrameLayout implements Notificati
 
             textView = new TextView(context);
             textView.setTextColor(Theme.getColor(Theme.key_chat_emojiPanelStickerSetName, resourcesProvider));
-            textView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+            textView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
             textView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
             textView.setEllipsize(TextUtils.TruncateAt.END);
             textView.setLines(1);
@@ -2397,7 +2397,7 @@ public class SelectAnimatedEmojiDialog extends FrameLayout implements Notificati
             addButtonTextView = new AnimatedTextView(getContext());
             addButtonTextView.setAnimationProperties(.3f, 0, 250, CubicBezierInterpolator.EASE_OUT_QUINT);
             addButtonTextView.setTextSize(AndroidUtilities.dp(14));
-            addButtonTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+            addButtonTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
             addButtonTextView.setTextColor(Theme.getColor(Theme.key_featuredStickers_buttonText, resourcesProvider));
             addButtonTextView.setGravity(Gravity.CENTER);
 
@@ -2521,7 +2521,7 @@ public class SelectAnimatedEmojiDialog extends FrameLayout implements Notificati
             textView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 12);
             textView.setTextColor(0xffffffff);// Theme.getColor(Theme.key_windowBackgroundWhite, resourcesProvider));
             textView.setBackground(Theme.createRoundRectDrawable(AndroidUtilities.dp(11), ColorUtils.setAlphaComponent(Theme.getColor(Theme.key_chat_emojiPanelStickerSetName, resourcesProvider), 99)));
-            textView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+            textView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
             textView.setPadding(AndroidUtilities.dp(4), AndroidUtilities.dp(1.66f), AndroidUtilities.dp(4), AndroidUtilities.dp(2f));
             addView(textView, LayoutHelper.createFrame(LayoutHelper.WRAP_CONTENT, LayoutHelper.WRAP_CONTENT, Gravity.CENTER));
         }

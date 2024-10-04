@@ -1204,7 +1204,7 @@ public class CacheControlActivity extends BaseFragment implements NotificationCe
         actionModeClearButton.setPadding(AndroidUtilities.dp(14), 0, AndroidUtilities.dp(14), 0);
         actionModeClearButton.setTextColor(Theme.getColor(Theme.key_featuredStickers_buttonText));
         actionModeClearButton.setBackground(Theme.AdaptiveRipple.filledRectByKey(Theme.key_featuredStickers_addButton, 6));
-        actionModeClearButton.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        actionModeClearButton.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
         actionModeClearButton.setGravity(Gravity.CENTER);
         actionModeClearButton.setText(LocaleController.getString("CacheClear", R.string.CacheClear));
         actionModeClearButton.setOnClickListener(e -> clearSelectedFiles());

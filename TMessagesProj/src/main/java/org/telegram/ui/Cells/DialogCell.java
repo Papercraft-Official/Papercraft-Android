@@ -856,7 +856,7 @@ public class DialogCell extends BaseCell {
             int boldEnd = boldStart + title.length();
             builder.append(title);
             if (dialog.unread_count > 0) {
-                builder.setSpan(new TypefaceSpan(AndroidUtilities.getTypeface("fonts/rmedium.ttf"), 0, Theme.getColor(Theme.key_chats_nameArchived, resourcesProvider)), boldStart, boldEnd, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                builder.setSpan(new TypefaceSpan(AndroidUtilities.getTypeface("fonts/rregular.ttf"), 0, Theme.getColor(Theme.key_chats_nameArchived, resourcesProvider)), boldStart, boldEnd, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
             }
             if (builder.length() > 150) {
                 break;
@@ -2401,7 +2401,7 @@ public class DialogCell extends BaseCell {
                 }
                 if (boldLen > 0) {
                     spannableStringBuilder.setSpan(
-                            new TypefaceSpan(AndroidUtilities.getTypeface("fonts/rmedium.ttf"), 0, Theme.key_chats_name, null),
+                            new TypefaceSpan(AndroidUtilities.getTypeface("fonts/rregular.ttf"), 0, Theme.key_chats_name, null),
                             0, Math.min(spannableStringBuilder.length(), boldLen + 2), 0
                     );
                 }

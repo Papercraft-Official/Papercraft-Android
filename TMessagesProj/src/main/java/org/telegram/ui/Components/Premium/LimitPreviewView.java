@@ -127,14 +127,14 @@ public class LimitPreviewView extends LinearLayout {
         FrameLayout limitLayout = new FrameLayout(context);
 
         TextView freeTextView = new TextView(context);
-        freeTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        freeTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
         freeTextView.setText(LocaleController.getString("LimitFree", R.string.LimitFree));
         freeTextView.setGravity(Gravity.CENTER_VERTICAL);
         freeTextView.setTextColor(Theme.getColor(Theme.key_windowBackgroundWhiteBlackText));
         freeTextView.setPadding(AndroidUtilities.dp(12), 0, 0, 0);
 
         defaultCount = new TextView(context);
-        defaultCount.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        defaultCount.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
         defaultCount.setText(String.format("%d", premiumLimit));
         defaultCount.setGravity(Gravity.CENTER_VERTICAL);
         defaultCount.setTextColor(Theme.getColor(Theme.key_windowBackgroundWhiteBlackText));
@@ -154,14 +154,14 @@ public class LimitPreviewView extends LinearLayout {
         FrameLayout limitLayout2 = new FrameLayout(context);
 
         TextView limitTextView = new TextView(context);
-        limitTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        limitTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
         limitTextView.setText(LocaleController.getString("LimitPremium", R.string.LimitPremium));
         limitTextView.setGravity(Gravity.CENTER_VERTICAL);
         limitTextView.setTextColor(Color.WHITE);
         limitTextView.setPadding(AndroidUtilities.dp(12), 0, 0, 0);
 
         premiumCount = new TextView(context);
-        premiumCount.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        premiumCount.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
         premiumCount.setText(String.format("%d", premiumLimit));
         premiumCount.setGravity(Gravity.CENTER_VERTICAL);
         premiumCount.setTextColor(Color.WHITE);
@@ -348,7 +348,7 @@ public class LimitPreviewView extends LinearLayout {
 
         public CounterView(Context context) {
             super(context);
-            textPaint.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+            textPaint.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
             textPaint.setTextSize(AndroidUtilities.dp(22));
             textPaint.setColor(Color.WHITE);
         }

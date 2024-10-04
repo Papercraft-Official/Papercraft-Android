@@ -126,7 +126,7 @@ public class CacheChart extends View {
         {
             text.setTextColor(Color.WHITE);
             text.setAnimationProperties(.35f, 0, 200, CubicBezierInterpolator.EASE_OUT_QUINT);
-            text.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+            text.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
             text.setTextSize(AndroidUtilities.dp(15));
             text.setGravity(Gravity.CENTER);
         }
@@ -383,7 +383,7 @@ public class CacheChart extends View {
 
         topText.setAnimationProperties(.2f, 0, 450, CubicBezierInterpolator.EASE_OUT_QUINT);
         topText.setTextColor(Theme.getColor(Theme.key_windowBackgroundWhiteBlackText));
-        topText.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        topText.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
         topText.setTextSize(AndroidUtilities.dp(32));
         topText.setGravity(Gravity.CENTER);
 
@@ -394,13 +394,13 @@ public class CacheChart extends View {
 
         topCompleteText.setAnimationProperties(.2f, 0, 450, CubicBezierInterpolator.EASE_OUT_QUINT);
         topCompleteText.getPaint().setShader(completeTextGradient);
-        topCompleteText.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        topCompleteText.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
         topCompleteText.setTextSize(AndroidUtilities.dp(32));
         topCompleteText.setGravity(Gravity.CENTER);
 
         bottomCompleteText.setAnimationProperties(.6f, 0, 450, CubicBezierInterpolator.EASE_OUT_QUINT);
         bottomCompleteText.getPaint().setShader(completeTextGradient);
-        bottomCompleteText.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        bottomCompleteText.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
         bottomCompleteText.setTextSize(AndroidUtilities.dp(12));
         bottomCompleteText.setGravity(Gravity.CENTER);
 

@@ -65,7 +65,7 @@ public class ReactionTabHolderView extends FrameLayout {
         counterView = new TextView(context);
         counterView.setImportantForAccessibility(IMPORTANT_FOR_ACCESSIBILITY_NO);
         counterView.setTextColor(Theme.getColor(Theme.key_avatar_nameInMessageBlue));
-        counterView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        counterView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
         addView(counterView, LayoutHelper.createFrameRelatively(LayoutHelper.MATCH_PARENT, LayoutHelper.WRAP_CONTENT, Gravity.START | Gravity.CENTER_VERTICAL, 40, 0, 8, 0));
 
         outlinePaint.setStyle(Paint.Style.STROKE);

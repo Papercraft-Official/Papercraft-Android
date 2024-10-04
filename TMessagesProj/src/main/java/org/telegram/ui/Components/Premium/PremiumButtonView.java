@@ -93,7 +93,7 @@ public class PremiumButtonView extends FrameLayout {
             overlayTextView.setGravity(Gravity.CENTER);
             overlayTextView.setTextColor(Theme.getColor(Theme.key_featuredStickers_buttonText));
             overlayTextView.setTextSize(AndroidUtilities.dp(14));
-            overlayTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+            overlayTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
             overlayTextView.getDrawable().setAllowCancel(true);
             overlayTextView.setBackground(Theme.createSimpleSelectorRoundRectDrawable(AndroidUtilities.dp(8), Color.TRANSPARENT, ColorUtils.setAlphaComponent(Color.WHITE, 120)));
             addView(overlayTextView);

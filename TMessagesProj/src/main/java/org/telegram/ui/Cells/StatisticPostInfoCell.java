@@ -74,7 +74,7 @@ public class StatisticPostInfoCell extends FrameLayout {
                 AnimatedEmojiSpan.drawAnimatedEmojis(canvas, getLayout(), stack, 0, null, 0, 0, 0, 1f);
             }
         };
-        message.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        message.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
         message.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 15);
         message.setTextColor(Color.BLACK);
         message.setLines(1);

@@ -265,13 +265,13 @@ public class GroupCallRenderersContainer extends FrameLayout {
         pinTextView = new TextView(context);
         pinTextView.setTextColor(Color.WHITE);
         pinTextView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 15);
-        pinTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        pinTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
         pinTextView.setText(LocaleController.getString("CallVideoPin", R.string.CallVideoPin));
 
         unpinTextView = new TextView(context);
         unpinTextView.setTextColor(Color.WHITE);
         unpinTextView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 15);
-        unpinTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+        unpinTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
         unpinTextView.setText(LocaleController.getString("CallVideoUnpin", R.string.CallVideoUnpin));
 
 
@@ -1419,9 +1419,9 @@ public class GroupCallRenderersContainer extends FrameLayout {
                         spannableStringBuilder.append(", ");
                     }
                     if (user != null) {
-                        spannableStringBuilder.append(UserObject.getFirstName(user), new TypefaceSpan(AndroidUtilities.getTypeface("fonts/rmedium.ttf")), 0);
+                        spannableStringBuilder.append(UserObject.getFirstName(user), new TypefaceSpan(AndroidUtilities.getTypeface("fonts/rregular.ttf")), 0);
                     } else {
-                        spannableStringBuilder.append(chat.title, new TypefaceSpan(AndroidUtilities.getTypeface("fonts/rmedium.ttf")), 0);
+                        spannableStringBuilder.append(chat.title, new TypefaceSpan(AndroidUtilities.getTypeface("fonts/rregular.ttf")), 0);
                     }
                 }
                 speakingIndex++;

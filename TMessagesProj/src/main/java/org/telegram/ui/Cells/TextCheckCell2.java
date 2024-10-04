@@ -54,7 +54,7 @@ public class TextCheckCell2 extends FrameLayout {
             animatedTextView.setTextSize(AndroidUtilities.dp(14));
             animatedTextView.getDrawable().setAllowCancel(true);
             animatedTextView.setTextColor(Theme.getColor(Theme.key_windowBackgroundWhiteBlackText));
-            animatedTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rmedium.ttf"));
+            animatedTextView.setTypeface(AndroidUtilities.getTypeface("fonts/rregular.ttf"));
             collapseViewContainer.addView(animatedTextView, LayoutHelper.createFrame(LayoutHelper.WRAP_CONTENT,20));
 
             collapsedArrow = new View(getContext());
