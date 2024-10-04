@@ -159,13 +159,6 @@ void bindRequestToGuid(JNIEnv *env, jclass c, jint instanceNum, jint requestToke
 }
 
 void applyDatacenterAddress(JNIEnv *env, jclass c, jint instanceNum, jint datacenterId, jstring ipAddress, jint port) {
-    const char *valueStr = env->GetStringUTFChars(ipAddress, 0);
-
-    ConnectionsManager::getInstance(instanceNum).applyDatacenterAddress((uint32_t) datacenterId, std::string(valueStr), (uint32_t) port);
-
-    if (valueStr != 0) {
-        env->ReleaseStringUTFChars(ipAddress, valueStr);
-    }
 }
 
 void setProxySettings(JNIEnv *env, jclass c, jint instanceNum, jstring address, jint port, jstring username, jstring password, jstring secret) {
@@ -227,12 +220,6 @@ void setPushConnectionEnabled(JNIEnv *env, jclass c, jint instanceNum, jboolean 
 }
 
 void applyDnsConfig(JNIEnv *env, jclass c, jint instanceNum, jlong address, jstring phone, jint date) {
-    const char *phoneStr = env->GetStringUTFChars(phone, 0);
-
-    ConnectionsManager::getInstance(instanceNum).applyDnsConfig((NativeByteBuffer *) (intptr_t) address, phoneStr, date);
-    if (phoneStr != 0) {
-        env->ReleaseStringUTFChars(phone, phoneStr);
-    }
 }
 
 jlong checkProxy(JNIEnv *env, jclass c, jint instanceNum, jstring address, jint port, jstring username, jstring password, jstring secret, jobject requestTimeFunc) {
