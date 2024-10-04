@@ -130,7 +130,7 @@
         tools:replace="android:supportsRtl">
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="@string/MAPS_V2_API" />
+            android:value="AIzaSyBb4p4ukIreJ6uDHprBN5rpv6i1dvyn8zM" />
 
         <activity-alias
             android:name="com.exteragram.messenger.DefaultIcon"
@@ -400,24 +400,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data
-                    android:host="telegram.me"
-                    android:scheme="http" />
-                <data
-                    android:host="telegram.me"
-                    android:scheme="https" />
-                <data
-                    android:host="telegram.dog"
-                    android:scheme="http" />
-                <data
-                    android:host="telegram.dog"
-                    android:scheme="https" />
-                <data
-                    android:host="t.me"
-                    android:scheme="http" />
-                <data
-                    android:host="t.me"
-                    android:scheme="https" />
+                <data android:host="papercraft-official.github.io" android:scheme="http" />
+                <data android:host="papercraft-official.github.io" android:scheme="https" />
             </intent-filter>
             <intent-filter
                 android:icon="@mipmap/ic_launcher"

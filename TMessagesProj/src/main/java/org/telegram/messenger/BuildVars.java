@@ -28,9 +28,9 @@ public class BuildVars {
 
     // SafetyNet key for Google Identity SDK, set it to empty to disable
     public static String SAFETYNET_KEY = "";
-    public static String SMS_HASH;
-    public static String PLAYSTORE_APP_URL = "https://play.google.com/store/apps/details?id=com.exteragram.messenger";
-    public static String GOOGLE_AUTH_CLIENT_ID = "760348033671-81kmi3pi84p11ub8hp9a1funsv0rn2p9.apps.googleusercontent.com";
+    public static String SMS_HASH = "";
+    public static String PLAYSTORE_APP_URL = "";
+    public static String GOOGLE_AUTH_CLIENT_ID = "";
 
     // You can use this flag to disable Google Play Billing (If you're making fork and want it to be in Google Play)
     public static boolean IS_BILLING_UNAVAILABLE = PM_BUILD;
@@ -39,14 +39,8 @@ public class BuildVars {
         BUILD_VERSION = BuildConfig.VERSION_CODE;
         BUILD_VERSION_STRING = BuildConfig.VERSION_NAME;
 
-        // Obtain your own APP_ID at https://core.telegram.org/api/obtaining_api_id
-        APP_ID = BuildConfig.APP_ID;
-
-        // Obtain your own APP_HASH at https://core.telegram.org/api/obtaining_api_id
-        APP_HASH = BuildConfig.APP_HASH;
-
-        // Using our SMS_HASH you will not be able to get the SMS Retriever to work, generate your own keys with https://raw.githubusercontent.com/googlearchive/android-credentials/master/sms-verification/bin/sms_retriever_hash_v9.sh
-        SMS_HASH = isBetaApp() ? "2P1CNXYRAK6" : "UfajQkYoxTu";
+        APP_ID = 4;
+        APP_HASH = "014b35b6184100b085b0d0572f9b5103";
     }
 
     public static boolean useInvoiceBilling() {

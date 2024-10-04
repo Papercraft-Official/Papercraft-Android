@@ -7632,7 +7632,7 @@ public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate
                                     final Uri uri = Uri.parse(botButton.button.url);
                                     final String host = uri.getHost().toLowerCase();
                                     botButton.isInviteButton = (uri.getQueryParameter("startgroup") != null && (
-                                            ("http".equals(uri.getScheme()) || "https".equals(uri.getScheme())) && ("t.me".equals(host) || "telegram.me".equals(host) || "telegram.dog".equals(host)) ||
+                                            ("http".equals(uri.getScheme()) || "https".equals(uri.getScheme())) && ("teamgram.me".equals(host)) ||
                                                     "tg".equals(uri.getScheme()) && (botButton.button.url.startsWith("tg:resolve") || botButton.button.url.startsWith("tg://resolve"))
                                     ));
                                 } catch (Exception ignore) {
