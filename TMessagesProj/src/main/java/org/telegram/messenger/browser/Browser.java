@@ -511,7 +511,7 @@ public class Browser {
                 return true;
             }
         } else if (all) {
-            if (host.endsWith("telegram.org") || host.endsWith("telegra.ph") || host.endsWith("telesco.pe")) {
+            if (host.endsWith("telegram.org")) {
                 return true;
             }
         }
