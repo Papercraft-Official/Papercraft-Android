@@ -37,8 +37,6 @@ jobs:
           export commit_sha="${{ github.sha }}"
           export run_num="${{ github.run_number }}"
           bash build.sh
-      - name: Find
-        run: find "/home" -type f -name "*.apk" -print
       - name: Upload Aritfact
         uses: actions/upload-artifact@v4
         with:
