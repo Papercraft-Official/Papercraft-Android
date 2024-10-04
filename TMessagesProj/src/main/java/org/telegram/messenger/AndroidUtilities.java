@@ -1745,15 +1745,11 @@ public class AndroidUtilities {
                                 break;
                             case TYPEFACE_ROBOTO_MEDIUM_ITALIC:
                                 if (FontUtils.isMediumWeightSupported()) {
-                                    t = Typeface.create("sans-serif-medium", Typeface.ITALIC);
-                                } else {
                                     t = Typeface.create("sans-serif", Typeface.BOLD_ITALIC);
                                 }
                                 break;
                             case TYPEFACE_ROBOTO_MEDIUM:
                                 if (FontUtils.isMediumWeightSupported()) {
-                                    t = Typeface.create("sans-serif-medium", Typeface.NORMAL);
-                                } else {
                                     t = Typeface.create("sans-serif", Typeface.BOLD);
                                 }
                                 break;
