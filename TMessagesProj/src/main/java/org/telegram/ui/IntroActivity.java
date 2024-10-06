@@ -346,6 +346,13 @@ public class IntroActivity extends BaseFragment implements NotificationCenter.No
         startMessagingButton.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 15);
         startMessagingButton.setPadding(AndroidUtilities.dp(34), 0, AndroidUtilities.dp(34), 0);
         frameContainerView.addView(startMessagingButton, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, 50, Gravity.CENTER_HORIZONTAL | Gravity.BOTTOM, 16, 0, 16, 76));
+        startMessagingButton.setBackgroundDrawable(
+        Theme.createSimpleSelectorRoundRectDrawable(
+        AndroidUtilities.dp(23), 
+        Theme.getColor(Theme.key_featuredStickers_addButton), 
+        Theme.getColor(Theme.key_featuredStickers_addButtonPressed)
+    )
+);
         startMessagingButton.setOnClickListener(view -> {
             if (startPressed) {
                 return;
