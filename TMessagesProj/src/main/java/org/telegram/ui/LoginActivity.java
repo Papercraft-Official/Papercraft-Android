@@ -2206,19 +2206,6 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
                 return false;
             });
 
-            TextView proxySettings = new TextView(context);
-            proxySettings.setPadding(AndroidUtilities.dp(34), 0, AndroidUtilities.dp(34), 0);
-            proxySettings.setGravity(Gravity.CENTER);
-            proxySettings.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
-            proxySettings.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR));
-
-            proxySettings.setText(LocaleController.getString("ProxySettings", R.string.ProxySettings));
-            proxySettings.setTextColor(Theme.getColor(Theme.key_featuredStickers_buttonText));
-            proxySettings.setBackgroundDrawable(Theme.createSimpleSelectorRoundRectDrawable(AndroidUtilities.dp(6), Theme.getColor(Theme.key_featuredStickers_addButton), Theme.getColor(Theme.key_featuredStickers_addButtonPressed)));
-
-            addView(proxySettings, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, 48, Gravity.BOTTOM, 16, 15, 16, 16));
-            proxySettings.setOnClickListener(view -> presentFragment(new ProxyListActivity()));
-
             int bottomMargin = 72;
             if (newAccount && activityMode == MODE_LOGIN) {
                 syncContactsBox = new CheckBoxCell(context, 2);
