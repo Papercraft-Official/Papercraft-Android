@@ -98,8 +98,8 @@ import org.telegram.ui.Components.StickerEmptyView;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.utils.CanvasUtils;
+import com.yomi.messenger.ExteraConfig;
+import com.yomi.messenger.utils.CanvasUtils;
 
 public class PhotoPickerActivity extends BaseFragment implements NotificationCenter.NotificationCenterDelegate {
 

@@ -42,7 +42,7 @@ import org.telegram.ui.Components.LayoutHelper;
 import org.telegram.ui.Components.ProgressButton;
 import org.telegram.ui.Components.ViewHelper;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.yomi.messenger.ExteraConfig;
 
 import java.util.ArrayList;
 

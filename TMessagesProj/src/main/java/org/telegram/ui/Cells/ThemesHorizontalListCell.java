@@ -63,7 +63,7 @@ import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.yomi.messenger.ExteraConfig;
 
 public class ThemesHorizontalListCell extends RecyclerListView implements NotificationCenter.NotificationCenterDelegate {
 

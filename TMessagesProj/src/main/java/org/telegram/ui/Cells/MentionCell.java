@@ -31,7 +31,7 @@ import org.telegram.ui.Components.AvatarDrawable;
 import org.telegram.ui.Components.BackupImageView;
 import org.telegram.ui.Components.LayoutHelper;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.yomi.messenger.ExteraConfig;
 
 public class MentionCell extends LinearLayout {
 

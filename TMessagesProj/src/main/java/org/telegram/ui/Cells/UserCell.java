@@ -44,7 +44,7 @@ import org.telegram.ui.Components.CheckBoxSquare;
 import org.telegram.ui.Components.LayoutHelper;
 import org.telegram.ui.NotificationsSettingsActivity;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.yomi.messenger.ExteraConfig;
 
 public class UserCell extends FrameLayout implements NotificationCenter.NotificationCenterDelegate {
 

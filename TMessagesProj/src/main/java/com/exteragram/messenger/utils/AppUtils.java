@@ -1,6 +1,6 @@
 /*
 
- This is the source code of exteraGram for Android.
+ This is the source code of Yomi for Android.
 
  We do not and cannot prevent the use of our code,
  but be respectful and credit the original author.
@@ -9,7 +9,7 @@
 
 */
 
-package com.exteragram.messenger.utils;
+package com.yomi.messenger.utils;
 
 import android.annotation.SuppressLint;
 import android.content.pm.PackageInfo;
@@ -84,7 +84,7 @@ public class AppUtils {
 
     // do not change or remove this part of the code if you're making public fork
     private static final String EXPECTED_SIGNATURE = "tcaLgrODWBN9GQvrHPfGzA==";
-    private static final String EXPECTED_PACKAGE_NAME = "com.exteragram.messenger";
+    private static final String EXPECTED_PACKAGE_NAME = "com.yomi.messenger";
 
     public static boolean isAppModified() {
         try {

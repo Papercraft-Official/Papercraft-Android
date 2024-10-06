@@ -56,7 +56,7 @@ import org.telegram.ui.Components.RadialProgressView;
 import java.util.ArrayList;
 import java.util.Locale;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.yomi.messenger.ExteraConfig;
 
 public class StickerSetCell extends FrameLayout {
     private final static String LINK_PREFIX = "t.me/addstickers/";

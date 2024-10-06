@@ -29,7 +29,7 @@ import org.telegram.messenger.R;
 import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.TopicsFragment;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.yomi.messenger.ExteraConfig;
 
 public class PullForegroundDrawable {
 

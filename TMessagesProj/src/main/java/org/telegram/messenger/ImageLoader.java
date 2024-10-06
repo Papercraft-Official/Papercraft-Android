@@ -2280,14 +2280,14 @@ public class ImageLoader {
                     try {
                         if (ApplicationLoader.applicationContext.getExternalMediaDirs().length > 0) {
                             publicMediaDir = getPublicStorageDir();
-                            publicMediaDir = new File(publicMediaDir, "exteraGram");
+                            publicMediaDir = new File(publicMediaDir, "Yomi");
                             publicMediaDir.mkdirs();
                         }
                     } catch (Exception e) {
                         FileLog.e(e);
                     }
                     newPath = ApplicationLoader.applicationContext.getExternalFilesDir(null);
-                    telegramPath = new File(newPath, "exteraGram");
+                    telegramPath = new File(newPath, "Yomi");
                 } else {
                     boolean isSdCard = !TextUtils.isEmpty(SharedConfig.storageCacheDir) && path.getAbsolutePath().startsWith(SharedConfig.storageCacheDir);
                     if (!isSdCard) {
@@ -2296,7 +2296,7 @@ public class ImageLoader {
                             path = ApplicationLoader.applicationContext.getExternalFilesDir(null);
                         }
                     }
-                    telegramPath = new File(path, "exteraGram");
+                    telegramPath = new File(path, "Yomi");
                 }
                 telegramPath.mkdirs();
 
@@ -2306,7 +2306,7 @@ public class ImageLoader {
                         File dir = dirs.get(a);
                         if (dir != null && !TextUtils.isEmpty(SharedConfig.storageCacheDir) && dir.getAbsolutePath().startsWith(SharedConfig.storageCacheDir)) {
                             path = dir;
-                            telegramPath = new File(path, "exteraGram");
+                            telegramPath = new File(path, "Yomi");
                             telegramPath.mkdirs();
                             break;
                         }
@@ -2315,7 +2315,7 @@ public class ImageLoader {
 
                 if (telegramPath.isDirectory()) {
                     try {
-                        File imagePath = new File(telegramPath, "exteraGram Images");
+                        File imagePath = new File(telegramPath, "Yomi Images");
                         imagePath.mkdir();
                         if (imagePath.isDirectory() && canMoveFiles(cachePath, imagePath, FileLoader.MEDIA_DIR_IMAGE)) {
                             mediaDirs.put(FileLoader.MEDIA_DIR_IMAGE, imagePath);
@@ -2328,7 +2328,7 @@ public class ImageLoader {
                     }
 
                     try {
-                        File videoPath = new File(telegramPath, "exteraGram Video");
+                        File videoPath = new File(telegramPath, "Yomi Video");
                         videoPath.mkdir();
                         if (videoPath.isDirectory() && canMoveFiles(cachePath, videoPath, FileLoader.MEDIA_DIR_VIDEO)) {
                             mediaDirs.put(FileLoader.MEDIA_DIR_VIDEO, videoPath);
@@ -2341,7 +2341,7 @@ public class ImageLoader {
                     }
 
                     try {
-                        File audioPath = new File(telegramPath, "exteraGram Audio");
+                        File audioPath = new File(telegramPath, "Yomi Audio");
                         audioPath.mkdir();
                         if (audioPath.isDirectory() && canMoveFiles(cachePath, audioPath, FileLoader.MEDIA_DIR_AUDIO)) {
                             AndroidUtilities.createEmptyFile(new File(audioPath, ".nomedia"));
@@ -2355,7 +2355,7 @@ public class ImageLoader {
                     }
 
                     try {
-                        File documentPath = new File(telegramPath, "exteraGram Documents");
+                        File documentPath = new File(telegramPath, "Yomi Documents");
                         documentPath.mkdir();
                         if (documentPath.isDirectory() && canMoveFiles(cachePath, documentPath, FileLoader.MEDIA_DIR_DOCUMENT)) {
                             AndroidUtilities.createEmptyFile(new File(documentPath, ".nomedia"));
@@ -2369,7 +2369,7 @@ public class ImageLoader {
                     }
 
                     try {
-                        File normalNamesPath = new File(telegramPath, "exteraGram Files");
+                        File normalNamesPath = new File(telegramPath, "Yomi Files");
                         normalNamesPath.mkdir();
                         if (normalNamesPath.isDirectory() && canMoveFiles(cachePath, normalNamesPath, FileLoader.MEDIA_DIR_FILES)) {
                             AndroidUtilities.createEmptyFile(new File(normalNamesPath, ".nomedia"));
@@ -2384,7 +2384,7 @@ public class ImageLoader {
                 }
                 if (publicMediaDir != null && publicMediaDir.isDirectory()) {
                     try {
-                        File imagePath = new File(publicMediaDir, "exteraGram Images");
+                        File imagePath = new File(publicMediaDir, "Yomi Images");
                         imagePath.mkdir();
                         if (imagePath.isDirectory() && canMoveFiles(cachePath, imagePath, FileLoader.MEDIA_DIR_IMAGE)) {
                             mediaDirs.put(FileLoader.MEDIA_DIR_IMAGE_PUBLIC, imagePath);
@@ -2397,7 +2397,7 @@ public class ImageLoader {
                     }
 
                     try {
-                        File videoPath = new File(publicMediaDir, "exteraGram Video");
+                        File videoPath = new File(publicMediaDir, "Yomi Video");
                         videoPath.mkdir();
                         if (videoPath.isDirectory() && canMoveFiles(cachePath, videoPath, FileLoader.MEDIA_DIR_VIDEO)) {
                             mediaDirs.put(FileLoader.MEDIA_DIR_VIDEO_PUBLIC, videoPath);

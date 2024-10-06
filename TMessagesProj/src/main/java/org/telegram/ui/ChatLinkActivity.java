@@ -56,7 +56,7 @@ import org.telegram.ui.Components.RecyclerListView;
 
 import java.util.ArrayList;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.yomi.messenger.ExteraConfig;
 
 public class ChatLinkActivity extends BaseFragment implements NotificationCenter.NotificationCenterDelegate {
 

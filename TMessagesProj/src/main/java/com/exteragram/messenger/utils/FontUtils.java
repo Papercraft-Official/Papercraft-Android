@@ -1,6 +1,6 @@
 //  @Nekogram
 
-package com.exteragram.messenger.utils;
+package com.yomi.messenger.utils;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;

@@ -1,6 +1,6 @@
 /*
 
- This is the source code of exteraGram for Android.
+ This is the source code of Yomi for Android.
 
  We do not and cannot prevent the use of our code,
  but be respectful and credit the original author.
@@ -9,7 +9,7 @@
 
 */
 
-package com.exteragram.messenger.preferences.updater;
+package com.yomi.messenger.preferences.updater;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -23,9 +23,9 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.utils.LocaleUtils;
-import com.exteragram.messenger.utils.UpdaterUtils;
+import com.yomi.messenger.ExteraConfig;
+import com.yomi.messenger.utils.LocaleUtils;
+import com.yomi.messenger.utils.UpdaterUtils;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.BuildVars;
@@ -140,7 +140,7 @@ public class UpdaterBottomSheet extends BottomSheet {
             doneButton.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
             doneButton.setText(LocaleController.getString("AppUpdateDownloadNow", R.string.AppUpdateDownloadNow));
             doneButton.setOnClickListener(v -> {
-                UpdaterUtils.downloadApk(fragment.getContext(), update.downloadURL, "exteraGram " + update.version);
+                UpdaterUtils.downloadApk(fragment.getContext(), update.downloadURL, "Yomi " + update.version);
                 dismiss();
             });
             linearLayout.addView(doneButton, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, 48, 0, 16, 15, 16, 5));

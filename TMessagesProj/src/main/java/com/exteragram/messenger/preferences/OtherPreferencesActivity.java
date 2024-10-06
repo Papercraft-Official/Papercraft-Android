@@ -1,6 +1,6 @@
 /*
 
- This is the source code of exteraGram for Android.
+ This is the source code of Yomi for Android.
 
  We do not and cannot prevent the use of our code,
  but be respectful and credit the original author.
@@ -9,7 +9,7 @@
 
 */
 
-package com.exteragram.messenger.preferences;
+package com.yomi.messenger.preferences;
 
 import android.content.Context;
 import android.os.CountDownTimer;
@@ -19,7 +19,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.yomi.messenger.ExteraConfig;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.ApplicationLoader;

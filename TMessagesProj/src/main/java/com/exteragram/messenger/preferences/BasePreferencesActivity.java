@@ -1,6 +1,6 @@
 /*
 
- This is the source code of exteraGram for Android.
+ This is the source code of Yomi for Android.
 
  We do not and cannot prevent the use of our code,
  but be respectful and credit the original author.
@@ -9,7 +9,7 @@
 
 */
 
-package com.exteragram.messenger.preferences;
+package com.yomi.messenger.preferences;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -23,7 +23,7 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.exteragram.messenger.preferences.components.HeaderSettingsCell;
+import com.yomi.messenger.preferences.components.HeaderSettingsCell;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.LocaleController;

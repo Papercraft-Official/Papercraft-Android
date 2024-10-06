@@ -1,6 +1,6 @@
 /*
 
- This is the source code of exteraGram for Android.
+ This is the source code of Yomi for Android.
 
  We do not and cannot prevent the use of our code,
  but be respectful and credit the original author.
@@ -9,7 +9,7 @@
 
 */
 
-package com.exteragram.messenger.preferences;
+package com.yomi.messenger.preferences;
 
 import android.content.Context;
 import android.os.Parcelable;
@@ -19,17 +19,17 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.preferences.components.AvatarCornersPreviewCell;
-import com.exteragram.messenger.preferences.components.ChatListPreviewCell;
-import com.exteragram.messenger.preferences.components.FabShapeCell;
-import com.exteragram.messenger.preferences.components.FoldersPreviewCell;
-import com.exteragram.messenger.preferences.components.SolarIconsPreview;
-import com.exteragram.messenger.utils.AppUtils;
-import com.exteragram.messenger.utils.ChatUtils;
-import com.exteragram.messenger.utils.LocaleUtils;
-import com.exteragram.messenger.utils.PopupUtils;
-import com.exteragram.messenger.utils.SystemUtils;
+import com.yomi.messenger.ExteraConfig;
+import com.yomi.messenger.preferences.components.AvatarCornersPreviewCell;
+import com.yomi.messenger.preferences.components.ChatListPreviewCell;
+import com.yomi.messenger.preferences.components.FabShapeCell;
+import com.yomi.messenger.preferences.components.FoldersPreviewCell;
+import com.yomi.messenger.preferences.components.SolarIconsPreview;
+import com.yomi.messenger.utils.AppUtils;
+import com.yomi.messenger.utils.ChatUtils;
+import com.yomi.messenger.utils.LocaleUtils;
+import com.yomi.messenger.utils.PopupUtils;
+import com.yomi.messenger.utils.SystemUtils;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.LocaleController;

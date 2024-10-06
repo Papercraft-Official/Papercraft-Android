@@ -1,6 +1,6 @@
 /*
 
- This is the source code of exteraGram for Android.
+ This is the source code of Yomi for Android.
 
  We do not and cannot prevent the use of our code,
  but be respectful and credit the original author.
@@ -9,7 +9,7 @@
 
 */
 
-package com.exteragram.messenger.utils;
+package com.yomi.messenger.utils;
 
 import android.text.Spannable;
 import android.text.SpannableString;
@@ -18,7 +18,7 @@ import android.text.TextUtils;
 import android.text.style.URLSpan;
 import android.view.View;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.yomi.messenger.ExteraConfig;
 
 import org.telegram.messenger.ApplicationLoader;
 import org.telegram.messenger.FileLog;
@@ -118,7 +118,7 @@ public class LocaleUtils {
         try {
             return ApplicationLoader.applicationContext.getString(R.string.exteraAppName);
         } catch (Exception e) {
-            return "exteraGram";
+            return "Yomi";
         }
     }
 }

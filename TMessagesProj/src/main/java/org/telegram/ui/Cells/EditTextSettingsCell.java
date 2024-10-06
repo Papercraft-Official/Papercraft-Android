@@ -26,7 +26,7 @@ import org.telegram.ui.Components.LayoutHelper;
 
 import java.util.ArrayList;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.yomi.messenger.ExteraConfig;
 
 public class EditTextSettingsCell extends FrameLayout {
 

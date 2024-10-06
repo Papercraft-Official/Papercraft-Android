@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Build;
 
-import com.exteragram.messenger.utils.AppUtils;
+import com.yomi.messenger.utils.AppUtils;
 
 import org.telegram.messenger.ApplicationLoader;
 import org.telegram.messenger.BuildVars;
@@ -65,7 +65,7 @@ public class LauncherIconController {
 
         public ComponentName getComponentName(Context ctx) {
             if (componentName == null) {
-                componentName = new ComponentName(ctx.getPackageName(), "com.exteragram.messenger." + key);
+                componentName = new ComponentName(ctx.getPackageName(), "com.yomi.messenger." + key);
             }
             return componentName;
         }

@@ -27,7 +27,7 @@ import android.view.inputmethod.InputConnection;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.yomi.messenger.ExteraConfig;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.LocaleController;

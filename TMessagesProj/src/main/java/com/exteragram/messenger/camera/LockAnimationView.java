@@ -1,4 +1,4 @@
-package com.exteragram.messenger.camera;
+package com.yomi.messenger.camera;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

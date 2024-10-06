@@ -31,8 +31,8 @@ import android.util.Log;
 
 import androidx.collection.LongSparseArray;
 
-import com.exteragram.messenger.boost.encryption.BaseEncryptor;
-import com.exteragram.messenger.boost.filter.ZalgoFilter;
+import com.yomi.messenger.boost.encryption.BaseEncryptor;
+import com.yomi.messenger.boost.filter.ZalgoFilter;
 
 import org.telegram.PhoneFormat.PhoneFormat;
 import org.telegram.messenger.browser.Browser;
@@ -3891,7 +3891,7 @@ public class MessageObject {
                 } else if (getMedia(messageOwner) instanceof TLRPC.TL_messageMediaInvoice) {
                     messageText = getMedia(messageOwner).description;
                 } else if (getMedia(messageOwner) instanceof TLRPC.TL_messageMediaUnsupported) {
-                    messageText = LocaleController.getString("UnsupportedMedia", R.string.UnsupportedMedia).replace("https://telegram.org/update", "https://github.com/exteraSquad/exteraGram/releases/latest").replace("Telegram", "exteraGram");
+                    messageText = LocaleController.getString("UnsupportedMedia", R.string.UnsupportedMedia).replace("https://telegram.org/update", "https://github.com/lingyicute/Yomi-Android/releases/latest").replace("Telegram", "Yomi");
                 } else if (getMedia(messageOwner) instanceof TLRPC.TL_messageMediaDocument) {
                     if (isSticker() || isAnimatedStickerDocument(getDocument(), true)) {
                         String sch = getStickerChar();

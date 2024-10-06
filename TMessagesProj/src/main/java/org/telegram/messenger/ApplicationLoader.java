@@ -32,9 +32,9 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.multidex.MultiDex;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.camera.CameraXUtils;
-import com.exteragram.messenger.utils.CrashlyticsUtils;
+import com.yomi.messenger.ExteraConfig;
+import com.yomi.messenger.camera.CameraXUtils;
+import com.yomi.messenger.utils.CrashlyticsUtils;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
 
@@ -136,7 +136,7 @@ public class ApplicationLoader extends Application {
         } catch (Exception e) {
             FileLog.e(e);
         }
-        return new File("/data/data/com.exteragram.messenger/files");
+        return new File("/data/data/com.yomi.messenger/files");
     }
 
     public static void postInitApplication() {

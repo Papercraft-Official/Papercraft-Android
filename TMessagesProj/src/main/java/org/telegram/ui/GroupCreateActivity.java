@@ -90,8 +90,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.utils.CanvasUtils;
+import com.yomi.messenger.ExteraConfig;
+import com.yomi.messenger.utils.CanvasUtils;
 
 public class GroupCreateActivity extends BaseFragment implements NotificationCenter.NotificationCenterDelegate, View.OnClickListener {
 

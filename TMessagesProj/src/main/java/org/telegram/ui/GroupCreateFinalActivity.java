@@ -81,8 +81,8 @@ import org.telegram.ui.Components.VerticalPositionAutoAnimator;
 import java.util.ArrayList;
 import java.util.concurrent.CountDownLatch;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.utils.CanvasUtils;
+import com.yomi.messenger.ExteraConfig;
+import com.yomi.messenger.utils.CanvasUtils;
 
 public class GroupCreateFinalActivity extends BaseFragment implements NotificationCenter.NotificationCenterDelegate, ImageUpdater.ImageUpdaterDelegate {
 

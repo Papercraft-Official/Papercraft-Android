@@ -49,7 +49,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import com.exteragram.messenger.utils.ChatUtils;
+import com.yomi.messenger.utils.ChatUtils;
 
 public class AppIconsSelectorCell extends RecyclerListView implements NotificationCenter.NotificationCenterDelegate {
     public final static float ICONS_ROUND_RADIUS = 100;

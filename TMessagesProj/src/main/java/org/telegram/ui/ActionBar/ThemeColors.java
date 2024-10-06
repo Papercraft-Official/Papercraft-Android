@@ -8,7 +8,7 @@ import android.util.SparseArray;
 
 import androidx.core.graphics.ColorUtils;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.yomi.messenger.ExteraConfig;
 
 import java.util.HashMap;
 

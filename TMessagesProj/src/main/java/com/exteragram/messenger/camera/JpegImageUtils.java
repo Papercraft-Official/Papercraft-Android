@@ -1,4 +1,4 @@
-package com.exteragram.messenger.camera;
+package com.yomi.messenger.camera;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

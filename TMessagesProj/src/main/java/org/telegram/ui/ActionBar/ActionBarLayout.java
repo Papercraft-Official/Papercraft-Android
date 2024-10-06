@@ -63,7 +63,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.yomi.messenger.ExteraConfig;
 
 public class ActionBarLayout extends FrameLayout implements INavigationLayout, FloatingDebugProvider {
 

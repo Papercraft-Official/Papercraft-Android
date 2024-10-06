@@ -1,4 +1,4 @@
-package com.exteragram.messenger.boost.encryption;
+package com.yomi.messenger.boost.encryption;
 
 public class BaseEncryptor {
     public String getName() {

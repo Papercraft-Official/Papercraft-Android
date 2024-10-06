@@ -1,10 +1,10 @@
 // all credits to @Nekogram
 
-package com.exteragram.messenger.utils;
+package com.yomi.messenger.utils;
 
 import androidx.core.util.Pair;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.yomi.messenger.ExteraConfig;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.LocaleController;

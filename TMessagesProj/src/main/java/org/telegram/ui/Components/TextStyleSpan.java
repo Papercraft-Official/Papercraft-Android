@@ -13,7 +13,7 @@ import android.graphics.Typeface;
 import android.text.TextPaint;
 import android.text.style.MetricAffectingSpan;
 
-import com.exteragram.messenger.utils.FontUtils;
+import com.yomi.messenger.utils.FontUtils;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.tgnet.TLRPC;

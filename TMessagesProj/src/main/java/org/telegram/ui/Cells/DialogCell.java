@@ -113,8 +113,8 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Stack;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.boost.filter.ZalgoFilter;
+import com.yomi.messenger.ExteraConfig;
+import com.yomi.messenger.boost.filter.ZalgoFilter;
 
 public class DialogCell extends BaseCell {
 

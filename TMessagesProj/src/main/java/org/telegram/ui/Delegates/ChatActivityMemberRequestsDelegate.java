@@ -17,7 +17,7 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.yomi.messenger.ExteraConfig;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.LocaleController;

@@ -63,7 +63,7 @@ import org.telegram.ui.Components.URLSpanNoUnderline;
 
 import java.util.concurrent.atomic.AtomicReference;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.yomi.messenger.ExteraConfig;
 
 public class AboutLinkCell extends FrameLayout {
 

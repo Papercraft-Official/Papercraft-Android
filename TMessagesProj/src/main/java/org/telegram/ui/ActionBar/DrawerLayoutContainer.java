@@ -40,7 +40,7 @@ import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.yomi.messenger.ExteraConfig;
 import com.google.android.gms.vision.Frame;
 
 import org.telegram.messenger.AndroidUtilities;

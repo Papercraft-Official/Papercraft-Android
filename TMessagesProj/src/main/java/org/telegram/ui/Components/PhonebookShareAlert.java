@@ -58,7 +58,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Locale;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.yomi.messenger.ExteraConfig;
 
 public class PhonebookShareAlert extends BottomSheet {
 

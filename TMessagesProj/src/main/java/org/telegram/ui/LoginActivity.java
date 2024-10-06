@@ -87,8 +87,8 @@ import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.ColorUtils;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.utils.CanvasUtils;
+import com.yomi.messenger.ExteraConfig;
+import com.yomi.messenger.utils.CanvasUtils;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;

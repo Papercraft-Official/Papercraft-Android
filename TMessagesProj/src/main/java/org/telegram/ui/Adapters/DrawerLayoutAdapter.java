@@ -14,9 +14,9 @@ import android.view.ViewGroup;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.utils.ChatUtils;
-import com.exteragram.messenger.utils.SystemUtils;
+import com.yomi.messenger.ExteraConfig;
+import com.yomi.messenger.utils.ChatUtils;
+import com.yomi.messenger.utils.SystemUtils;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.LocaleController;

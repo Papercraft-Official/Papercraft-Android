@@ -116,8 +116,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.android.internal.telephony.ITelephony;
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.utils.FontUtils;
+import com.yomi.messenger.ExteraConfig;
+import com.yomi.messenger.utils.FontUtils;
 import com.google.android.exoplayer2.util.Consumer;
 import com.google.android.gms.auth.api.phone.SmsRetriever;
 import com.google.android.gms.auth.api.phone.SmsRetrieverClient;
@@ -2851,7 +2851,7 @@ public class AndroidUtilities {
         }
         File storageDir = null;
         if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {
-            storageDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), "exteraGram");
+            storageDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), "Yomi");
             if (!storageDir.mkdirs()) {
                 if (!storageDir.exists()) {
                     if (BuildVars.LOGS_ENABLED) {

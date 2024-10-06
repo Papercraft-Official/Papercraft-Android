@@ -32,7 +32,7 @@ import org.telegram.ui.Components.CheckBoxSquare;
 import org.telegram.ui.Components.CubicBezierInterpolator;
 import org.telegram.ui.Components.LayoutHelper;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.yomi.messenger.ExteraConfig;
 
 public class CheckBoxCell extends FrameLayout {
 

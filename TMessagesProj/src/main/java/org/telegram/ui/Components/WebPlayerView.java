@@ -41,7 +41,7 @@ import android.webkit.WebView;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.yomi.messenger.ExteraConfig;
 import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.ExoPlayer;
 import com.google.android.exoplayer2.ui.AspectRatioFrameLayout;

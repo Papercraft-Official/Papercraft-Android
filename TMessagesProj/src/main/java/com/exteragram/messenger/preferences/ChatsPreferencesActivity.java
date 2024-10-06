@@ -1,6 +1,6 @@
 /*
 
- This is the source code of exteraGram for Android.
+ This is the source code of Yomi for Android.
 
  We do not and cannot prevent the use of our code,
  but be respectful and credit the original author.
@@ -9,7 +9,7 @@
 
 */
 
-package com.exteragram.messenger.preferences;
+package com.yomi.messenger.preferences;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -21,13 +21,13 @@ import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.preferences.components.AltSeekbar;
-import com.exteragram.messenger.preferences.components.DoubleTapCell;
-import com.exteragram.messenger.preferences.components.StickerShapeCell;
-import com.exteragram.messenger.preferences.components.StickerSizePreviewCell;
-import com.exteragram.messenger.utils.LocaleUtils;
-import com.exteragram.messenger.utils.PopupUtils;
+import com.yomi.messenger.ExteraConfig;
+import com.yomi.messenger.preferences.components.AltSeekbar;
+import com.yomi.messenger.preferences.components.DoubleTapCell;
+import com.yomi.messenger.preferences.components.StickerShapeCell;
+import com.yomi.messenger.preferences.components.StickerSizePreviewCell;
+import com.yomi.messenger.utils.LocaleUtils;
+import com.yomi.messenger.utils.PopupUtils;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.LocaleController;

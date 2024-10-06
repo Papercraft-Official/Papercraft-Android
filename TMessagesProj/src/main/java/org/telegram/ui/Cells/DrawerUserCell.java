@@ -16,7 +16,7 @@ import android.view.Gravity;
 import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.FrameLayout;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.yomi.messenger.ExteraConfig;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.ContactsController;

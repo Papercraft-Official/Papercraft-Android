@@ -73,9 +73,9 @@ import androidx.core.content.ContextCompat;
 import androidx.core.graphics.ColorUtils;
 import androidx.core.math.MathUtils;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.utils.LocaleUtils;
-import com.exteragram.messenger.utils.MonetUtils;
+import com.yomi.messenger.ExteraConfig;
+import com.yomi.messenger.utils.LocaleUtils;
+import com.yomi.messenger.utils.MonetUtils;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

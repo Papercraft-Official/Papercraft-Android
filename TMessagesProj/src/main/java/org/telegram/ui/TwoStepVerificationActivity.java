@@ -75,8 +75,8 @@ import org.telegram.ui.Components.VerticalPositionAutoAnimator;
 import java.util.ArrayList;
 import java.util.Locale;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.utils.CanvasUtils;
+import com.yomi.messenger.ExteraConfig;
+import com.yomi.messenger.utils.CanvasUtils;
 
 public class TwoStepVerificationActivity extends BaseFragment implements NotificationCenter.NotificationCenterDelegate {
 

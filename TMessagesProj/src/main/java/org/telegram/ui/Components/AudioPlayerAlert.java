@@ -58,8 +58,8 @@ import androidx.dynamicanimation.animation.SpringForce;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.utils.ChatUtils;
+import com.yomi.messenger.ExteraConfig;
+import com.yomi.messenger.utils.ChatUtils;
 import com.google.android.exoplayer2.C;
 
 import org.telegram.messenger.AndroidUtilities;

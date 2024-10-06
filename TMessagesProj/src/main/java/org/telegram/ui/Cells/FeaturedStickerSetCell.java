@@ -44,7 +44,7 @@ import org.telegram.ui.Components.BackupImageView;
 import org.telegram.ui.Components.LayoutHelper;
 import org.telegram.ui.Components.ProgressButton;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.yomi.messenger.ExteraConfig;
 
 public class FeaturedStickerSetCell extends FrameLayout {
 

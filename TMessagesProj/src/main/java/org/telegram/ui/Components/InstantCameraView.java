@@ -66,9 +66,9 @@ import androidx.camera.core.SurfaceOrientedMeteringPointFactory;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.ColorUtils;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.camera.CameraXController;
-import com.exteragram.messenger.camera.CameraXUtils;
+import com.yomi.messenger.ExteraConfig;
+import com.yomi.messenger.camera.CameraXController;
+import com.yomi.messenger.camera.CameraXUtils;
 import com.google.android.exoplayer2.ExoPlayer;
 import com.google.android.exoplayer2.util.Log;
 

@@ -39,7 +39,7 @@ import org.telegram.ui.Components.CheckBox2;
 import org.telegram.ui.Components.CubicBezierInterpolator;
 import org.telegram.ui.Components.LayoutHelper;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.yomi.messenger.ExteraConfig;
 
 public class GroupCreateUserCell extends FrameLayout {
 

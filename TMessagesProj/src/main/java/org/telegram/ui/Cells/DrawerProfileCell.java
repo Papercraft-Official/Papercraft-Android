@@ -34,7 +34,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.yomi.messenger.ExteraConfig;
 
 import org.telegram.PhoneFormat.PhoneFormat;
 import org.telegram.messenger.AndroidUtilities;

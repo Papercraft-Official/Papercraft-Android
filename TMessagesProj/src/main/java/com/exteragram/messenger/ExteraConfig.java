@@ -1,6 +1,6 @@
 /*
 
- This is the source code of exteraGram for Android.
+ This is the source code of Yomi for Android.
 
  We do not and cannot prevent the use of our code,
  but be respectful and credit the original author.
@@ -9,17 +9,17 @@
 
 */
 
-package com.exteragram.messenger;
+package com.yomi.messenger;
 
 import android.app.Activity;
 import android.content.SharedPreferences;
 
 import androidx.annotation.NonNull;
 
-import com.exteragram.messenger.camera.CameraXUtils;
-import com.exteragram.messenger.icons.BaseIconSet;
-import com.exteragram.messenger.icons.EmptyIconSet;
-import com.exteragram.messenger.icons.SolarIconSet;
+import com.yomi.messenger.camera.CameraXUtils;
+import com.yomi.messenger.icons.BaseIconSet;
+import com.yomi.messenger.icons.EmptyIconSet;
+import com.yomi.messenger.icons.SolarIconSet;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.ApplicationLoader;

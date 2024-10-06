@@ -1,4 +1,4 @@
-package com.exteragram.messenger.camera;
+package com.yomi.messenger.camera;
 
 import android.content.Context;
 import android.graphics.Color;

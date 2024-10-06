@@ -96,12 +96,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.preferences.MainPreferencesActivity;
-import com.exteragram.messenger.utils.AppUtils;
-import com.exteragram.messenger.utils.CanvasUtils;
-import com.exteragram.messenger.utils.ChatUtils;
-import com.exteragram.messenger.utils.LocaleUtils;
+import com.yomi.messenger.ExteraConfig;
+import com.yomi.messenger.preferences.MainPreferencesActivity;
+import com.yomi.messenger.utils.AppUtils;
+import com.yomi.messenger.utils.CanvasUtils;
+import com.yomi.messenger.utils.ChatUtils;
+import com.yomi.messenger.utils.LocaleUtils;
 
 import org.telegram.PhoneFormat.PhoneFormat;
 import org.telegram.messenger.AccountInstance;
@@ -8984,7 +8984,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                     cell.getTextView().setMovementMethod(null);
                     try {
                         PackageInfo info = ApplicationLoader.applicationContext.getPackageManager().getPackageInfo(ApplicationLoader.applicationContext.getPackageName(), 0);
-                        cell.setText(LocaleUtils.getAppName() + " " + BuildVars.BUILD_VERSION_STRING + " (" + info.versionCode + ")" + (AppUtils.isAppModified() ? "\nbased on @exteraGram" : ""));
+                        cell.setText(LocaleUtils.getAppName() + " " + BuildVars.BUILD_VERSION_STRING + " (" + info.versionCode + ")" + (AppUtils.isAppModified() ? "\nbased on @Yomi" : ""));
                     } catch (PackageManager.NameNotFoundException e) {
                         FileLog.e(e);
                     }

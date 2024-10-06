@@ -42,7 +42,7 @@ import android.widget.ScrollView;
 
 import androidx.annotation.NonNull;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.yomi.messenger.ExteraConfig;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.ChatObject;

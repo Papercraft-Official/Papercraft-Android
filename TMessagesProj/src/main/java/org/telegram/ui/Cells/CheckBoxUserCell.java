@@ -26,7 +26,7 @@ import org.telegram.ui.Components.CombinedDrawable;
 import org.telegram.ui.Components.LayoutHelper;
 import org.telegram.ui.Components.Switch;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.yomi.messenger.ExteraConfig;
 
 public class CheckBoxUserCell extends FrameLayout {
 

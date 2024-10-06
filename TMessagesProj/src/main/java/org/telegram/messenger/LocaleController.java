@@ -36,8 +36,8 @@ import java.util.HashSet;
 import java.util.Locale;
 import java.util.TimeZone;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.utils.LocaleUtils;
+import com.yomi.messenger.ExteraConfig;
+import com.yomi.messenger.utils.LocaleUtils;
 
 public class LocaleController {
 

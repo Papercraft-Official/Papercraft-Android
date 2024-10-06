@@ -54,7 +54,7 @@ import org.telegram.ui.TopicsFragment;
 
 import java.util.concurrent.atomic.AtomicReference;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.yomi.messenger.ExteraConfig;
 
 public class ChatAvatarContainer extends FrameLayout implements NotificationCenter.NotificationCenterDelegate {
 
