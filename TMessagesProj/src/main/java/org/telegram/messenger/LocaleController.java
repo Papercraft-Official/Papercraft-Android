@@ -1,11 +1,3 @@
-/*
- * This is the source code of Telegram for Android v. 1.3.x.
- * It is licensed under GNU GPL v. 2 or later.
- * You should have received a copy of the license in this archive (see LICENSE).
- *
- * Copyright Nikolai Kudashov, 2013-2018.
- */
-
 package org.telegram.messenger;
 
 import android.app.Activity;
@@ -266,14 +258,14 @@ public class LocaleController {
                 "tr", "vi", "wo", "yo", "zh", "bo", "dz", "id", "jv", "jw", "ka", "km", "kn", "ms", "th", "in"}, new PluralRules_None());
 
         LocaleInfo localeInfo = new LocaleInfo();
-        localeInfo.name = "English";
-        localeInfo.nameEnglish = "English";
-        localeInfo.shortName = localeInfo.pluralLangCode = "en";
+        localeInfo.name = "简体中文";
+        localeInfo.nameEnglish = "Chinese Simplified";
+        localeInfo.shortName = localeInfo.pluralLangCode = "zh_cn";
         localeInfo.pathToFile = null;
         localeInfo.builtIn = true;
         languages.add(localeInfo);
         languagesDict.put(localeInfo.shortName, localeInfo);
-
+/*
         localeInfo = new LocaleInfo();
         localeInfo.name = "Italiano";
         localeInfo.nameEnglish = "Italian";
@@ -329,18 +321,6 @@ public class LocaleController {
         languagesDict.put(localeInfo.shortName, localeInfo);
 
         localeInfo = new LocaleInfo();
-        localeInfo.name = "简体中文";
-        localeInfo.nameEnglish = "Chinese Simplified";
-        localeInfo.shortName = "classic-zh-cn";
-        localeInfo.pathToFile = null;
-        localeInfo.pluralLangCode = "zh_cn";
-        localeInfo.builtIn = true;
-        languages.add(localeInfo);
-        languagesDict.put(localeInfo.shortName, localeInfo);
-        languagesDict.put("zh_cn", localeInfo);
-        languagesDict.put("zh_sg", localeInfo);
-
-        localeInfo = new LocaleInfo();
         localeInfo.name = "한국어";
         localeInfo.nameEnglish = "Korean";
         localeInfo.shortName = localeInfo.pluralLangCode = "ko";
@@ -348,7 +328,7 @@ public class LocaleController {
         localeInfo.builtIn = true;
         languages.add(localeInfo);
         languagesDict.put(localeInfo.shortName, localeInfo);
-
+*/
         loadOtherLanguages();
         if (remoteLanguages.isEmpty()) {
             AndroidUtilities.runOnUIThread(() -> loadRemoteLanguages(UserConfig.selectedAccount));
