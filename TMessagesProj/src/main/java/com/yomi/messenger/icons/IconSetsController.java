@@ -118,7 +118,7 @@ public class IconSetsController {
         solar.put(R.drawable.msg2_reactions2, R.drawable.msg_reactions_solar);
         solar.put(R.drawable.msg2_secret, R.drawable.msg_secret_solar);
         solar.put(R.drawable.msg2_smile_status, R.drawable.input_smile_solar);
-        solar.put(R.drawable.msg2_sticker, R.drawable.msg_sticker_solar);
+        solar.put(R.drawable.msg2_sticker, R.drawable.msg_sticker);
         solar.put(R.drawable.msg2_trending, R.drawable.msg_trending_solar);
         solar.put(R.drawable.msg2_videocall, R.drawable.msg_videocall_solar);
         solar.put(R.drawable.msg2_videocall, R.drawable.msg_videocall_solar);
@@ -189,7 +189,7 @@ public class IconSetsController {
         solar.put(R.drawable.msg_emoji_question, R.drawable.msg_psa_solar);
         solar.put(R.drawable.msg_emoji_recent, R.drawable.msg_emoji_recent_solar);
         solar.put(R.drawable.msg_emoji_smiles, R.drawable.input_smile_solar);
-        solar.put(R.drawable.msg_emoji_stickers, R.drawable.msg_sticker_solar);
+        solar.put(R.drawable.msg_emoji_stickers, R.drawable.msg_sticker);
         solar.put(R.drawable.msg_emoji_travel, R.drawable.msg_emoji_travel_solar);
         solar.put(R.drawable.msg_endcall, R.drawable.msg_endcall_solar);
         solar.put(R.drawable.msg_fave, R.drawable.msg_fave_solar);
@@ -367,7 +367,7 @@ public class IconSetsController {
         solar.put(R.drawable.msg_stats, R.drawable.msg_stats_solar);
         solar.put(R.drawable.msg_status_edit, R.drawable.msg_status_edit_solar);
         solar.put(R.drawable.msg_status_set, R.drawable.msg_status_set_solar);
-        solar.put(R.drawable.msg_sticker, R.drawable.msg_sticker_solar);
+        solar.put(R.drawable.msg_sticker, R.drawable.msg_sticker);
         solar.put(R.drawable.msg_theme, R.drawable.msg_theme_solar);
         solar.put(R.drawable.msg_to_beginning, R.drawable.msg_to_beginning_solar);
         solar.put(R.drawable.msg_tone_add, R.drawable.msg_tone_add_solar);
@@ -437,7 +437,7 @@ public class IconSetsController {
         solar.put(R.drawable.smiles_tab_gif, R.drawable.msg_gif_solar);
         solar.put(R.drawable.smiles_tab_settings, R.drawable.smiles_tab_settings_solar);
         solar.put(R.drawable.smiles_tab_smiles, R.drawable.input_smile_solar);
-        solar.put(R.drawable.smiles_tab_stickers, R.drawable.msg_sticker_solar);
+        solar.put(R.drawable.smiles_tab_stickers, R.drawable.msg_sticker);
         solar.put(R.drawable.stickers_empty, R.drawable.stickers_empty_solar);
         solar.put(R.drawable.stickers_favorites, R.drawable.stickers_favorites_solar);
         solar.put(R.drawable.stickers_gifs_trending, R.drawable.stickers_gifs_trending_solar);
