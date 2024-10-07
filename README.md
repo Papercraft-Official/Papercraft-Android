@@ -10,7 +10,7 @@ Experimental **third-party** Telegram client based on [official sources](https:/
 [![Downloads](https://img.shields.io/badge/Download%20at%20-%20Telegram-blue.svg)](https://t.me/exteraReleases)
 
 ## Importing API hash and keys
-- You should get **YOUR OWN API KEY AND HASH** here: https://core.telegram.org/api/obtaining_api_id and create a file called `API_KEYS` in the source root directory.
+- You should get **YOUR OWN API KEY AND HASH** here: https://core.telegram.org/api/obtaining_api_id and create a file called `API` in the source root directory.
 - Also you should get **YOUR OWN MAPS API KEY** here: https://console.cloud.google.com/google/maps-apis/credentials and add it to this file.
 - And you need to generate **SIGNING KEY**: https://developer.android.com/studio/publish/app-signing#generate-key
 
@@ -27,7 +27,7 @@ SIGNING_KEY_STORE_PASSWORD = Z9yXDEFHJ6KRqn7oP
 
 ## Compilation Guide
 1. Clone exteraGram's source code using `git clone https://github.com/lingyicute/Yomi-Android.git`
-2. Fill out values in `API_KEYS` like [here](https://github.com/lingyicute/Yomi-Android#importing-api-hash-and-keys)
+2. Fill out values in `API` like [here](https://github.com/lingyicute/Yomi-Android#importing-api-hash-and-keys)
 3. Open the project in Android Studio. It should be opened, **not imported**
 4. You are ready to compile `exteraGram`
 
