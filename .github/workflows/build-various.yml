@@ -1,10 +1,6 @@
-name: Release
+name: Release Full
 
 on:
-  push:
-    paths-ignore:
-      - '**.md'
-  pull_request:
   workflow_dispatch:
 
 jobs:
@@ -36,7 +32,7 @@ jobs:
           export commit_author="${{ github.actor }}"
           export commit_sha="${{ github.sha }}"
           export run_num="${{ github.run_number }}"
-          bash build.sh
+          bash build-full.sh
       - name: Upload Aritfact
         uses: actions/upload-artifact@v4
         with:

@@ -8,7 +8,8 @@ send_build() { curl -F document=@"$1" "$doc" -F "parse_mode=html" -F caption="$t
 build_failed() { curl -F document=@"$1" "$doc_fail" -F "parse_mode=html" -F caption="$text_failed"; }
 
 start=$(date +"%s")
-./gradlew assembleAfatRelease 2>&1 | tee -a log.txt
+./gradlew assembleArmv7Release
+./gradlew assembleArm64Release 2>&1 | tee -a log.txt
 end=$(date +"%s")
 bt=$(($end - $start))
 apk=$(find TMessagesProj/build/outputs/apk -name '*.apk')
