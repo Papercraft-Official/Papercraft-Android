@@ -28,7 +28,7 @@ import java.util.Calendar;
 public class AppUtils {
 
     public static int getNotificationIconColor() {
-        return BuildVars.isBetaApp() ? 0xff747f9f : 0xfff54142;
+        return BuildVars.isBetaApp() ? 0xff747f9f : 0xff3D95FF;
     }
 
     public static int[] getDrawerIconPack() {
