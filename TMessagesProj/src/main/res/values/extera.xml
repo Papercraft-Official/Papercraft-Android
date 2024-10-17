@@ -10,7 +10,7 @@
     <string name="Preferences">Yomi 设置</string>
     <!-- Main Menu -->
     <string name="Links">链接</string>
-    <string name="AboutExteraDescription">我想这是全宇宙最好的聊天App，\n所以把它送给，全宇宙最好的你。</string>
+    <string name="AboutExteraDescription">我想这是全宇宙最好的聊天 App，\n所以把它送给，全宇宙最好的你。</string>
     <string name="Channel">通知频道</string>
     <string name="Crowdin">翻译</string>
     <string name="SourceCode">Yomi 源码</string>
