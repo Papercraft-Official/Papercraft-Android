@@ -62,7 +62,6 @@ public class MainPreferencesActivity extends BasePreferencesActivity {
     private int sourceCodeRow;
     private int channelRow;
     private int groupRow;
-    private int crowdinRow;
     private int infoDividerRow;
 
     @Override
@@ -203,7 +202,6 @@ public class MainPreferencesActivity extends BasePreferencesActivity {
         infoHeaderRow = newRow();
         channelRow = newRow();
         groupRow = newRow();
-        crowdinRow = newRow();
         sourceCodeRow = newRow();
         infoDividerRow = newRow();
     }
@@ -219,8 +217,6 @@ public class MainPreferencesActivity extends BasePreferencesActivity {
             MessagesController.getInstance(currentAccount).openByUserName(("Yomi"), this, 1);
         } else if (position == groupRow) {
             MessagesController.getInstance(currentAccount).openByUserName(("exteraChat"), this, 1);
-        } else if (position == crowdinRow) {
-            Browser.openUrl(getParentActivity(), "https://crowdin.com/project/exteralocales");
         } else if (position == appearanceRow) {
             presentFragment(new AppearancePreferencesActivity());
         } else if (position == chatsRow) {
@@ -278,8 +274,6 @@ public class MainPreferencesActivity extends BasePreferencesActivity {
                         textCell.setTextAndValueAndIcon(LocaleController.getString("Channel", R.string.Channel), "@Yomi", R.drawable.msg_channel, true);
                     } else if (position == groupRow) {
                         textCell.setTextAndValueAndIcon(LocaleController.getString("SearchAllChatsShort", R.string.SearchAllChatsShort), "@exteraChat", R.drawable.msg_groups, true);
-                    } else if (position == crowdinRow) {
-                        textCell.setTextAndValueAndIcon(LocaleController.getString("Crowdin", R.string.Crowdin), "Crowdin", R.drawable.msg_translate, true);
                     } else if (position == sourceCodeRow) {
                         textCell.setTextAndValueAndIcon(LocaleController.getString("SourceCode", R.string.SourceCode), "GitHub", R.drawable.msg_delete, false);
                     }
