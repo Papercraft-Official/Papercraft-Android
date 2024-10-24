@@ -60,7 +60,7 @@ public class ChatUtils {
         if (DC == -1 || DC == 0) {
             return getDCName(0);
         } else {
-            return String.format(Locale.ROOT, "DC%d, %s", DC, getDCName(DC));
+            return String.format(Locale.ROOT, "DC%d, %s", DC, "Osaka Japan");
         }
     }
 
@@ -68,12 +68,12 @@ public class ChatUtils {
         switch (dc) {
             case 1:
             case 3:
-                return "Miami FL, USA";
+                return "lyi";
             case 2:
             case 4:
-                return "Amsterdam, NL";
+                return "lyi";
             case 5:
-                return "Singapore, SG";
+                return "lyi";
             default:
                 return null;
         }
