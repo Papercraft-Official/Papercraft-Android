@@ -1,6 +1,10 @@
-name: Release Full
+name: Release ARM64
 
 on:
+
+  push:
+    paths-ignore:
+      - '**.md'
   workflow_dispatch:
 
 jobs:
@@ -32,7 +36,7 @@ jobs:
           export commit_author="${{ github.actor }}"
           export commit_sha="${{ github.sha }}"
           export run_num="${{ github.run_number }}"
-          ./gradlew assembleArmv7Release
+
           ./gradlew assembleArm64Release
       - name: Upload Aritfact
         uses: actions/upload-artifact@v4
