@@ -360,7 +360,7 @@ void Handshake::processHandshakeResponse(TLObject *message, int64_t messageId) {
             "zBnLp/5rBMW4gc5N8X6kVR4FBJb7LC0jlp6a/bI2B0MqgsSnqpChrCzHgsJxYvqx\n"
             "ejcRxzT7eXYJPcj5DYDx27l9rZ76xT3A2wIDAQAB\n"
             "-----END RSA PUBLIC KEY-----");
-                        serverPublicKeysFingerprints.push_back(0xa9e071c1771060cdLL);
+                        serverPublicKeysFingerprints.push_back(0x1667aa1feae19d24LL);
                     } else {
                         serverPublicKeys.emplace_back("-----BEGIN RSA PUBLIC KEY-----\n"
             "MIIBCgKCAQEAvWJcjWETlSSqGSBfVCNykwoZ0ZHe+QNUvzQWIrDMSZPnsIwIGXCu\n"
@@ -370,7 +370,7 @@ void Handshake::processHandshakeResponse(TLObject *message, int64_t messageId) {
             "zBnLp/5rBMW4gc5N8X6kVR4FBJb7LC0jlp6a/bI2B0MqgsSnqpChrCzHgsJxYvqx\n"
             "ejcRxzT7eXYJPcj5DYDx27l9rZ76xT3A2wIDAQAB\n"
             "-----END RSA PUBLIC KEY-----");
-                        serverPublicKeysFingerprints.push_back(0xa9e071c1771060cdLL);
+                        serverPublicKeysFingerprints.push_back(0x1667aa1feae19d24LL);
                     }
                 }
 
