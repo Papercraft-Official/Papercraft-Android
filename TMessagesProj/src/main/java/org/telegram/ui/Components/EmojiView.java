@@ -7381,7 +7381,7 @@ public class EmojiView extends FrameLayout implements NotificationCenter.Notific
 
         @Override
         public boolean canScrollToTab(int position) {
-            if ((position == 1 || position == 2) && stickersBanned) {
+            if (position == 1 || position == 2) {
                 showStickerBanHint(true, false, position == 1);
                 return false;
             }
