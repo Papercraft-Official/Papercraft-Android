@@ -148,6 +148,9 @@ public class EmojiPacksAlert extends BottomSheet implements NotificationCenter.N
 
         @Override
         public Boolean canSetAsStatus(TLRPC.Document document) {
+            if (UserConfig.getInstance(UserConfig.selectedAccount).isPremium()) {
+                return null;
+            }
             if (!UserConfig.getInstance(UserConfig.selectedAccount).isPremium()) {
                 return null;
             }
