@@ -267,9 +267,6 @@ public class AppearancePreferencesActivity extends BasePreferencesActivity {
         } else if (position == callsRow) {
             ExteraConfig.toggleDrawerElements(5);
             ((TextCell) view).setChecked(ExteraConfig.calls);
-        } else if (position == peopleNearbyRow) {
-            ExteraConfig.toggleDrawerElements(6);
-            ((TextCell) view).setChecked(ExteraConfig.peopleNearby);
         } else if (position == archivedChatsRow) {
             ExteraConfig.toggleDrawerElements(7);
             ((TextCell) view).setChecked(ExteraConfig.archivedChats);
@@ -469,8 +466,6 @@ public class AppearancePreferencesActivity extends BasePreferencesActivity {
                         textCell.setTextAndCheckAndIcon(LocaleController.getString("Contacts", R.string.Contacts), ExteraConfig.contacts, icons[3], true);
                     } else if (position == callsRow) {
                         textCell.setTextAndCheckAndIcon(LocaleController.getString("Calls", R.string.Calls), ExteraConfig.calls, icons[4], true);
-                    } else if (position == peopleNearbyRow) {
-                        textCell.setTextAndCheckAndIcon(LocaleController.getString("PeopleNearby", R.string.PeopleNearby), ExteraConfig.peopleNearby, icons[6], true);
                     } else if (position == archivedChatsRow) {
                         textCell.setTextAndCheckAndIcon(LocaleController.getString("ArchivedChats", R.string.ArchivedChats), ExteraConfig.archivedChats, R.drawable.msg_archive, true);
                     } else if (position == savedMessagesRow) {
