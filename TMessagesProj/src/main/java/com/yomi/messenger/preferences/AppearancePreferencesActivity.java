@@ -174,7 +174,7 @@ public class AppearancePreferencesActivity extends BasePreferencesActivity {
         drawerOptionsDividerRow = newRow();
 
         drawerHeaderRow = newRow();
-        statusRow = getUserConfig().isPremium() ? newRow() : -1;
+        statusRow = -1;
         archivedChatsRow = ChatUtils.hasArchivedChats() ? newRow() : -1;
         newGroupRow = newRow();
         newSecretChatRow = newRow();
