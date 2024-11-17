@@ -181,7 +181,7 @@ public class AppearancePreferencesActivity extends BasePreferencesActivity {
         newChannelRow = newRow();
         contactsRow = newRow();
         callsRow = newRow();
-        peopleNearbyRow = SystemUtils.hasGps() ? newRow() : -1;
+        peopleNearbyRow = -1;
         savedMessagesRow = newRow();
         scanQrRow = newRow();
         drawerDividerRow = newRow();
