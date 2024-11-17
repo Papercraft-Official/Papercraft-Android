@@ -635,7 +635,6 @@ public class ThemeActivity extends BaseFragment implements NotificationCenter.No
 
             nightThemeRow = rowCount++;
             liteModeRow = rowCount++;
-            stickersRow = rowCount++;
             stickersSectionRow = rowCount++;
 
             mediaSoundHeaderRow = rowCount++;
