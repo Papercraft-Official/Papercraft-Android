@@ -308,12 +308,7 @@ public class DrawerLayoutAdapter extends RecyclerListView.SelectionAdapter {
             peopleNearbyIcon = R.drawable.msg_nearby;
         }
         UserConfig me = UserConfig.getInstance(UserConfig.selectedAccount);
-        if (me != null && me.isPremium() && ExteraConfig.changeStatus) {
-            if (me.getEmojiStatus() != null) {
-                items.add(new Item(15, LocaleController.getString("ChangeEmojiStatus", R.string.ChangeEmojiStatus), R.drawable.msg_status_edit));
-            } else {
-                items.add(new Item(15, LocaleController.getString("SetEmojiStatus", R.string.SetEmojiStatus), R.drawable.msg_status_set));
-            }
+        if (me != null && me.isPremium()) {
             items.add(null);
         }
         if (ExteraConfig.archivedChats && ChatUtils.hasArchivedChats()) {

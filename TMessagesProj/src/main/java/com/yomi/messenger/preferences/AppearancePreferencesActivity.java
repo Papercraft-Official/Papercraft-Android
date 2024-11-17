@@ -140,7 +140,7 @@ public class AppearancePreferencesActivity extends BasePreferencesActivity {
         chatListHeaderRow = newRow();
         chatListPreviewRow = newRow();
         actionBarTitleRow = newRow();
-        hideActionBarStatusRow = getUserConfig().isPremium() ? newRow() : -1;
+        hideActionBarStatusRow = -1;
         centerTitleRow = newRow();
         chatListDividerRow = newRow();
 
