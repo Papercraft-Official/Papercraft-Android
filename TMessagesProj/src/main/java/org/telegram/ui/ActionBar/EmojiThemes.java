@@ -101,7 +101,7 @@ public class EmojiThemes {
         String lastDayCustomTheme = preferences.getString("lastDayCustomTheme", null);
         int dayAccentId = preferences.getInt("lastDayCustomThemeAccentId", -1);
         if (lastDayCustomTheme == null || Theme.getTheme(lastDayCustomTheme) == null) {
-            lastDayCustomTheme = preferences.getString("lastDayTheme", "Blue");
+            lastDayCustomTheme = preferences.getString("lastDayTheme", "Arctic Blue");
             Theme.ThemeInfo themeInfo = Theme.getTheme(lastDayCustomTheme);
             if (themeInfo == null) {
                 lastDayCustomTheme = "Blue";
@@ -491,7 +491,7 @@ public class EmojiThemes {
             SharedPreferences preferences = ApplicationLoader.applicationContext.getSharedPreferences("themeconfig", Activity.MODE_PRIVATE);
             String lastThemeName = isDark
                     ? preferences.getString("lastDarkTheme", "Dark Blue")
-                    : preferences.getString("lastDayTheme", "Blue");
+                    : preferences.getString("lastDayTheme", "Arctic Blue");
             themeInfo = Theme.getTheme(lastThemeName);
             if (themeInfo == null) {
                 themeInfo = Theme.getTheme(isDark ? "Dark Blue" : "Blue");

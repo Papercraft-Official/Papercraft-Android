@@ -476,7 +476,7 @@ public class ChatThemeBottomSheet extends BottomSheet implements NotificationCen
                 activeTheme = Theme.getActiveTheme();
             } else {
                 SharedPreferences preferences = ApplicationLoader.applicationContext.getSharedPreferences("themeconfig", Activity.MODE_PRIVATE);
-                String dayThemeName = preferences.getString("lastDayTheme", "Blue");
+                String dayThemeName = preferences.getString("lastDayTheme", "Arctic Blue");
                 if (Theme.getTheme(dayThemeName) == null || Theme.getTheme(dayThemeName).isDark()) {
                     dayThemeName = "Blue";
                 }
