@@ -297,9 +297,6 @@ public class DrawerLayoutAdapter extends RecyclerListView.SelectionAdapter {
             peopleNearbyIcon = R.drawable.msg_nearby;
         }
         UserConfig me = UserConfig.getInstance(UserConfig.selectedAccount);
-        if (me != null && me.isPremium()) {
-            items.add(null);
-        }
         if (ExteraConfig.archivedChats && ChatUtils.hasArchivedChats()) {
             items.add(new Item(14, LocaleController.getString("ArchivedChats", R.string.ArchivedChats), archiveIcon));
             items.add(null);
