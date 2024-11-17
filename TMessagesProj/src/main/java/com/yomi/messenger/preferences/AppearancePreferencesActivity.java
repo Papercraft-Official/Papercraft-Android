@@ -286,7 +286,7 @@ public class AppearancePreferencesActivity extends BasePreferencesActivity {
             }
             PopupUtils.showDialog(events, new int[]{
                     R.drawable.msg_calendar2, R.drawable.msg_block,
-                    R.drawable.msg_settings_ny, R.drawable.msg_saved_14, R.drawable.msg_contacts_hw
+                    R.drawable.msg_settings_ny, R.drawable.msg_saved_14, R.drawable.msg_contacts
             }, LocaleController.getString("DrawerIconSet", R.string.DrawerIconSet), ExteraConfig.eventType, getContext(), which -> {
                 ExteraConfig.editor.putInt("eventType", ExteraConfig.eventType = which).apply();
                 listAdapter.notifyItemChanged(eventChooserRow, payload);
