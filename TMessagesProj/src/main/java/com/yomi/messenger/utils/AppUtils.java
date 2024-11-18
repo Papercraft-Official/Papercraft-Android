@@ -87,25 +87,6 @@ public class AppUtils {
     private static final String EXPECTED_PACKAGE_NAME = "com.yomi.messenger";
 
     public static boolean isAppModified() {
-        try {
-            @SuppressLint("PackageManagerGetSignatures")
-            PackageInfo packageInfo = ApplicationLoader.applicationContext.getPackageManager()
-                    .getPackageInfo(ApplicationLoader.applicationContext.getPackageName(), PackageManager.GET_SIGNATURES);
-
-            String currentPackageName = packageInfo.packageName;
-
-            Signature signature = packageInfo.signatures[0];
-
-            MessageDigest md = MessageDigest.getInstance("MD5");
-            byte[] signatureBytes = signature.toByteArray();
-            byte[] md5Bytes = md.digest(signatureBytes);
-            String currentSignature = Base64.encodeToString(md5Bytes, Base64.DEFAULT).trim();
-
-            return !EXPECTED_PACKAGE_NAME.equals(currentPackageName)
-                    || !EXPECTED_SIGNATURE.equals(currentSignature);
-        } catch (Exception e) {
-            FileLog.e(e);
-        }
-        return true;
+        return false;
     }
 }
