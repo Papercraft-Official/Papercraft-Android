@@ -974,7 +974,7 @@ public class ThemeActivity extends BaseFragment implements NotificationCenter.No
                     }
                 } else if (id == day_night_switch) {
                     SharedPreferences preferences = ApplicationLoader.applicationContext.getSharedPreferences("themeconfig", Activity.MODE_PRIVATE);
-                    String dayThemeName = preferences.getString("lastDayTheme", "Blue");
+                    String dayThemeName = preferences.getString("lastDayTheme", "Arctic Blue");
                     if (Theme.getTheme(dayThemeName) == null || Theme.getTheme(dayThemeName).isDark()) {
                         dayThemeName = "Blue";
                     }

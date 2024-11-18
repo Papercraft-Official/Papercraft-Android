@@ -31738,7 +31738,7 @@ public class ChatActivity extends BaseFragment implements NotificationCenter.Not
                     activeTheme = Theme.getActiveTheme();
                 } else {
                     SharedPreferences preferences = ApplicationLoader.applicationContext.getSharedPreferences("themeconfig", Activity.MODE_PRIVATE);
-                    String dayThemeName = preferences.getString("lastDayTheme", "Blue");
+                    String dayThemeName = preferences.getString("lastDayTheme", "Arctic Blue");
                     if (Theme.getTheme(dayThemeName) == null || Theme.getTheme(dayThemeName).isDark()) {
                         dayThemeName = "Blue";
                     }
@@ -31808,7 +31808,7 @@ public class ChatActivity extends BaseFragment implements NotificationCenter.Not
                         activeTheme = Theme.getActiveTheme();
                     } else {
                         SharedPreferences preferences = ApplicationLoader.applicationContext.getSharedPreferences("themeconfig", Activity.MODE_PRIVATE);
-                        String dayThemeName = preferences.getString("lastDayTheme", "Blue");
+                        String dayThemeName = preferences.getString("lastDayTheme", "Arctic Blue");
                         if (Theme.getTheme(dayThemeName) == null || Theme.getTheme(dayThemeName).isDark()) {
                             dayThemeName = "Blue";
                         }
