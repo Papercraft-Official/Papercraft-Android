@@ -65,11 +65,6 @@ public class GeneralPreferencesActivity extends BasePreferencesActivity {
     private int cameraXQualityRow;
     private int cameraTypeDividerRow;
 
-    private int speedBoostersHeaderRow;
-    private int downloadSpeedChooserRow;
-    private int uploadSpeedBoostRow;
-    private int speedBoostersDividerRow;
-
     private int generalHeaderRow;
     private int formatTimeWithSecondsRow;
     private int disableNumberRoundingRow;
@@ -111,11 +106,6 @@ public class GeneralPreferencesActivity extends BasePreferencesActivity {
         formatTimeWithSecondsRow = newRow();
         tabletModeRow = newRow();
         generalDividerRow = newRow();
-
-        speedBoostersHeaderRow = newRow();
-        downloadSpeedChooserRow = newRow();
-        uploadSpeedBoostRow = newRow();
-        speedBoostersDividerRow = newRow();
 
         profileHeaderRow = newRow();
         hidePhoneNumberRow = newRow();
@@ -169,9 +159,6 @@ public class GeneralPreferencesActivity extends BasePreferencesActivity {
                 listAdapter.notifyItemChanged(showIdAndDcRow, payload);
             });
             parentLayout.rebuildAllFragmentViews(false, false);
-        } else if (position == uploadSpeedBoostRow) {
-            ExteraConfig.editor.putBoolean("uploadSpeedBoost", ExteraConfig.uploadSpeedBoost ^= true).apply();
-            ((TextCheckCell) view).setChecked(ExteraConfig.uploadSpeedBoost);
         } else if (position == cameraXOptimizeRow) {
             ExteraConfig.editor.putBoolean("useCameraXOptimizedMode", ExteraConfig.useCameraXOptimizedMode ^= true).apply();
             ((TextCheckCell) view).setChecked(ExteraConfig.useCameraXOptimizedMode);
@@ -251,8 +238,6 @@ public class GeneralPreferencesActivity extends BasePreferencesActivity {
                         headerCell.setText(LocaleController.getString("ArchivedChats", R.string.ArchivedChats));
                     } else if (position == profileHeaderRow) {
                         headerCell.setText(LocaleController.getString("Profile", R.string.Profile));
-                    } else if (position == speedBoostersHeaderRow) {
-                        headerCell.setText(LocaleController.getString("DownloadSpeedBoost", R.string.DownloadSpeedBoost));
                     } else if (position == cameraTypeHeaderRow) {
                         headerCell.setText(LocaleController.getString("CameraType", R.string.CameraType));
                     }
@@ -270,8 +255,6 @@ public class GeneralPreferencesActivity extends BasePreferencesActivity {
                         textCheckCell.setTextAndCheck(LocaleController.getString("ArchiveOnPull", R.string.ArchiveOnPull), ExteraConfig.archiveOnPull, true);
                     } else if (position == hidePhoneNumberRow) {
                         textCheckCell.setTextAndCheck(LocaleController.getString("HidePhoneNumber", R.string.HidePhoneNumber), ExteraConfig.hidePhoneNumber, true);
-                    } else if (position == uploadSpeedBoostRow) {
-                        textCheckCell.setTextAndCheck(LocaleController.getString("UploadSpeedBoost", R.string.UploadSpeedBoost), ExteraConfig.uploadSpeedBoost, false);
                     } else if (position == cameraXOptimizeRow) {
                         textCheckCell.setTextAndValueAndCheck(LocaleController.getString("PerformanceMode", R.string.PerformanceMode), LocaleController.getString("PerformanceModeInfo", R.string.PerformanceModeInfo), ExteraConfig.useCameraXOptimizedMode, true, true);
                     }
@@ -309,8 +292,6 @@ public class GeneralPreferencesActivity extends BasePreferencesActivity {
                             htmlParsed = new SpannableString(Html.fromHtml(advise));
                         }
                         textInfoPrivacyCell.setText(LocaleUtils.formatWithURLs(htmlParsed));
-                    } else if (position == speedBoostersDividerRow) {
-                        textInfoPrivacyCell.setText(LocaleController.getString("SpeedBoostInfo", R.string.SpeedBoostInfo));
                     } else if (position == profileDividerRow) {
                         textInfoPrivacyCell.setText(LocaleController.getString("ShowIdAndDcInfo", R.string.ShowIdAndDcInfo));
                     } else if (position == archiveDividerRow) {
@@ -319,11 +300,6 @@ public class GeneralPreferencesActivity extends BasePreferencesActivity {
                     break;
                 case 13:
                     SlideChooseView slide = (SlideChooseView) holder.itemView;
-                    if (position == downloadSpeedChooserRow) {
-                        slide.setNeedDivider(true);
-                        slide.setCallback(index -> ExteraConfig.editor.putInt("downloadSpeedBoost", ExteraConfig.downloadSpeedBoost = index).apply());
-                        slide.setOptions(ExteraConfig.downloadSpeedBoost, LocaleController.getString("BlurOff", R.string.BlurOff), LocaleController.getString("SpeedFast", R.string.SpeedFast), LocaleController.getString("Ultra", R.string.Ultra));
-                    }
                     break;
             }
         }
@@ -333,14 +309,12 @@ public class GeneralPreferencesActivity extends BasePreferencesActivity {
             if (position == generalDividerRow) {
                 return 1;
             } else if (position == generalHeaderRow || position == archiveHeaderRow || position == profileHeaderRow ||
-                    position == speedBoostersHeaderRow || position == cameraTypeHeaderRow) {
+                    position == cameraTypeHeaderRow) {
                 return 3;
             } else if (position == cameraXQualityRow || position == tabletModeRow || position == showIdAndDcRow) {
                 return 7;
-            } else if (position == cameraTypeDividerRow || position == speedBoostersDividerRow || position == profileDividerRow  || position == archiveDividerRow) {
+            } else if (position == cameraTypeDividerRow || position == profileDividerRow  || position == archiveDividerRow) {
                 return 8;
-            } else if (position == downloadSpeedChooserRow) {
-                return 13;
             } else if (position == cameraTypeSelectorRow) {
                 return 17;
             }
