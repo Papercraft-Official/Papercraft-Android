@@ -72,9 +72,7 @@ public class GeneralPreferencesActivity extends BasePreferencesActivity {
     private int generalDividerRow;
 
     private int profileHeaderRow;
-    private int showIdAndDcRow;
     private int hidePhoneNumberRow;
-    private int profileDividerRow;
 
     private int archiveHeaderRow;
     private int archiveOnPullRow;
@@ -109,8 +107,6 @@ public class GeneralPreferencesActivity extends BasePreferencesActivity {
 
         profileHeaderRow = newRow();
         hidePhoneNumberRow = newRow();
-        showIdAndDcRow = newRow();
-        profileDividerRow = newRow();
 
         archiveHeaderRow = newRow();
         archiveOnPullRow = newRow();
@@ -149,16 +145,6 @@ public class GeneralPreferencesActivity extends BasePreferencesActivity {
             ((TextCheckCell) view).setChecked(ExteraConfig.hidePhoneNumber);
             parentLayout.rebuildAllFragmentViews(false, false);
             getNotificationCenter().postNotificationName(NotificationCenter.mainUserInfoChanged);
-        } else if (position == showIdAndDcRow) {
-            if (getParentActivity() == null) {
-                return;
-            }
-            PopupUtils.showDialog(id, LocaleController.getString("ShowIdAndDc", R.string.ShowIdAndDc), ExteraConfig.showIdAndDc, getContext(), i -> {
-                ExteraConfig.editor.putInt("showIdAndDc", ExteraConfig.showIdAndDc = i).apply();
-                parentLayout.rebuildAllFragmentViews(false, false);
-                listAdapter.notifyItemChanged(showIdAndDcRow, payload);
-            });
-            parentLayout.rebuildAllFragmentViews(false, false);
         } else if (position == cameraXOptimizeRow) {
             ExteraConfig.editor.putBoolean("useCameraXOptimizedMode", ExteraConfig.useCameraXOptimizedMode ^= true).apply();
             ((TextCheckCell) view).setChecked(ExteraConfig.useCameraXOptimizedMode);
@@ -265,9 +251,6 @@ public class GeneralPreferencesActivity extends BasePreferencesActivity {
                         textSettingsCell.setTextAndValue(LocaleController.getString("CameraQuality", R.string.CameraQuality), ExteraConfig.cameraResolution + "p", payload, false);
                     } else if (position == tabletModeRow) {
                         textSettingsCell.setTextAndValue(LocaleController.getString("TabletMode", R.string.TabletMode), tabletMode[ExteraConfig.tabletMode], payload, false);
-                    } else if (position == showIdAndDcRow) {
-                        textSettingsCell.setTextAndValue(LocaleController.getString("ShowIdAndDc", R.string.ShowIdAndDc), id[ExteraConfig.showIdAndDc], payload, false);
-                    }
                     break;
                 case 8:
                     TextInfoPrivacyCell textInfoPrivacyCell = (TextInfoPrivacyCell) holder.itemView;
@@ -292,8 +275,6 @@ public class GeneralPreferencesActivity extends BasePreferencesActivity {
                             htmlParsed = new SpannableString(Html.fromHtml(advise));
                         }
                         textInfoPrivacyCell.setText(LocaleUtils.formatWithURLs(htmlParsed));
-                    } else if (position == profileDividerRow) {
-                        textInfoPrivacyCell.setText(LocaleController.getString("ShowIdAndDcInfo", R.string.ShowIdAndDcInfo));
                     } else if (position == archiveDividerRow) {
                         textInfoPrivacyCell.setText(LocaleController.getString("DisableUnarchiveSwipeInfo", R.string.DisableUnarchiveSwipeInfo));
                     }
@@ -311,9 +292,9 @@ public class GeneralPreferencesActivity extends BasePreferencesActivity {
             } else if (position == generalHeaderRow || position == archiveHeaderRow || position == profileHeaderRow ||
                     position == cameraTypeHeaderRow) {
                 return 3;
-            } else if (position == cameraXQualityRow || position == tabletModeRow || position == showIdAndDcRow) {
+            } else if (position == cameraXQualityRow || position == tabletModeRow) {
                 return 7;
-            } else if (position == cameraTypeDividerRow || position == profileDividerRow  || position == archiveDividerRow) {
+            } else if (position == cameraTypeDividerRow || position == archiveDividerRow) {
                 return 8;
             } else if (position == cameraTypeSelectorRow) {
                 return 17;
