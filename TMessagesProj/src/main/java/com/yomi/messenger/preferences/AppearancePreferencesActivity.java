@@ -99,7 +99,6 @@ public class AppearancePreferencesActivity extends BasePreferencesActivity {
     private int solarIconsHeaderRow;
     private int solarIconsPreviewRow;
     private int solarIconsRow;
-    private int solarIconsInfoRow;
 
     private int appearanceHeaderRow;
     private int fabShapeRow;
@@ -151,11 +150,6 @@ public class AppearancePreferencesActivity extends BasePreferencesActivity {
         tabCounterRow = newRow();
         hideAllChatsRow = newRow();
         foldersDividerRow = newRow();
-
-        solarIconsHeaderRow = newRow();
-        solarIconsPreviewRow = newRow();
-        solarIconsRow = newRow();
-        solarIconsInfoRow = newRow();
 
         appearanceHeaderRow = newRow();
         fabShapeRow = newRow();
@@ -490,8 +484,6 @@ public class AppearancePreferencesActivity extends BasePreferencesActivity {
                     TextInfoPrivacyCell cell = (TextInfoPrivacyCell) holder.itemView;
                     if (position == appearanceDividerRow) {
                         cell.setText(LocaleController.getString("AlternativeNavigationInfo", R.string.AlternativeNavigationInfo));
-                    } else if (position == solarIconsInfoRow) {
-                        cell.setText(LocaleUtils.formatWithUsernames(LocaleController.getString("SolarIconsInfo", R.string.SolarIconsInfo), AppearancePreferencesActivity.this));
                     } else if (position == foldersDividerRow) {
                         cell.setText(LocaleController.getString("FoldersInfo", R.string.FoldersInfo));
                     } else if (position == chatListDividerRow) {
@@ -511,7 +503,7 @@ public class AppearancePreferencesActivity extends BasePreferencesActivity {
                 return 3;
             } else if (position == eventChooserRow || position == actionBarTitleRow || position == tabStyleRow || position == tabTitleRow) {
                 return 7;
-            } else if (position == appearanceDividerRow || position == solarIconsInfoRow || position == foldersDividerRow || position == chatListDividerRow) {
+            } else if (position == appearanceDividerRow || position == foldersDividerRow || position == chatListDividerRow) {
                 return 8;
             } else if (position == avatarCornersPreviewRow) {
                 return 9;

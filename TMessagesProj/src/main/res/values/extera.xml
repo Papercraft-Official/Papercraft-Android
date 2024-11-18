@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="exteraAppName" translatable="false">Yomi</string>
-    <string name="SolarIconsInfo" translatable="false">Powered by @Design480</string>
+    <string name="SolarIconsInfo" translatable="false"></string>
     <string name="formatterDay24HSec" translatable="false">HH:mm:ss</string>
     <string name="formatterDay12HSec" translatable="false">h:mm:ss a</string>
     <string name="AppIconMonet" translatable="false">Monet</string>
