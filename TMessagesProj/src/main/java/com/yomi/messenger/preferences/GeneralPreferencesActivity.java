@@ -261,7 +261,7 @@ public class GeneralPreferencesActivity extends BasePreferencesActivity {
                     TextCheckCell textCheckCell = (TextCheckCell) holder.itemView;
                     textCheckCell.setEnabled(true, null);
                     if (position == disableNumberRoundingRow) {
-                        textCheckCell.setTextAndValueAndCheck(LocaleController.getString("DisableNumberRounding", R.string.DisableNumberRounding), "1.23K -> 1,234", ExteraConfig.disableNumberRounding, true, true);
+                        textCheckCell.setTextAndValueAndCheck(LocaleController.getString("DisableNumberRounding", R.string.DisableNumberRounding), "5.2K -> 5,201", ExteraConfig.disableNumberRounding, true, true);
                     } else if (position == formatTimeWithSecondsRow) {
                         textCheckCell.setTextAndValueAndCheck(LocaleController.getString("FormatTimeWithSeconds", R.string.FormatTimeWithSeconds), "12:34 -> 12:34:56", ExteraConfig.formatTimeWithSeconds, true, true);
                     } else if (position == disableUnarchiveSwipeRow) {

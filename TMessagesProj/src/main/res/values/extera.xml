@@ -61,13 +61,13 @@
     <!-- General -->
     <string name="CameraType">相机类型</string>
     <string name="CameraTypeSystem">系统</string>
-    <string name="DefaultCameraInfo">使用Yomi的官方内置相机</string>
-    <string name="CameraXInfo">CameraX仅支持<![CDATA[<a href="https://developer.android.com/training/camerax/devices">该列表</a>]]>中的设备，拍摄质量与兼容性取决于硬件性能。</string>
+    <string name="DefaultCameraInfo">使用 Yomi 的内置相机</string>
+    <string name="CameraXInfo">CameraX 是 Android 提供的规范化接口。借助它，Yomi 可以像系统原相机一样调动辅助摄像头来提高拍摄质量，而大多数 App —— 无论是微信、抖音，还是美图秀秀，它们都只会调用最大的那个摄像头。这就是它们拍的照片为什么不清楚啦。</string>
     <string name="SystemCameraInfo">直接使用系统相机(不适用于视频消息)</string>
     <string name="PerformanceMode">性能模式</string>
-    <string name="PerformanceModeInfo">CameraX的拍摄质量会有所降低，以提高性能</string>
-    <string name="CameraQuality">相机清晰度</string>
-    <string name="DisableNumberRounding">禁用数字舍入</string>
+    <string name="PerformanceModeInfo">CameraX 的拍摄质量会略有所降低。</string>
+    <string name="CameraQuality">照片质量</string>
+    <string name="DisableNumberRounding">取消数字舍入</string>
     <string name="FormatTimeWithSeconds">时间精确到秒</string>
     <string name="TabletMode">平板模式</string>
     <string name="DownloadSpeedBoost">下载加速</string>
