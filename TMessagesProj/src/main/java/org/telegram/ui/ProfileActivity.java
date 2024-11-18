@@ -8984,7 +8984,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                     cell.getTextView().setMovementMethod(null);
                     try {
                         PackageInfo info = ApplicationLoader.applicationContext.getPackageManager().getPackageInfo(ApplicationLoader.applicationContext.getPackageName(), 0);
-                        cell.setText(LocaleUtils.getAppName() + " " + BuildVars.BUILD_VERSION_STRING + " (" + info.versionCode + ")" + (AppUtils.isAppModified() ? "\nbased on @Yomi" : ""));
+                        cell.setText(LocaleUtils.getAppName() + " " + BuildVars.BUILD_VERSION_STRING + " (" + info.versionCode + ")");
                     } catch (PackageManager.NameNotFoundException e) {
                         FileLog.e(e);
                     }
