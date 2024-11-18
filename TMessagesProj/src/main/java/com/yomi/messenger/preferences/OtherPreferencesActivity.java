@@ -53,11 +53,6 @@ public class OtherPreferencesActivity extends BasePreferencesActivity {
     @Override
     protected void updateRowsId() {
         super.updateRowsId();
-
-        analyticsHeaderRow = newRow();
-        crashlyticsRow = newRow();
-        analyticsRow = newRow();
-        analyticsDividerRow = newRow();
         
         resetSettingsRow = newRow();
         deleteAccountRow = newRow();
