@@ -67,8 +67,8 @@
     <string name="PerformanceMode">性能模式</string>
     <string name="PerformanceModeInfo">CameraX 的拍摄质量会略有所降低。</string>
     <string name="CameraQuality">照片质量</string>
-    <string name="DisableNumberRounding">取消数字舍入</string>
-    <string name="FormatTimeWithSeconds">时间精确到秒</string>
+    <string name="DisableNumberRounding">精确数字</string>
+    <string name="FormatTimeWithSeconds">精确时间</string>
     <string name="TabletMode">平板模式</string>
     <string name="DownloadSpeedBoost">下载加速</string>
     <string name="UploadSpeedBoost">上传加速</string>

@@ -162,7 +162,6 @@ import org.telegram.ui.LaunchActivity;
 import org.telegram.ui.PhotoViewer;
 import org.telegram.ui.PremiumPreviewFragment;
 import org.telegram.ui.ProfileActivity;
-import org.telegram.ui.StickersActivity;
 import org.telegram.ui.TopicsFragment;
 
 import java.io.File;
@@ -1953,18 +1952,13 @@ public class ChatActivityEnterView extends BlurredFrameLayout implements Notific
             if (adjustPanLayoutHelper != null && adjustPanLayoutHelper.animationInProgress()) {
                 return;
             }
-            if (emojiButtonRestricted) {
-                showRestrictedHint();
-                return;
-            }
             if (hasBotWebView() && botCommandsMenuIsShowing()) {
                 if (botWebViewMenuContainer != null) {
                     botWebViewMenuContainer.dismiss(v::callOnClick);
                 }
                 return;
             }
-
-            if (!isPopupShowing() || currentPopupContentType != 0) {
+/*          if (!isPopupShowing() || currentPopupContentType != 0) {
                 showPopup(1, 0);
                 emojiView.onOpen(messageEditText != null && messageEditText.length() > 0);
             } else {
@@ -1987,7 +1981,9 @@ public class ChatActivityEnterView extends BlurredFrameLayout implements Notific
                 } else {
                     openKeyboardInternal();
                 }
-            }
+            } 
+                */
+            return;
         });
         messageEditTextContainer.addView(emojiButton, LayoutHelper.createFrame(48, 48, Gravity.BOTTOM | Gravity.LEFT, 3, 0, 0, 0));
         setEmojiButtonImage(false, false);
@@ -8488,16 +8484,16 @@ public class ChatActivityEnterView extends BlurredFrameLayout implements Notific
 
             @Override
             public void onStickersSettingsClick() {
-                if (parentFragment != null) {
+                /* if (parentFragment != null) {
                     parentFragment.presentFragment(new StickersActivity(MediaDataController.TYPE_IMAGE, null));
-                }
+                } */
             }
 
             @Override
             public void onEmojiSettingsClick(ArrayList<TLRPC.TL_messages_stickerSet> frozenEmojiPacks) {
-                if (parentFragment != null) {
+               /* if (parentFragment != null) {
                     parentFragment.presentFragment(new StickersActivity(MediaDataController.TYPE_EMOJIPACKS, frozenEmojiPacks));
-                }
+                } */
             }
 
             @Override

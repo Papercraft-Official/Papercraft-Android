@@ -287,20 +287,20 @@ public class GeneralPreferencesActivity extends BasePreferencesActivity {
         }
 
         @Override
-public int getItemViewType(int position) {
-    if (position == generalDividerRow) {
-        return 1;
-    } else if (position == generalHeaderRow || position == archiveHeaderRow || position == profileHeaderRow ||
-            position == cameraTypeHeaderRow) {
-        return 3;
-    } else if (position == cameraXQualityRow || position == tabletModeRow) {
-        return 7;
-    } else if (position == cameraTypeDividerRow || position == archiveDividerRow) {
-        return 8;
-    } else if (position == cameraTypeSelectorRow) {
-        return 17;
-    }
-    return 5;
-}
+        public int getItemViewType(int position) {
+            if (position == generalDividerRow) {
+                return 1;
+            } else if (position == generalHeaderRow || position == archiveHeaderRow || position == profileHeaderRow ||
+                    position == cameraTypeHeaderRow) {
+                return 3;
+            } else if (position == cameraXQualityRow || position == tabletModeRow) {
+                return 7;
+            } else if (position == cameraTypeDividerRow || position == archiveDividerRow) {
+                return 8;
+            } else if (position == cameraTypeSelectorRow) {
+                return 17;
+            }
+            return 5;
+        }
     }
 }

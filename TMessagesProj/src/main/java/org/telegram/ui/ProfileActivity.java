@@ -3316,8 +3316,6 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                 presentFragment(new ThemeActivity(ThemeActivity.THEME_TYPE_BASIC));
             } else if (position == filtersRow) {
                 presentFragment(new FiltersSetupActivity());
-            } else if (position == stickersRow) {
-                presentFragment(new StickersActivity(MediaDataController.TYPE_IMAGE, null));
             } else if (position == liteModeRow) {
                 presentFragment(new LiteModeSettingsActivity());
             } else if (position == devicesRow) {
@@ -9907,19 +9905,6 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                 new SearchResult(308, LocaleController.getString("DirectShare", R.string.DirectShare), "directShareRow", LocaleController.getString("ChatSettings", R.string.ChatSettings), R.drawable.msg2_discussion, () -> presentFragment(new ThemeActivity(ThemeActivity.THEME_TYPE_BASIC))),
                 new SearchResult(311, LocaleController.getString("SendByEnter", R.string.SendByEnter), "sendByEnterRow", LocaleController.getString("ChatSettings", R.string.ChatSettings), R.drawable.msg2_discussion, () -> presentFragment(new ThemeActivity(ThemeActivity.THEME_TYPE_BASIC))),
                 new SearchResult(318, LocaleController.getString("DistanceUnits", R.string.DistanceUnits), "distanceRow", LocaleController.getString("ChatSettings", R.string.ChatSettings), R.drawable.msg2_discussion, () -> presentFragment(new ThemeActivity(ThemeActivity.THEME_TYPE_BASIC))),
-
-                new SearchResult(600, LocaleController.getString(R.string.StickersName), R.drawable.msg2_sticker, () -> presentFragment(new StickersActivity(MediaDataController.TYPE_IMAGE, null))),
-                new SearchResult(601, LocaleController.getString("SuggestStickers", R.string.SuggestStickers), "suggestRow", LocaleController.getString(R.string.StickersName), R.drawable.msg2_sticker, () -> presentFragment(new StickersActivity(MediaDataController.TYPE_IMAGE, null))),
-                new SearchResult(602, LocaleController.getString("FeaturedStickers", R.string.FeaturedStickers), "featuredStickersHeaderRow", LocaleController.getString(R.string.StickersName), R.drawable.msg2_sticker, () -> presentFragment(new StickersActivity(MediaDataController.TYPE_IMAGE, null))),
-                new SearchResult(603, LocaleController.getString("Masks", R.string.Masks), null, LocaleController.getString(R.string.StickersName), R.drawable.msg2_sticker, () -> presentFragment(new StickersActivity(MediaDataController.TYPE_MASK, null))),
-                new SearchResult(604, LocaleController.getString("ArchivedStickers", R.string.ArchivedStickers), null, LocaleController.getString(R.string.StickersName), R.drawable.msg2_sticker, () -> presentFragment(new ArchivedStickersActivity(MediaDataController.TYPE_IMAGE))),
-                new SearchResult(605, LocaleController.getString("ArchivedMasks", R.string.ArchivedMasks), null, LocaleController.getString(R.string.StickersName), R.drawable.msg2_sticker, () -> presentFragment(new ArchivedStickersActivity(MediaDataController.TYPE_MASK))),
-                new SearchResult(606, LocaleController.getString(R.string.LargeEmoji), "largeEmojiRow", LocaleController.getString(R.string.StickersName), R.drawable.msg2_sticker, () -> presentFragment(new StickersActivity(MediaDataController.TYPE_IMAGE, null))),
-                new SearchResult(607, LocaleController.getString(R.string.LoopAnimatedStickers), "loopRow", LocaleController.getString(R.string.StickersName), R.drawable.msg2_sticker, () -> presentFragment(new StickersActivity(MediaDataController.TYPE_IMAGE, null))),
-                new SearchResult(608, LocaleController.getString(R.string.Emoji), null, LocaleController.getString(R.string.StickersName), R.drawable.input_smile, () -> presentFragment(new StickersActivity(MediaDataController.TYPE_EMOJIPACKS, null))),
-                new SearchResult(609, LocaleController.getString(R.string.SuggestAnimatedEmoji), "suggestAnimatedEmojiRow", LocaleController.getString(R.string.StickersName), LocaleController.getString(R.string.Emoji), R.drawable.input_smile, () -> presentFragment(new StickersActivity(MediaDataController.TYPE_EMOJIPACKS, null))),
-                new SearchResult(610, LocaleController.getString(R.string.FeaturedEmojiPacks), "featuredStickersHeaderRow", LocaleController.getString(R.string.StickersName), LocaleController.getString(R.string.Emoji), R.drawable.input_smile, () -> presentFragment(new StickersActivity(MediaDataController.TYPE_EMOJIPACKS, null))),
-                new SearchResult(611, LocaleController.getString(R.string.DoubleTapSetting), null, LocaleController.getString(R.string.StickersName), R.drawable.msg2_sticker, () -> presentFragment(new ReactionsDoubleTapManageActivity())),
 
                 new SearchResult(700, LocaleController.getString(R.string.Filters), null, R.drawable.msg2_folder, () -> presentFragment(new FiltersSetupActivity())),
                 new SearchResult(701, LocaleController.getString(R.string.CreateNewFilter), "createFilterRow", LocaleController.getString(R.string.Filters), R.drawable.msg2_folder, () -> presentFragment(new FiltersSetupActivity())),

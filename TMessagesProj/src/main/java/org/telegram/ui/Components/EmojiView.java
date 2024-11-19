@@ -123,7 +123,6 @@ import org.telegram.ui.ChatActivity;
 import org.telegram.ui.Components.ListView.RecyclerListViewWithOverlayDraw;
 import org.telegram.ui.Components.Premium.PremiumButtonView;
 import org.telegram.ui.ContentPreviewViewer;
-import org.telegram.ui.StickersActivity;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -2107,7 +2106,7 @@ public class EmojiView extends FrameLayout implements NotificationCenter.Notific
 
                     if (SharedConfig.updateStickersOrderOnSend) {
                         SharedConfig.toggleUpdateStickersOrderOnSend();
-                        if (fragment != null) {
+                        /* if (fragment != null) {
                             BulletinFactory.of(fragment).createSimpleBulletin(
                                 R.raw.filter_reorder,
                                 LocaleController.getString("DynamicPackOrderOff", R.string.DynamicPackOrderOff),
@@ -2120,6 +2119,8 @@ public class EmojiView extends FrameLayout implements NotificationCenter.Notific
                         } else {
                             return;
                         }
+                        */
+                       return;
                     }
                 }
 

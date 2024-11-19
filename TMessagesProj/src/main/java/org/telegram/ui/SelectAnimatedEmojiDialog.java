@@ -511,7 +511,6 @@ public class SelectAnimatedEmojiDialog extends FrameLayout implements Notificati
             EmojiTabsStrip emojiTabs = new EmojiTabsStrip(context, null, false, true, type, showSettings ? () -> {
                 search(null, false, false);
                 onSettings();
-                baseFragment.presentFragment(new StickersActivity(MediaDataController.TYPE_EMOJIPACKS, frozenEmojiPacks));
                 if (dismiss != null) {
                     dismiss.run();
                 }

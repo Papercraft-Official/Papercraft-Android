@@ -27,7 +27,6 @@ import org.telegram.ui.ActionBar.AlertDialog;
 import org.telegram.ui.ActionBar.BaseFragment;
 import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.Cells.ArchivedStickerSetCell;
-import org.telegram.ui.StickersActivity;
 
 import java.util.ArrayList;
 
@@ -82,7 +81,6 @@ public class StickersArchiveAlert extends AlertDialog.Builder {
         setNegativeButton(LocaleController.getString("Close", R.string.Close), (dialog, which) -> dialog.dismiss());
         if (parentFragment != null) {
             setPositiveButton(LocaleController.getString("Settings", R.string.Settings), (dialog, which) -> {
-                parentFragment.presentFragment(new StickersActivity(currentType, null));
                 dialog.dismiss();
             });
         }
