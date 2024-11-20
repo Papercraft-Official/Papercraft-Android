@@ -96,10 +96,6 @@ public class AppearancePreferencesActivity extends BasePreferencesActivity {
     private int actionBarTitleRow;
     private int chatListDividerRow;
 
-    private int solarIconsHeaderRow;
-    private int solarIconsPreviewRow;
-    private int solarIconsRow;
-
     private int appearanceHeaderRow;
     private int fabShapeRow;
     private int forceBlurRow;
@@ -323,9 +319,6 @@ public class AppearancePreferencesActivity extends BasePreferencesActivity {
                 listAdapter.notifyItemChanged(tabStyleRow, payload);
                 getNotificationCenter().postNotificationName(NotificationCenter.dialogFiltersUpdated);
             });
-        } else if (position == solarIconsRow) {
-            ((TextCheckCell) view).setChecked(!ExteraConfig.useSolarIcons);
-            solarIconsPreview.updateIcons(true);
         }
     }
 
