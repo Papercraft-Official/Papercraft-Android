@@ -24,8 +24,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.yomi.messenger.ExteraConfig;
 import com.yomi.messenger.preferences.components.AltSeekbar;
 import com.yomi.messenger.preferences.components.DoubleTapCell;
-import com.yomi.messenger.preferences.components.StickerShapeCell;
-import com.yomi.messenger.preferences.components.StickerSizePreviewCell;
 import com.yomi.messenger.utils.LocaleUtils;
 import com.yomi.messenger.utils.PopupUtils;
 
@@ -51,7 +49,6 @@ import java.util.Locale;
 public class ChatsPreferencesActivity extends BasePreferencesActivity implements NotificationCenter.NotificationCenterDelegate {
 
     private ActionBarMenuItem resetItem;
-    private StickerSizeCell stickerSizeCell;
     private DoubleTapCell doubleTapCell;
 
     private final CharSequence[] doubleTapActions = new CharSequence[]{
@@ -88,18 +85,6 @@ public class ChatsPreferencesActivity extends BasePreferencesActivity implements
             R.drawable.msg_saved,
             R.drawable.msg_delete
     };
-
-    private int stickerSizeRow;
-
-    private int stickerShapeHeaderRow;
-    private int stickerShapeRow;
-    private int stickerShapeDividerRow;
-
-    private int stickersHeaderRow;
-    private int hideStickerTimeRow;
-    private int unlimitedRecentStickersRow;
-    private int hideCategoriesRow;
-    private int stickersDividerRow;
 
     private int doubleTapHeaderRow;
     private int doubleTapRow;
@@ -150,51 +135,6 @@ public class ChatsPreferencesActivity extends BasePreferencesActivity implements
     private boolean adminShortcutsExpanded;
     private boolean messageMenuExpanded;
 
-    private class StickerSizeCell extends FrameLayout {
-
-        private final StickerSizePreviewCell messagesCell;
-        private final AltSeekbar seekBar;
-        int startStickerSize = 4, endStickerSize = 20;
-        private int lastWidth;
-
-        public StickerSizeCell(Context context) {
-            super(context);
-            setBackgroundColor(Theme.getColor(Theme.key_windowBackgroundWhite));
-            setWillNotDraw(false);
-
-            seekBar = new AltSeekbar(context, (float p) -> {
-                ExteraConfig.editor.putFloat("stickerSize", ExteraConfig.stickerSize = p).apply();
-                invalidate();
-                if (resetItem.getVisibility() != VISIBLE) {
-                    AndroidUtilities.updateViewVisibilityAnimated(resetItem, true, 0.5f, true);
-                }
-            }, startStickerSize, endStickerSize, LocaleController.getString("StickerSize", R.string.StickerSize), LocaleController.getString("StickerSizeLeft", R.string.StickerSizeLeft), LocaleController.getString("StickerSizeRight", R.string.StickerSizeRight));
-            seekBar.setProgress((ExteraConfig.stickerSize - startStickerSize) / (float) (endStickerSize - startStickerSize));
-            addView(seekBar, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, LayoutHelper.WRAP_CONTENT));
-
-            messagesCell = new StickerSizePreviewCell(context, ChatsPreferencesActivity.this, parentLayout);
-            messagesCell.setImportantForAccessibility(IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE_DESCENDANTS);
-            addView(messagesCell, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, LayoutHelper.WRAP_CONTENT, Gravity.LEFT | Gravity.TOP, 0, 112, 0, 0));
-        }
-
-        @Override
-        protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-            super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-            int width = MeasureSpec.getSize(widthMeasureSpec);
-            if (lastWidth != width) {
-                lastWidth = width;
-            }
-        }
-
-        @Override
-        public void invalidate() {
-            super.invalidate();
-            lastWidth = -1;
-            messagesCell.invalidate();
-            seekBar.invalidate();
-        }
-    }
-
     @Override
     public View createView(Context context) {
         View fragmentView = super.createView(context);
@@ -243,18 +183,6 @@ public class ChatsPreferencesActivity extends BasePreferencesActivity implements
     @Override
     protected void updateRowsId() {
         super.updateRowsId();
-
-        stickerSizeRow = newRow();
-
-        stickerShapeHeaderRow = newRow();
-        stickerShapeRow = newRow();
-        stickerShapeDividerRow = newRow();
-
-        stickersHeaderRow = newRow();
-        hideStickerTimeRow = newRow();
-        unlimitedRecentStickersRow = newRow();
-        hideCategoriesRow = newRow();
-        stickersDividerRow = newRow();
 
         doubleTapHeaderRow = newRow();
         doubleTapRow = newRow();
@@ -321,14 +249,7 @@ public class ChatsPreferencesActivity extends BasePreferencesActivity implements
 
     @Override
     protected void onItemClick(View view, int position, float x, float y) {
-        if (position == hideStickerTimeRow) {
-            ExteraConfig.editor.putBoolean("hideStickerTime", ExteraConfig.hideStickerTime ^= true).apply();
-            ((TextCheckCell) view).setChecked(ExteraConfig.hideStickerTime);
-            stickerSizeCell.invalidate();
-        } else if (position == unlimitedRecentStickersRow) {
-            ExteraConfig.editor.putBoolean("unlimitedRecentStickers", ExteraConfig.unlimitedRecentStickers ^= true).apply();
-            ((TextCheckCell) view).setChecked(ExteraConfig.unlimitedRecentStickers);
-        } else if (position == hideCategoriesRow) {
+        if (position == hideCategoriesRow) {
             ExteraConfig.editor.putBoolean("hideCategories", ExteraConfig.hideCategories ^= true).apply();
             ((TextCheckCell) view).setChecked(ExteraConfig.hideCategories);
         } else if (position == addCommaAfterMentionRow) {
@@ -760,19 +681,13 @@ public class ChatsPreferencesActivity extends BasePreferencesActivity implements
 
         @Override
         public int getItemViewType(int position) {
-            if (position == stickerShapeDividerRow) {
-                return 1;
-            } else if (position == stickersHeaderRow || position == chatsHeaderRow || position == videosHeaderRow || position == stickerShapeHeaderRow ||
+            if (position == chatsHeaderRow || position == videosHeaderRow ||
                     position == doubleTapHeaderRow || position == photosHeaderRow || position == messagesHeaderRow) {
                 return 3;
             } else if (position == doubleTapActionRow || position == doubleTapActionOutOwnerRow || position == bottomButtonRow || position == videoMessagesCameraRow || position == doubleTapSeekDurationRow) {
                 return 7;
             } else if (position == doubleTapDividerRow || position == photosDividerRow || position == chatsDividerRow || position == stickersDividerRow || position == videosDividerRow || position == messagesDividerRow) {
                 return 8;
-            } else if (position == stickerShapeRow) {
-                return 10;
-            } else if (position == stickerSizeRow) {
-                return 11;
             } else if (position == photosQualityChooserRow) {
                 return 13;
             } else if (position == doubleTapRow) {
