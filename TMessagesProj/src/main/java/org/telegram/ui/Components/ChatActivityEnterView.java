@@ -1949,7 +1949,7 @@ public class ChatActivityEnterView extends BlurredFrameLayout implements Notific
         emojiButton.setPadding(padding, padding, padding, padding);
         emojiButton.setBackground(Theme.createSelectorDrawable(getThemedColor(Theme.key_listSelector)));
         emojiButton.setOnClickListener(v -> {
-            if (adjustPanLayoutHelper != null && adjustPanLayoutHelper.animationInProgress()) {
+    /*      if (adjustPanLayoutHelper != null && adjustPanLayoutHelper.animationInProgress()) {
                 return;
             }
             if (hasBotWebView() && botCommandsMenuIsShowing()) {
@@ -1958,7 +1958,7 @@ public class ChatActivityEnterView extends BlurredFrameLayout implements Notific
                 }
                 return;
             }
-/*          if (!isPopupShowing() || currentPopupContentType != 0) {
+            if (!isPopupShowing() || currentPopupContentType != 0) {
                 showPopup(1, 0);
                 emojiView.onOpen(messageEditText != null && messageEditText.length() > 0);
             } else {
