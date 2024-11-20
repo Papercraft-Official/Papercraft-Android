@@ -24,7 +24,6 @@ import com.yomi.messenger.preferences.components.AvatarCornersPreviewCell;
 import com.yomi.messenger.preferences.components.ChatListPreviewCell;
 import com.yomi.messenger.preferences.components.FabShapeCell;
 import com.yomi.messenger.preferences.components.FoldersPreviewCell;
-import com.yomi.messenger.preferences.components.SolarIconsPreview;
 import com.yomi.messenger.utils.AppUtils;
 import com.yomi.messenger.utils.ChatUtils;
 import com.yomi.messenger.utils.LocaleUtils;
@@ -50,7 +49,6 @@ public class AppearancePreferencesActivity extends BasePreferencesActivity {
 
     private Parcelable recyclerViewState = null;
 
-    SolarIconsPreview solarIconsPreview;
     AvatarCornersPreviewCell avatarCornersPreviewCell;
     ChatListPreviewCell chatListPreviewCell;
     FoldersPreviewCell foldersPreviewCell;
@@ -364,17 +362,6 @@ public class AppearancePreferencesActivity extends BasePreferencesActivity {
                     foldersPreviewCell = new FoldersPreviewCell(mContext);
                     foldersPreviewCell.setLayoutParams(new RecyclerView.LayoutParams(RecyclerView.LayoutParams.MATCH_PARENT, RecyclerView.LayoutParams.WRAP_CONTENT));
                     return new RecyclerListView.Holder(foldersPreviewCell);
-                case 15:
-                    solarIconsPreview = new SolarIconsPreview(mContext) {
-                        @Override
-                        protected void reloadResources() {
-                            ((LaunchActivity) getParentActivity()).reloadIcons();
-                            Theme.reloadAllResources(getParentActivity());
-                            parentLayout.rebuildAllFragmentViews(false, false);
-                        }
-                    };
-                    solarIconsPreview.setLayoutParams(new RecyclerView.LayoutParams(RecyclerView.LayoutParams.MATCH_PARENT, RecyclerView.LayoutParams.WRAP_CONTENT));
-                    return new RecyclerListView.Holder(solarIconsPreview);
                 case 17:
                     chatListPreviewCell = new ChatListPreviewCell(mContext);
                     chatListPreviewCell.setLayoutParams(new RecyclerView.LayoutParams(RecyclerView.LayoutParams.MATCH_PARENT, RecyclerView.LayoutParams.WRAP_CONTENT));
@@ -398,8 +385,6 @@ public class AppearancePreferencesActivity extends BasePreferencesActivity {
                         headerCell.setText(LocaleController.getString("DrawerElements", R.string.DrawerElements));
                     } else if (position == drawerOptionsHeaderRow) {
                         headerCell.setText(LocaleController.getString("DrawerOptions", R.string.DrawerOptions));
-                    } else if (position == solarIconsHeaderRow) {
-                        headerCell.setText(LocaleController.getString("IconPack", R.string.IconPack));
                     } else if (position == foldersHeaderRow) {
                         headerCell.setText(LocaleController.getString("Filters", R.string.Filters));
                     } else if (position == chatListHeaderRow) {
@@ -431,8 +416,6 @@ public class AppearancePreferencesActivity extends BasePreferencesActivity {
                         textCheckCell.setTextAndCheck(LocaleController.getString("DisableDividers", R.string.DisableDividers), ExteraConfig.disableDividers, true);
                     } else if (position == hideActionBarStatusRow) {
                         textCheckCell.setTextAndCheck(LocaleController.getString("HideActionBarStatus", R.string.HideActionBarStatus), ExteraConfig.hideActionBarStatus, true);
-                    } else if (position == solarIconsRow) {
-                        textCheckCell.setTextAndCheck(LocaleController.getString("SolarIcons", R.string.SolarIcons), ExteraConfig.useSolarIcons, false);
                     } else if (position == alternativeOpenAnimationRow) {
                         textCheckCell.setTextAndCheck(LocaleController.getString("DrawerAlternativeOpeningAnimation", R.string.DrawerAlternativeOpeningAnimation), ExteraConfig.alternativeOpenAnimation, false);
                     }
@@ -492,7 +475,7 @@ public class AppearancePreferencesActivity extends BasePreferencesActivity {
                 return 1;
             } else if (position == statusRow || position == archivedChatsRow || position >= newGroupRow && position <= scanQrRow) {
                 return 2;
-            } else if (position == appearanceHeaderRow || position == drawerHeaderRow || position == drawerOptionsHeaderRow || position == solarIconsHeaderRow || position == foldersHeaderRow || position == chatListHeaderRow) {
+            } else if (position == appearanceHeaderRow || position == drawerHeaderRow || position == drawerOptionsHeaderRow || position == foldersHeaderRow || position == chatListHeaderRow) {
                 return 3;
             } else if (position == eventChooserRow || position == actionBarTitleRow || position == tabStyleRow || position == tabTitleRow) {
                 return 7;
@@ -504,8 +487,6 @@ public class AppearancePreferencesActivity extends BasePreferencesActivity {
                 return 12;
             } else if (position == foldersPreviewRow) {
                 return 14;
-            } else if (position == solarIconsPreviewRow) {
-                return 15;
             } else if (position == chatListPreviewRow) {
                 return 17;
             }
