@@ -41,11 +41,6 @@ import java.util.Locale;
 
 public class OtherPreferencesActivity extends BasePreferencesActivity {
 
-    private int analyticsHeaderRow;
-    private int crashlyticsRow;
-    private int analyticsRow;
-    private int analyticsDividerRow;
-
     private int deleteAccountRow;
     private int resetSettingsRow;
     private int deleteAccountDividerRow;
@@ -61,22 +56,7 @@ public class OtherPreferencesActivity extends BasePreferencesActivity {
 
     @Override
     protected void onItemClick(View view, int position, float x, float y) {
-        if (position == crashlyticsRow) {
-            ExteraConfig.editor.putBoolean("useGoogleCrashlytics", ExteraConfig.useGoogleCrashlytics ^= true).apply();
-            ((TextCell) view).setChecked(ExteraConfig.useGoogleCrashlytics);
-            if (ApplicationLoader.getFirebaseCrashlytics() != null) {
-                ApplicationLoader.getFirebaseCrashlytics().setCrashlyticsCollectionEnabled(ExteraConfig.useGoogleCrashlytics);
-            }
-        } else if (position == analyticsRow) {
-            ExteraConfig.editor.putBoolean("useGoogleAnalytics", ExteraConfig.useGoogleAnalytics ^= true).apply();
-            ((TextCell) view).setChecked(ExteraConfig.useGoogleAnalytics);
-            if (ApplicationLoader.getFirebaseAnalytics() != null) {
-                ApplicationLoader.getFirebaseAnalytics().setAnalyticsCollectionEnabled(ExteraConfig.useGoogleAnalytics);
-                if (!ExteraConfig.useGoogleAnalytics) {
-                    ApplicationLoader.getFirebaseAnalytics().resetAnalyticsData();
-                }
-            }
-        } else if (position == resetSettingsRow) {
+        if (position == resetSettingsRow) {
             ExteraConfig.clearPreferences();
             parentLayout.rebuildAllFragmentViews(false, false);
             getNotificationCenter().postNotificationName(NotificationCenter.mainUserInfoChanged);
@@ -172,11 +152,7 @@ public class OtherPreferencesActivity extends BasePreferencesActivity {
                     break;
                 case 2:
                     TextCell textCell = (TextCell) holder.itemView;
-                    if (position == crashlyticsRow) {
-                        textCell.setTextAndCheckAndIcon("Crashlytics", ExteraConfig.useGoogleCrashlytics, R.drawable.msg_report, true);
-                    } else if (position == analyticsRow) {
-                        textCell.setTextAndCheckAndIcon("Analytics", ExteraConfig.useGoogleAnalytics, R.drawable.msg_data, false);
-                    } else if (position == deleteAccountRow) {
+                    if (position == deleteAccountRow) {
                         textCell.setTextAndIcon(LocaleController.getString("DeleteAccount", R.string.DeleteAccount), R.drawable.msg_clearcache, false);
                         textCell.setColors(Theme.key_text_RedBold, Theme.key_text_RedBold);
                     } else if (position == resetSettingsRow) {
@@ -185,15 +161,9 @@ public class OtherPreferencesActivity extends BasePreferencesActivity {
                     break;
                 case 3:
                     HeaderCell headerCell = (HeaderCell) holder.itemView;
-                    if (position == analyticsHeaderRow) {
-                        headerCell.setText("Google");
-                    }
                     break;
                 case 8:
                     TextInfoPrivacyCell textInfoPrivacyCell = (TextInfoPrivacyCell) holder.itemView;
-                    if (position == analyticsDividerRow) {
-                        textInfoPrivacyCell.setText(LocaleController.getString("YandexAppMetricaInfo", R.string.AnalyticsInfo));
-                    }
                     break;
             }
         }
@@ -202,10 +172,6 @@ public class OtherPreferencesActivity extends BasePreferencesActivity {
         public int getItemViewType(int position) {
             if (position == deleteAccountDividerRow) {
                 return 1;
-            } else if (position == analyticsHeaderRow) {
-                return 3;
-            } else if (position == analyticsDividerRow) {
-                return 8;
             }
             return 2;
         }
