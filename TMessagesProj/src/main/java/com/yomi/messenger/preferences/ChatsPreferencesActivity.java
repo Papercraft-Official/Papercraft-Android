@@ -90,7 +90,6 @@ public class ChatsPreferencesActivity extends BasePreferencesActivity implements
     private int doubleTapRow;
     private int doubleTapActionOutOwnerRow;
     private int doubleTapActionRow;
-    private int doubleTapReactionRow;
     private int doubleTapDividerRow;
 
     private int chatsHeaderRow;
@@ -188,7 +187,7 @@ public class ChatsPreferencesActivity extends BasePreferencesActivity implements
         doubleTapRow = newRow();
         doubleTapActionRow = newRow();
         doubleTapActionOutOwnerRow = newRow();
-        doubleTapReactionRow = ExteraConfig.doubleTapAction == 1 || ExteraConfig.doubleTapActionOutOwner == 1 ? newRow() : -1;
+
         doubleTapDividerRow = newRow();
 
         chatsHeaderRow = newRow();
@@ -342,35 +341,18 @@ public class ChatsPreferencesActivity extends BasePreferencesActivity implements
                         return;
                     doubleTapCell.updateIcons(2, true);
                     ExteraConfig.editor.putInt("doubleTapActionOutOwner", ExteraConfig.doubleTapActionOutOwner = i).apply();
-                    if (old == 1 && ExteraConfig.doubleTapAction != 1) {
-                        listAdapter.notifyItemRemoved(doubleTapReactionRow);
-                        updateRowsId();
-                    } else if (i == 1 && ExteraConfig.doubleTapAction != 1) {
-                        updateRowsId();
-                        listAdapter.notifyItemInserted(doubleTapReactionRow);
-                    }
+
                     listAdapter.notifyItemChanged(doubleTapActionOutOwnerRow, payload);
                 } else {
                     int old = ExteraConfig.doubleTapAction;
                     if (old == i) return;
                     doubleTapCell.updateIcons(1, true);
                     ExteraConfig.editor.putInt("doubleTapAction", ExteraConfig.doubleTapAction = i).apply();
-                    if (old == 1 && ExteraConfig.doubleTapActionOutOwner != 1) {
-                        listAdapter.notifyItemRemoved(doubleTapReactionRow);
-                        updateRowsId();
-                    } else if (i == 1 && ExteraConfig.doubleTapActionOutOwner != 1) {
-                        updateRowsId();
-                        listAdapter.notifyItemInserted(doubleTapReactionRow);
-                    }
+
                     listAdapter.notifyItemChanged(doubleTapActionOutOwnerRow);
                     listAdapter.notifyItemChanged(doubleTapActionRow, payload);
                 }
             });
-        } else if (position == doubleTapReactionRow) {
-            if (view.getY() >= listView.getBottom() / 3f) {
-                listView.smoothScrollBy(0, (int) Math.abs(view.getY()));
-            }
-            DoubleTapCell.SetReactionCell.showSelectStatusDialog((DoubleTapCell.SetReactionCell) view, this);
         } else if (position == adminShortcutsRow) {
             adminShortcutsExpanded ^= true;
             updateRowsId();
@@ -589,7 +571,7 @@ public class ChatsPreferencesActivity extends BasePreferencesActivity implements
                 case 7:
                     TextSettingsCell textSettingsCell = (TextSettingsCell) holder.itemView;
                     if (position == doubleTapActionOutOwnerRow) {
-                        textSettingsCell.setTextAndValue(LocaleController.getString("DoubleTapOutgoing", R.string.DoubleTapOutgoing), doubleTapActions[ExteraConfig.doubleTapActionOutOwner], payload, doubleTapReactionRow != -1);
+                        textSettingsCell.setTextAndValue(LocaleController.getString("DoubleTapOutgoing", R.string.DoubleTapOutgoing), doubleTapActions[ExteraConfig.doubleTapActionOutOwner], payload, true);
                     } else if (position == doubleTapActionRow) {
                         textSettingsCell.setTextAndValue(LocaleController.getString("DoubleTapIncoming", R.string.DoubleTapIncoming), doubleTapActions[ExteraConfig.doubleTapAction], payload, true);
                     } else if (position == bottomButtonRow) {
@@ -692,8 +674,7 @@ public class ChatsPreferencesActivity extends BasePreferencesActivity implements
                 return 13;
             } else if (position == doubleTapRow) {
                 return 15;
-            } else if (position == doubleTapReactionRow) {
-                return 16;
+
             } else if (position == adminShortcutsRow || position == messageMenuRow) {
                 return 18;
             } else if (position >= permissionsRow && position <= recentActionsRow || position >= copyPhotoRow && position <= detailsRow) {
