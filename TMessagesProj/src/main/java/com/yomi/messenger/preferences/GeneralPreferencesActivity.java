@@ -73,6 +73,7 @@ public class GeneralPreferencesActivity extends BasePreferencesActivity {
 
     private int profileHeaderRow;
     private int hidePhoneNumberRow;
+    private int profileDividerRow;
 
     private int archiveHeaderRow;
     private int archiveOnPullRow;
@@ -107,6 +108,7 @@ public class GeneralPreferencesActivity extends BasePreferencesActivity {
 
         profileHeaderRow = newRow();
         hidePhoneNumberRow = newRow();
+        profileDividerRow = newRow();
 
         archiveHeaderRow = newRow();
         archiveOnPullRow = newRow();
@@ -288,7 +290,7 @@ public class GeneralPreferencesActivity extends BasePreferencesActivity {
 
         @Override
         public int getItemViewType(int position) {
-            if (position == generalDividerRow) {
+            if (position == generalDividerRow || position == profileDividerRow) {
                 return 1;
             } else if (position == generalHeaderRow || position == archiveHeaderRow || position == profileHeaderRow ||
                     position == cameraTypeHeaderRow) {
