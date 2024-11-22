@@ -73,7 +73,6 @@ public class AppearancePreferencesActivity extends BasePreferencesActivity {
             LocaleController.getString("Default", R.string.Default),
             LocaleController.getString("NewYear", R.string.NewYear),
             LocaleController.getString("ValentinesDay", R.string.ValentinesDay),
-            LocaleController.getString("Halloween", R.string.Halloween)
     };
 
     private int avatarCornersPreviewRow;
@@ -274,7 +273,7 @@ public class AppearancePreferencesActivity extends BasePreferencesActivity {
             }
             PopupUtils.showDialog(events, new int[]{
                     R.drawable.msg_calendar2, R.drawable.msg_block,
-                    R.drawable.msg_settings_ny, R.drawable.msg_saved_14, R.drawable.msg_contacts
+                    R.drawable.msg_settings_ny, R.drawable.msg_saved_14
             }, LocaleController.getString("DrawerIconSet", R.string.DrawerIconSet), ExteraConfig.eventType, getContext(), which -> {
                 ExteraConfig.editor.putInt("eventType", ExteraConfig.eventType = which).apply();
                 listAdapter.notifyItemChanged(eventChooserRow, payload);
@@ -460,8 +459,6 @@ public class AppearancePreferencesActivity extends BasePreferencesActivity {
                     TextInfoPrivacyCell cell = (TextInfoPrivacyCell) holder.itemView;
                     if (position == appearanceDividerRow) {
                         cell.setText(LocaleController.getString("AlternativeNavigationInfo", R.string.AlternativeNavigationInfo));
-                    } else if (position == foldersDividerRow) {
-                        cell.setText(LocaleController.getString("FoldersInfo", R.string.FoldersInfo));
                     } else if (position == chatListDividerRow) {
                         cell.setText(LocaleController.getString("ListOfChatsInfo", R.string.ListOfChatsInfo));
                     }
@@ -471,7 +468,7 @@ public class AppearancePreferencesActivity extends BasePreferencesActivity {
 
         @Override
         public int getItemViewType(int position) {
-            if (position == drawerDividerRow || position == drawerOptionsDividerRow || position == avatarCornersDividerRow) {
+            if (position == drawerDividerRow || position == drawerOptionsDividerRow || position == avatarCornersDividerRow || position == foldersDividerRow) {
                 return 1;
             } else if (position == statusRow || position == archivedChatsRow || position >= newGroupRow && position <= scanQrRow) {
                 return 2;
@@ -479,7 +476,7 @@ public class AppearancePreferencesActivity extends BasePreferencesActivity {
                 return 3;
             } else if (position == eventChooserRow || position == actionBarTitleRow || position == tabStyleRow || position == tabTitleRow) {
                 return 7;
-            } else if (position == appearanceDividerRow || position == foldersDividerRow || position == chatListDividerRow) {
+            } else if (position == appearanceDividerRow || position == chatListDividerRow) {
                 return 8;
             } else if (position == avatarCornersPreviewRow) {
                 return 9;

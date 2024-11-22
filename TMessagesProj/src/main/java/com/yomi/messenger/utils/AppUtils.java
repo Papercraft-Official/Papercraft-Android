@@ -55,13 +55,13 @@ public class AppUtils {
                 };
             case 2:
                 return new int[]{
-                        R.drawable.msg_groups_hw,
-                        R.drawable.msg_secret_hw,
-                        R.drawable.msg_channel_hw,
-                        R.drawable.msg_contacts_hw,
-                        R.drawable.msg_calls_hw,
-                        R.drawable.msg_saved_hw,
-                        R.drawable.msg_nearby_hw
+                        R.drawable.msg_groups,
+                        R.drawable.msg_secret,
+                        R.drawable.msg_channel,
+                        R.drawable.msg_contacts,
+                        R.drawable.msg_calls,
+                        R.drawable.msg_saved,
+                        R.drawable.msg_nearby
                 };
             default:
                 return new int[]{

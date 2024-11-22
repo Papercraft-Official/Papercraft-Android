@@ -37,7 +37,7 @@
     <string name="TabStylePills">药丸</string>
     <string name="TabCounter">选项卡计数</string>
     <string name="HideAllChats">隐藏 %1$s 选项卡</string>
-    <string name="FoldersInfo">图标与 Yomi 官方同步。</string>
+    <string name="FoldersInfo">图标可同步。</string>
     <string name="IconPack">图标</string>
     <string name="SolarIcons">使用“Solar”风格图标</string>
     <string name="ForceBlur">强制模糊</string>
@@ -62,7 +62,7 @@
     <string name="CameraType">相机类型</string>
     <string name="CameraTypeSystem">系统</string>
     <string name="DefaultCameraInfo">使用 Yomi 的内置相机</string>
-    <string name="CameraXInfo">CameraX 是 Android 提供的规范化接口。借助它，Yomi 可以像系统原相机一样调动辅助摄像头来提高拍摄质量，而大多数 App —— 无论是微信、抖音，还是美图秀秀，它们都只会调用最大的那个摄像头。这就是它们拍的照片为什么不清楚啦。</string>
+    <string name="CameraXInfo">CameraX 是 Android 提供的规范化接口。\n\n借助它，Yomi 可以像系统原相机一样调动辅助摄像头来提高拍摄质量，而大多数 App —— 无论是微信、抖音，还是美图秀秀，它们都只会调用最大的那个摄像头。\n\n这就是为什么它们拍的照片总是不清楚啦。</string>
     <string name="SystemCameraInfo">直接使用系统相机（不适用于视频消息）</string>
     <string name="PerformanceMode">性能模式</string>
     <string name="PerformanceModeInfo">CameraX 的拍摄质量会略有所降低。</string>
@@ -79,8 +79,8 @@
     <string name="ShowIdAndDc">显示用户ID和DC(数据中心)</string>
     <string name="ShowIdAndDcInfo">按照Yomi APl的返回表示ID，而Bot API为群组的ID之前添加负号，为超级群组、广播群组和频道的ID之前添加-100。</string>
     <string name="ArchiveOnPull">下拉打开已归档对话</string>
-    <string name="DisableUnarchiveSwipe">禁用\"取消存档\"滑动动作</string>
-    <string name="DisableUnarchiveSwipeInfo">向左滑动不会删除归档中的聊天。</string>
+    <string name="DisableUnarchiveSwipe">启用\"取消归档\"滑动动作</string>
+    <string name="DisableUnarchiveSwipeInfo">启用后，向左滑动会话可以取消归档。</string>
     <!-- Other -->
     <string name="AnalyticsInfo">启用这些选项后，将收集设备的数据并发送到Google Analytics 以及 Crashlytics。 允许我们保留使用统计并跟踪应用中的错误。 \n\n然而，如果该选项被关闭，数据收集将会中止，发送的数据被立即删除。</string>
     <string name="DeleteAccount">删除账户</string>
