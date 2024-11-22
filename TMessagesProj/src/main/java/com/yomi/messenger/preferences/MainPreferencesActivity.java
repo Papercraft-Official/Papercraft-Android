@@ -275,7 +275,7 @@ public class MainPreferencesActivity extends BasePreferencesActivity {
                     } else if (position == groupRow) {
                         textCell.setTextAndValueAndIcon(LocaleController.getString("SearchAllChatsShort", R.string.SearchAllChatsShort), "@lingyicute", R.drawable.msg_groups, true);
                     } else if (position == sourceCodeRow) {
-                        textCell.setTextAndValueAndIcon(LocaleController.getString("SourceCode", R.string.SourceCode), "GitHub", R.drawable.msg2_secret, false);
+                        textCell.setTextAndValueAndIcon(LocaleController.getString("SourceCode", R.string.SourceCode), "GitHub", R.drawable.msg_secret, false);
                     }
                     break;
                 case 3:
