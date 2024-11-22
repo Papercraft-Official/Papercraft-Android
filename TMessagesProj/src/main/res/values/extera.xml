@@ -11,9 +11,10 @@
     <!-- Main Menu -->
     <string name="Links">链接</string>
     <string name="AboutExteraDescription">我想这是全宇宙最好的聊天 App，\n所以把它送给，全宇宙最好的你。</string>
-    <string name="Channel">通知频道</string>
+    <string name="Channel">芸小嘉</string>
     <string name="Crowdin">翻译</string>
-    <string name="SourceCode">Yomi 源码</string>
+    <string name="Lyi">梨の本体</string>
+    <string name="SourceCode">源代码</string>
     <string name="Categories">设置分类</string>
     <!-- Appearance -->
     <string name="AvatarCorners">头像圆角</string>
@@ -56,7 +57,7 @@
     <string name="DependsOnTheDate">根据日期</string>
     <string name="NewYear">新年</string>
     <string name="ValentinesDay">情人节</string>
-    <string name="Halloween">万圣节</string>
+    <string name="Halloween">已废弃</string>
     <string name="DrawerElements">侧栏元素</string>
     <!-- General -->
     <string name="CameraType">相机类型</string>
@@ -82,7 +83,7 @@
     <string name="HidePhoneNumber">隐藏手机号码</string>
     <string name="ShowIdAndDc">显示用户ID和DC(数据中心)</string>
     <string name="ShowIdAndDcInfo">按照Yomi APl的返回表示ID，而Bot API为群组的ID之前添加负号，为超级群组、广播群组和频道的ID之前添加-100。</string>
-    <string name="ArchiveOnPull">下拉打开已归档对话</string>
+    <string name="ArchiveOnPull">下拉直接跳转（超丝滑的！）</string>
     <string name="DisableUnarchiveSwipe">启用\"取消归档\"滑动动作</string>
     <string name="DisableUnarchiveSwipeInfo">启用后，向左滑动会话可以取消归档。</string>
     <!-- Other -->
