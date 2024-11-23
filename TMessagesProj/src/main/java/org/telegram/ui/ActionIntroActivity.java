@@ -740,13 +740,6 @@ public class ActionIntroActivity extends BaseFragment implements LocationControl
             case ACTION_TYPE_CHANGE_PHONE_NUMBER: {
                 subtitleTextView.setVisibility(View.VISIBLE);
                 imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
-                imageView.setAnimation(R.raw.utyan_change_number, 200, 200);
-                imageView.setOnClickListener(v -> {
-                    if (!imageView.getAnimatedDrawable().isRunning()) {
-                        imageView.getAnimatedDrawable().setCurrentFrame(0, false);
-                        imageView.playAnimation();
-                    }
-                });
 
                 UserConfig userConfig = getUserConfig();
                 TLRPC.User user = getMessagesController().getUser(userConfig.clientUserId);
