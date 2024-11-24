@@ -54,7 +54,7 @@ public class AppearancePreferencesActivity extends BasePreferencesActivity {
     FoldersPreviewCell foldersPreviewCell;
 
     private final CharSequence[] styles = new CharSequence[]{
-            LocaleController.getString("Default", R.string.Default),
+            LocaleController.getString("TabStyleDefault", R.string.TabStyleDefault),
             LocaleController.getString("TabStyleRounded", R.string.TabStyleRounded),
             LocaleController.getString("TabStyleTextOnly", R.string.TabStyleTextOnly),
             LocaleController.getString("TabStyleChips", R.string.TabStyleChips),
@@ -199,7 +199,7 @@ public class AppearancePreferencesActivity extends BasePreferencesActivity {
             ((TextCheckCell) view).setChecked(ExteraConfig.alternativeOpenAnimation);
         } else if (position == alternativeNavigationRow) {
             ExteraConfig.editor.putBoolean("useLNavigation", ExteraConfig.useLNavigation ^= true).apply();
-            if (ExteraConfig.useLNavigation) {
+            if (!ExteraConfig.useLNavigation) {
                 MessagesController.getGlobalMainSettings().edit().putBoolean("view_animations", true).apply();
                 SharedConfig.setAnimationsEnabled(true);
             }

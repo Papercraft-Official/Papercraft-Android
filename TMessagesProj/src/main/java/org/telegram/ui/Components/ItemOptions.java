@@ -227,7 +227,7 @@ public class ItemOptions {
             @Override
             protected void onDraw(Canvas canvas) {
                 super.onDraw(canvas);
-                if (!ExteraConfig.useLNavigation) {
+                if (ExteraConfig.useLNavigation) {
                     canvas.drawColor(dim);
 
                     if (cachedBitmap != null && scrimView.getParent() instanceof View) {

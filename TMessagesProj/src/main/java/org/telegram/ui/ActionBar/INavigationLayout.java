@@ -82,7 +82,7 @@ public interface INavigationLayout {
     void setPulledDialogs(List<BackButtonMenu.PulledDialog> pulledDialogs);
 
     static INavigationLayout newLayout(Context context) {
-        return ExteraConfig.useLNavigation ? new LNavigation(context) : new ActionBarLayout(context);
+        return ExteraConfig.useLNavigation ? new ActionBarLayout(context) : new LNavigation(context);
     }
 
     static INavigationLayout newLayout(Context context, Supplier<BottomSheet> supplier) {
