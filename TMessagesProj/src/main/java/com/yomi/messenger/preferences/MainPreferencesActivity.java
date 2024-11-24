@@ -267,13 +267,13 @@ public class MainPreferencesActivity extends BasePreferencesActivity {
                     } else if (position == appearanceRow) {
                         textCell.setTextAndIcon(LocaleController.getString("Appearance", R.string.Appearance), R.drawable.msg_theme, true);
                     } else if (position == chatsRow) {
-                        textCell.setTextAndIcon(LocaleController.getString("Lyi", R.string.SearchAllChatsShort), R.drawable.msg_discussion, true);
+                        textCell.setTextAndIcon(LocaleController.getString("SearchAllChatsShort", R.string.SearchAllChatsShort), R.drawable.msg_discussion, true);
                     } else if (position == otherRow) {
                         textCell.setTextAndIcon(LocaleController.getString("LocalOther", R.string.LocalOther), R.drawable.msg_fave, false);
                     } else if (position == channelRow) {
                         textCell.setTextAndValueAndIcon(LocaleController.getString("Channel", R.string.Channel), "@Yomi", R.drawable.msg_channel, true);
                     } else if (position == groupRow) {
-                        textCell.setTextAndValueAndIcon(LocaleController.getString("SearchAllChatsShort", R.string.SearchAllChatsShort), "@lingyicute", R.drawable.msg_contacts, true);
+                        textCell.setTextAndValueAndIcon(LocaleController.getString("Lyi", R.string.Lyi), "@lingyicute", R.drawable.msg_contacts, true);
                     } else if (position == sourceCodeRow) {
                         textCell.setTextAndValueAndIcon(LocaleController.getString("SourceCode", R.string.SourceCode), "GitHub", R.drawable.msg_policy, false);
                     }
