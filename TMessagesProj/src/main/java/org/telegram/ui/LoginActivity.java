@@ -2244,7 +2244,6 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
                     if (testBackend != LoginActivity.this.testBackend) {
                         getConnectionsManager().switchBackend(false);
                     }
-                    loadCountries();
                 });
             }
             if (bottomMargin > 0 && !AndroidUtilities.isSmallScreen()) {
@@ -2322,75 +2321,9 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
                 codeField.requestFocus();
             }
 
-            loadCountries();
         }
 
         private void loadCountries() {
-            req.lang_code = LocaleController.getInstance().getCurrentLocaleInfo() != null ? LocaleController.getInstance().getCurrentLocaleInfo().getLangCode() : Locale.getDefault().getCountry();
-            getConnectionsManager().sendRequest(req, (response, error) -> {
-                AndroidUtilities.runOnUIThread(() -> {
-                    if (error == null) {
-                        countriesArray.clear();
-                        codesMap.clear();
-                        phoneFormatMap.clear();
-
-                        if (activityMode == MODE_CHANGE_PHONE_NUMBER) {
-                            String number = PhoneFormat.stripExceptNumbers(UserConfig.getInstance(currentAccount).getClientPhone());
-                            boolean ok = false;
-                            if (!TextUtils.isEmpty(number)) {
-                                if (number.length() > 4) {
-                                    for (int a = 4; a >= 1; a--) {
-                                        String sub = number.substring(0, a);
-
-                                        CountrySelectActivity.Country country2;
-                                        List<CountrySelectActivity.Country> list = codesMap.get(sub);
-                                        if (list == null) {
-                                            country2 = null;
-                                        } else if (list.size() > 1) {
-                                            SharedPreferences preferences = MessagesController.getGlobalMainSettings();
-                                            String lastMatched = preferences.getString("phone_code_last_matched_" + sub, null);
-
-                                            if (lastMatched != null) {
-                                                country2 = list.get(list.size() - 1);
-                                                for (CountrySelectActivity.Country c : countriesArray) {
-                                                    if (Objects.equals(c.shortname, lastMatched)) {
-                                                        country2 = c;
-                                                        break;
-                                                    }
-                                                }
-                                            } else {
-                                                country2 = list.get(list.size() - 1);
-                                            }
-                                        } else {
-                                            country2 = list.get(0);
-                                        }
-
-                                        if (country2 != null) {
-                                            ok = true;
-                                            codeField.setText(sub);
-                                            break;
-                                        }
-                                    }
-                                    if (!ok) {
-                                        codeField.setText(number.substring(0, 1));
-                                    }
-                                }
-                            }
-                        }
-                        CountrySelectActivity.Country countryWithCode = new CountrySelectActivity.Country();
-                        countryWithCode.name = "Test Backend";
-                        countryWithCode.code = "999";
-                        countryWithCode.shortname = "EX";
-                        countriesArray.add(countryWithCode);
-                        List<CountrySelectActivity.Country> countryList = codesMap.get(countryWithCode.code);
-                        if (countryList == null) {
-                            codesMap.put(countryWithCode.code, countryList = new ArrayList<>());
-                        }
-                        countryList.add(countryWithCode);
-                        phoneFormatMap.put(countryWithCode.code, Collections.singletonList("66 X XXXX"));
-                    }
-                });
-            }, ConnectionsManager.RequestFlagWithoutLogin | ConnectionsManager.RequestFlagFailOnServerErrors);
         }
 
         @Override
