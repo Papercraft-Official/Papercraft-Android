@@ -2326,7 +2326,6 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
         }
 
         private void loadCountries() {
-            TLRPC.TL_help_getCountriesList req = new TLRPC.TL_help_getCountriesList();
             req.lang_code = LocaleController.getInstance().getCurrentLocaleInfo() != null ? LocaleController.getInstance().getCurrentLocaleInfo().getLangCode() : Locale.getDefault().getCountry();
             getConnectionsManager().sendRequest(req, (response, error) -> {
                 AndroidUtilities.runOnUIThread(() -> {
@@ -2334,34 +2333,6 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
                         countriesArray.clear();
                         codesMap.clear();
                         phoneFormatMap.clear();
-
-                        TLRPC.TL_help_countriesList help_countriesList = (TLRPC.TL_help_countriesList) response;
-                        for (int i = 0; i < help_countriesList.countries.size(); i++) {
-                            TLRPC.TL_help_country c = help_countriesList.countries.get(i);
-                            for (int k = 0; k < c.country_codes.size(); k++) {
-                                TLRPC.TL_help_countryCode countryCode = c.country_codes.get(k);
-                                if (countryCode != null) {
-                                    CountrySelectActivity.Country countryWithCode = new CountrySelectActivity.Country();
-                                    countryWithCode.name = c.name;
-                                    countryWithCode.defaultName = c.default_name;
-                                    if (countryWithCode.name == null && countryWithCode.defaultName != null) {
-                                        countryWithCode.name = countryWithCode.defaultName;
-                                    }
-                                    countryWithCode.code = countryCode.country_code;
-                                    countryWithCode.shortname = c.iso2;
-
-                                    countriesArray.add(countryWithCode);
-                                    List<CountrySelectActivity.Country> countryList = codesMap.get(countryCode.country_code);
-                                    if (countryList == null) {
-                                        codesMap.put(countryCode.country_code, countryList = new ArrayList<>());
-                                    }
-                                    countryList.add(countryWithCode);
-                                    if (countryCode.patterns.size() > 0) {
-                                        phoneFormatMap.put(countryCode.country_code, countryCode.patterns);
-                                    }
-                                }
-                            }
-                        }
 
                         if (activityMode == MODE_CHANGE_PHONE_NUMBER) {
                             String number = PhoneFormat.stripExceptNumbers(UserConfig.getInstance(currentAccount).getClientPhone());
