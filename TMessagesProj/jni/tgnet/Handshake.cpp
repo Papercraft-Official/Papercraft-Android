@@ -351,26 +351,26 @@ void Handshake::processHandshakeResponse(TLObject *message, int64_t messageId) {
                 }
             } else {
                 if (serverPublicKeys.empty()) {
-                    if (ConnectionsManager::getInstance(currentDatacenter->instanceNum).testBackend) {
-                        serverPublicKeys.emplace_back("-----BEGIN RSA PUBLIC KEY-----\n"
-                                                      "MIIBCgKCAQEAvKLEOWTzt9Hn3/9Kdp/RdHcEhzmd8xXeLSpHIIzaXTLJDw8BhJy1\n"
-                                                      "jR/iqeG8Je5yrtVabqMSkA6ltIpgylH///FojMsX1BHu4EPYOXQgB0qOi6kr08iX\n"
-                                                      "ZIH9/iOPQOWDsL+Lt8gDG0xBy+sPe/2ZHdzKMjX6O9B4sOsxjFrk5qDoWDrioJor\n"
-                                                      "AJ7eFAfPpOBf2w73ohXudSrJE0lbQ8pCWNpMY8cB9i8r+WBitcvouLDAvmtnTX7a\n"
-                                                      "khoDzmKgpJBYliAY4qA73v7u5UIepE8QgV0jCOhxJCPubP8dg+/PlLLVKyxU5Cdi\n"
-                                                      "QtZj2EMy4s9xlNKzX8XezE0MHEa6bQpnFwIDAQAB\n"
-                                                      "-----END RSA PUBLIC KEY-----");
-                        serverPublicKeysFingerprints.push_back(0xa9e071c1771060cdLL);
-                    } else {
-                        serverPublicKeys.emplace_back("-----BEGIN RSA PUBLIC KEY-----\n"
-                                                      "MIIBCgKCAQEAvKLEOWTzt9Hn3/9Kdp/RdHcEhzmd8xXeLSpHIIzaXTLJDw8BhJy1\n"
-                                                      "jR/iqeG8Je5yrtVabqMSkA6ltIpgylH///FojMsX1BHu4EPYOXQgB0qOi6kr08iX\n"
-                                                      "ZIH9/iOPQOWDsL+Lt8gDG0xBy+sPe/2ZHdzKMjX6O9B4sOsxjFrk5qDoWDrioJor\n"
-                                                      "AJ7eFAfPpOBf2w73ohXudSrJE0lbQ8pCWNpMY8cB9i8r+WBitcvouLDAvmtnTX7a\n"
-                                                      "khoDzmKgpJBYliAY4qA73v7u5UIepE8QgV0jCOhxJCPubP8dg+/PlLLVKyxU5Cdi\n"
-                                                      "QtZj2EMy4s9xlNKzX8XezE0MHEa6bQpnFwIDAQAB\n"
-                                                      "-----END RSA PUBLIC KEY-----");
-                        serverPublicKeysFingerprints.push_back(0xa9e071c1771060cdLL);
+                if (ConnectionsManager::getInstance(currentDatacenter->instanceNum).testBackend) {
+                    serverPublicKeys.emplace_back("-----BEGIN RSA PUBLIC KEY-----\n"
+                                                  "MIIBCgKCAQEAvKLEOWTzt9Hn3/9Kdp/RdHcEhzmd8xXeLSpHIIzaXTLJDw8BhJy1\n"
+                                                  "jR/iqeG8Je5yrtVabqMSkA6ltIpgylH///FojMsX1BHu4EPYOXQgB0qOi6kr08iX\n"
+                                                  "ZIH9/iOPQOWDsL+Lt8gDG0xBy+sPe/2ZHdzKMjX6O9B4sOsxjFrk5qDoWDrioJor\n"
+                                                  "AJ7eFAfPpOBf2w73ohXudSrJE0lbQ8pCWNpMY8cB9i8r+WBitcvouLDAvmtnTX7a\n"
+                                                  "khoDzmKgpJBYliAY4qA73v7u5UIepE8QgV0jCOhxJCPubP8dg+/PlLLVKyxU5Cdi\n"
+                                                  "QtZj2EMy4s9xlNKzX8XezE0MHEa6bQpnFwIDAQAB\n"
+                                                  "-----END RSA PUBLIC KEY-----");
+                    serverPublicKeysFingerprints.push_back(0xa9e071c1771060cd);
+                } else {
+                    serverPublicKeys.emplace_back("-----BEGIN RSA PUBLIC KEY-----\n"
+                                                  "MIIBCgKCAQEAvKLEOWTzt9Hn3/9Kdp/RdHcEhzmd8xXeLSpHIIzaXTLJDw8BhJy1\n"
+                                                  "jR/iqeG8Je5yrtVabqMSkA6ltIpgylH///FojMsX1BHu4EPYOXQgB0qOi6kr08iX\n"
+                                                  "ZIH9/iOPQOWDsL+Lt8gDG0xBy+sPe/2ZHdzKMjX6O9B4sOsxjFrk5qDoWDrioJor\n"
+                                                  "AJ7eFAfPpOBf2w73ohXudSrJE0lbQ8pCWNpMY8cB9i8r+WBitcvouLDAvmtnTX7a\n"
+                                                  "khoDzmKgpJBYliAY4qA73v7u5UIepE8QgV0jCOhxJCPubP8dg+/PlLLVKyxU5Cdi\n"
+                                                  "QtZj2EMy4s9xlNKzX8XezE0MHEa6bQpnFwIDAQAB\n"
+                                                  "-----END RSA PUBLIC KEY-----");
+                    serverPublicKeysFingerprints.push_back(0xa9e071c1771060cd);
                     }
                 }
 

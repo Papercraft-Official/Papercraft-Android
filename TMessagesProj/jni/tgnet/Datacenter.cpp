@@ -1493,13 +1493,13 @@ TL_help_configSimple *Datacenter::decodeSimpleConfig(NativeByteBuffer *buffer) {
 
     static std::string public_key =
             "-----BEGIN RSA PUBLIC KEY-----\n"
-            "MIIBCgKCAQEAvWJcjWETlSSqGSBfVCNykwoZ0ZHe+QNUvzQWIrDMSZPnsIwIGXCu\n"
-            "z0KDcrCnbVZxdJNCtzryrtmrr48oaaLqfdh3CZT5TnoP2uginPMM4JW7HOfxlgdq\n"
-            "XVZCvpHtmsaAXgh91sphJSB0QlSjk866HzQbLOPlZ5XI4i38PVtuQydUfuL9tvsq\n"
-            "NX3FxxKqsbxU11zNpehWvL65wg/1Ipj8qqOB5PcQofrGT+cqaTY6Mkrx2XxPfr1w\n"
-            "zBnLp/5rBMW4gc5N8X6kVR4FBJb7LC0jlp6a/bI2B0MqgsSnqpChrCzHgsJxYvqx\n"
-            "ejcRxzT7eXYJPcj5DYDx27l9rZ76xT3A2wIDAQAB\n"
-            "-----END RSA PUBLIC KEY-----";
+                    "MIIBCgKCAQEAyr+18Rex2ohtVy8sroGPBwXD3DOoKCSpjDqYoXgCqB7ioln4eDCF\n"
+                    "fOBUlfXUEvM/fnKCpF46VkAftlb4VuPDeQSS/ZxZYEGqHaywlroVnXHIjgqoxiAd\n"
+                    "192xRGreuXIaUKmkwlM9JID9WS2jUsTpzQ91L8MEPLJ/4zrBwZua8W5fECwCCh2c\n"
+                    "9G5IzzBm+otMS/YKwmR1olzRCyEkyAEjXWqBI9Ftv5eG8m0VkBzOG655WIYdyV0H\n"
+                    "fDK/NWcvGqa0w/nriMD6mDjKOryamw0OP9QuYgMN0C9xMW9y8SmP4h92OAWodTYg\n"
+                    "Y1hZCxdv6cs5UnW9+PWvS+WIbkh+GaWYxwIDAQAB\n"
+                    "-----END RSA PUBLIC KEY-----";
 
     BIO *keyBio = BIO_new(BIO_s_mem());
     BIO_write(keyBio, public_key.c_str(), (int) public_key.length());
