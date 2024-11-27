@@ -5485,7 +5485,6 @@
     <string name="Start">Start</string>
     <string name="StartDayAt">\&apos;Start on\&apos; MMM d \&apos;at\&apos; HH:mm</string>
     <string name="StartDayYearAt">\&apos;Start on\&apos; MMM d yyyy \&apos;at\&apos; HH:mm</string>
-    <string name="StartEncryptedChat">Start Secret Chat</string>
     <string name="StartMessaging">Start Messaging</string>
     <string name="StartsDayAt">\&apos;Starts on\&apos; MMM d \&apos;at\&apos; HH:mm</string>
     <string name="StartsDayYearAt">\&apos;Starts on\&apos; MMM d yyyy \&apos;at\&apos; HH:mm</string>
