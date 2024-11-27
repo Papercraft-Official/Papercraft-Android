@@ -790,26 +790,6 @@ public class ContactsActivity extends BaseFragment implements NotificationCenter
         if (listViewAdapter != null) {
             listViewAdapter.notifyDataSetChanged();
         }
-        if (checkPermission && Build.VERSION.SDK_INT >= 23) {
-            Activity activity = getParentActivity();
-            if (activity != null) {
-                checkPermission = false;
-                if (activity.checkSelfPermission(Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
-                    if (activity.shouldShowRequestPermissionRationale(Manifest.permission.READ_CONTACTS)) {
-                        AlertDialog.Builder builder = AlertsCreator.createContactsPermissionDialog(activity, param -> {
-                            askAboutContacts = param != 0;
-                            if (param == 0) {
-                                return;
-                            }
-                            askForPermissons(false);
-                        });
-                        showDialog(permissionDialog = builder.create());
-                    } else {
-                        askForPermissons(true);
-                    }
-                }
-            }
-        }
     }
 
     protected RecyclerListView getListView() {
@@ -848,14 +828,6 @@ public class ContactsActivity extends BaseFragment implements NotificationCenter
             return;
         }
         if (alert && askAboutContacts) {
-            AlertDialog.Builder builder = AlertsCreator.createContactsPermissionDialog(activity, param -> {
-                askAboutContacts = param != 0;
-                if (param == 0) {
-                    return;
-                }
-                askForPermissons(false);
-            });
-            showDialog(builder.create());
             return;
         }
         permissionRequestTime = SystemClock.elapsedRealtime();

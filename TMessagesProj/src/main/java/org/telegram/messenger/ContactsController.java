@@ -607,18 +607,6 @@ public class ContactsController extends BaseController {
     }
 
     public HashMap<String, Contact> readContactsFromPhoneBook() {
-        if (!getUserConfig().syncContacts) {
-            if (BuildVars.LOGS_ENABLED) {
-                FileLog.d("contacts sync disabled");
-            }
-            return new HashMap<>();
-        }
-        if (!hasContactsPermission()) {
-            if (BuildVars.LOGS_ENABLED) {
-                FileLog.d("app has no contacts permissions");
-            }
-            return new HashMap<>();
-        }
         Cursor pCur = null;
         HashMap<String, Contact> contactsMap = null;
         try {
