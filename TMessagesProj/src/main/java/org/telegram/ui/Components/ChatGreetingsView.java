@@ -53,7 +53,7 @@ public class ChatGreetingsView extends LinearLayout {
 
         stickerToSendView = new BackupImageView(context);
 
-        addView(titleView, LayoutHelper.createLinear(LayoutHelper.MATCH_PARENT, LayoutHelper.WRAP_CONTENT, 20, 14, 20, 14));
+        addView(titleView, LayoutHelper.createLinear(LayoutHelper.MATCH_PARENT, LayoutHelper.WRAP_CONTENT, 20, 6, 20, 6));
         addView(descriptionView, LayoutHelper.createLinear(LayoutHelper.MATCH_PARENT, LayoutHelper.WRAP_CONTENT, 20, 12, 20, 0));
         addView(stickerToSendView, LayoutHelper.createLinear(112, 112, Gravity.CENTER_HORIZONTAL, 0, 16, 0, 16));
 
@@ -148,16 +148,9 @@ public class ChatGreetingsView extends LinearLayout {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         ignoreLayot = true;
-        descriptionView.setVisibility(View.VISIBLE);
-        stickerToSendView.setVisibility(View.VISIBLE);
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        if (getMeasuredHeight() > MeasureSpec.getSize(heightMeasureSpec)) {
             descriptionView.setVisibility(View.GONE);
             stickerToSendView.setVisibility(View.GONE);
-        } else {
-            descriptionView.setVisibility(View.VISIBLE);
-            stickerToSendView.setVisibility(View.VISIBLE);
-        }
         ignoreLayot = false;
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
