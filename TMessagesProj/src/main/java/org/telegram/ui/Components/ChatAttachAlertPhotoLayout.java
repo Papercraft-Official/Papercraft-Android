@@ -242,7 +242,7 @@ public class ChatAttachAlertPhotoLayout extends ChatAttachAlert.AttachAlertLayou
     private boolean showAvatarConstructor;
 
     public void updateAvatarPicker() {
-        showAvatarConstructor = parentAlert.avatarPicker != 0 && !parentAlert.isPhotoPicker;
+        showAvatarConstructor = false;
     }
 
     private class BasePhotoProvider extends PhotoViewer.EmptyPhotoViewerProvider {
@@ -580,7 +580,7 @@ public class ChatAttachAlertPhotoLayout extends ChatAttachAlert.AttachAlertLayou
         NotificationCenter.getGlobalInstance().addObserver(this, NotificationCenter.albumsDidLoad);
         NotificationCenter.getGlobalInstance().addObserver(this, NotificationCenter.cameraInitied);
         FrameLayout container = alert.getContainer();
-        showAvatarConstructor = parentAlert.avatarPicker != 0;
+        showAvatarConstructor = false;
 
         cameraDrawable = context.getResources().getDrawable(R.drawable.instant_camera).mutate();
 
@@ -749,16 +749,6 @@ public class ChatAttachAlertPhotoLayout extends ChatAttachAlert.AttachAlertLayou
             }
             if (position != 0 || !needCamera || selectedAlbumEntry != galleryAlbumEntry) {
                 if (selectedAlbumEntry == galleryAlbumEntry && needCamera || ExteraConfig.hideCameraTile && (selectedAlbumEntry != galleryAlbumEntry || shouldLoadAllMedia())) {
-                    position--;
-                }
-                if (showAvatarConstructor) {
-                    if (position == 0) {
-                        if (!(view instanceof AvatarConstructorPreviewCell)) {
-                            return;
-                        }
-                        showAvatarConstructorFragment((AvatarConstructorPreviewCell) view, null);
-                        parentAlert.dismiss();
-                    }
                     position--;
                 }
                 ArrayList<Object> arrayList = getAllPhotosArray();
@@ -4152,9 +4142,6 @@ public class ChatAttachAlertPhotoLayout extends ChatAttachAlert.AttachAlertLayou
                         if (needCamera && selectedAlbumEntry == galleryAlbumEntry) {
                             position++;
                         }
-                        if (showAvatarConstructor) {
-                            position++;
-                        }
                         if (position == 0) {
                             int rad = AndroidUtilities.dp(8 * parentAlert.cornerRadius);
                             outline.setRoundRect(0, 0, view.getMeasuredWidth() + rad, view.getMeasuredHeight() + rad, rad);
@@ -4323,15 +4310,6 @@ public class ChatAttachAlertPhotoLayout extends ChatAttachAlert.AttachAlertLayou
                 default:
                     holder = new RecyclerListView.Holder(new PhotoAttachPermissionCell(mContext, resourcesProvider));
                     break;
-                case 4:
-                    AvatarConstructorPreviewCell avatarConstructorPreviewCell = new AvatarConstructorPreviewCell(mContext, parentAlert.forUser) {
-                        @Override
-                        protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-                            super.onMeasure(MeasureSpec.makeMeasureSpec(itemSize, MeasureSpec.EXACTLY), MeasureSpec.makeMeasureSpec(itemSize, MeasureSpec.EXACTLY));
-                        }
-                    };
-                    holder = new RecyclerListView.Holder(avatarConstructorPreviewCell);
-                    break;
             }
             return holder;
         }
@@ -4386,9 +4364,6 @@ public class ChatAttachAlertPhotoLayout extends ChatAttachAlert.AttachAlertLayou
             }
             if (needCamera) {
                 localPosition--;
-            }
-            if (showAvatarConstructor && localPosition == 0) {
-                return VIEW_TYPE_AVATAR_CONSTRUCTOR;
             }
             if (this == adapter && position == itemsCount - 1) {
                 return 2;
