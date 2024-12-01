@@ -62,7 +62,7 @@ public class HeaderSettingsCell extends FrameLayout {
         titleTextView.setTextColor(Theme.getColor(Theme.key_windowBackgroundWhiteBlackText));
         titleTextView.setTypeface(AndroidUtilities.getTypeface(AndroidUtilities.TYPEFACE_ROBOTO_REGULAR));
         titleTextView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 22);
-        titleTextView.setText(LocaleController.getString(R.string.exteraAppName));
+        titleTextView.setText(LocaleController.getString(R.string.AboutExteraName));
         titleTextView.setLines(1);
         titleTextView.setMaxLines(1);
         titleTextView.setSingleLine(true);
