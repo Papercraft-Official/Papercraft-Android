@@ -1215,7 +1215,7 @@
 	<string name="ChannelJoined">您已加入此频道</string>
 	<string name="ChannelJoinRequest">申请加入群组</string>
 	<string name="ChannelJoinRequestSent">加入请求已发送</string>
-	<string name="ChannelJoinTo">您确定要加入频道‘%1$s’吗？</string>
+	<string name="ChannelJoinTo">您确定要加入频道“%1$s”吗？</string>
 	<string name="ChannelLeaveAlert">您确定要退出此频道吗？</string>
 	<string name="ChannelLeaveAlertWithName">您确定要退出 **%1$s** 吗？</string>
 	<string name="ChannelLinkInfo">任何已安装 Telegram 的用户都可以通过此链接关注您的频道。</string>
@@ -2649,7 +2649,7 @@
 	<string name="ForgotPassword">是否忘记密码？</string>
 	<string name="formatDateAtTime">%1$s %2$s</string>
 	<string name="formatDateSchedule">MMM d</string>
-	<string name="formatDateScheduleYear">yyyy'年'MM'月'd'日'</string>
+	<string name="formatDateScheduleYear">yyyy年MM月d日</string>
 	<string name="formatFwdDate">%1$s %2$s</string>
 	<string name="formatterBannedUntil12H">yyyy年M月d日 ah:mm</string>
 	<string name="formatterBannedUntil24H">yyyy年M月d日 HH:mm</string>
@@ -4039,11 +4039,11 @@
 	<string name="NotificationsUnmutedHintChats_one">Notifications unmuted for %d chat</string>
 	<string name="NotificationsUnmutedHintChats_other">%d 个聊天中的通知已取消静音</string>
 	<string name="NotificationsUnmutedHintChats_two">Notifications unmuted for %d chats</string>
-	<string name="NotificationTopicExceptionsDesctription_few">%s, %d exceptions</string>
-	<string name="NotificationTopicExceptionsDesctription_many">%s, %d exceptions</string>
-	<string name="NotificationTopicExceptionsDesctription_one">%s, %d exception</string>
+	<string name="NotificationTopicExceptionsDesctription_few">%s, %d 个例外</string>
+	<string name="NotificationTopicExceptionsDesctription_many">%s, %d 个例外</string>
+	<string name="NotificationTopicExceptionsDesctription_one">%s, %d 个例外</string>
 	<string name="NotificationTopicExceptionsDesctription_other">%s, %d 个例外</string>
-	<string name="NotificationTopicExceptionsDesctription_two">%s, %d exceptions</string>
+	<string name="NotificationTopicExceptionsDesctription_two">%s, %d 个例外</string>
 	<string name="NotificationUnrecognizedDevice">%1$s，
 我们发现您的帐号在 %2$s 从新的设备登录
 
@@ -4060,7 +4060,7 @@ Telegram 团队</string>
 	<string name="NoTopics">暂无主题</string>
 	<string name="NoTopicsDescription">您可以创建您的第一个话题或点击%s
 切换到消息列表。</string>
-	<string name="NoTopicsDescriptionUser">来自该群组的较早消息已移至 **'%s'** 话题。</string>
+	<string name="NoTopicsDescriptionUser">来自该群组的较早消息已移至 **%s** 话题。</string>
 	<string name="NoUsernameFound">未找到用户名。</string>
 	<string name="November">十一月</string>
 	<string name="NoVotes">无人投票</string>
@@ -5001,8 +5001,8 @@ Telegram 团队</string>
 	<string name="ReleaseToGoNextArchive">松开跳转到已归档频道</string>
 	<string name="ReleaseToGoNextChannel">松开跳转到下一个未读频道</string>
 	<string name="ReleaseToGoNextFolder">松开跳转到下一个未读分组</string>
-	<string name="RemindDayAt">MMM d HH:mm '提醒我'</string>
-	<string name="RemindDayYearAt">yyyy MMM d HH:mm '提醒我'</string>
+	<string name="RemindDayAt">MMM d HH:mm 提醒我</string>
+	<string name="RemindDayYearAt">yyyy MMM d HH:mm 提醒我</string>
 	<string name="Reminders">提醒</string>
 	<string name="RemindTodayAt">今天 HH:mm 提醒我</string>
 	<string name="Remove">移除</string>
@@ -5396,8 +5396,8 @@ Telegram 团队</string>
 	<string name="SendByEnter">使用回车键发送消息</string>
 	<string name="SendContactToGroupText">您要把此联系人信息发送给 **%1$s** 吗？</string>
 	<string name="SendContactToText">您要把此联系人信息发送给 **%1$s** 吗？</string>
-	<string name="SendDayAt">'在' MMM d HH:mm ‘发送’</string>
-	<string name="SendDayYearAt">yyyy'年'MM'月'd'日' HH'时'mm'分' '发送'</string>
+	<string name="SendDayAt">在 MMM d HH:mm 发送</string>
+	<string name="SendDayYearAt">yyyy年MM月d日HH时mm分发送</string>
 	<string name="SendDice">发送</string>
 	<string name="SendEmojiPreview">发送表情</string>
 	<string name="SendGameToGroupText">你想要将该游戏分享给 **%1$s** 吗？</string>
@@ -5442,7 +5442,7 @@ Telegram 团队</string>
 	<string name="SendSelectedLocation">发送选中的位置</string>
 	<string name="SendSticker">发送表情</string>
 	<string name="SendStickerPreview">发送贴纸</string>
-	<string name="SendTodayAt">'今天' HH:mm ‘发送'</string>
+	<string name="SendTodayAt">今天 HH:mm 发送</string>
 	<string name="SendWhenOnline">在线时发送</string>
 	<string name="SendWithoutCompression">无压缩发送</string>
 	<string name="SendWithoutGrouping">单独发送</string>
@@ -5697,17 +5697,17 @@ Telegram 团队</string>
 	<string name="SponsoredMessageRecommended">推荐</string>
 	<string name="SponsoredMessageSponsor">广告商信息</string>
 	<string name="Start">开启</string>
-	<string name="StartDayAt">'开始于'MMM'月'd'日'HH:mm</string>
-	<string name="StartDayYearAt">yyyy-MM-dd HH:mm '开始'</string>
+	<string name="StartDayAt">开始于 MMM月d日HH:mm</string>
+	<string name="StartDayYearAt">yyyy-MM-dd HH:mm 开始</string>
 	<string name="StartMessaging">开始聊天</string>
-	<string name="StartsDayAt">'于' M '月' d '日' HH:mm '开始'</string>
-	<string name="StartsDayYearAt">yyyy-MM-dd HH:mm '开始'</string>
+	<string name="StartsDayAt">于 M 月 d 日 HH:mm 开始</string>
+	<string name="StartsDayYearAt">yyyy-MM-dd HH:mm 开始</string>
 	<string name="StartShortDayAt">M 月 d 日，HH:mm</string>
 	<string name="StartShortDayYearAt">yyyy-MM-dd HH:mm</string>
-	<string name="StartShortTodayAt">'今天，'HH:mm</string>
-	<string name="StartsTodayAt">‘今天’ HH:mm ‘开始’</string>
+	<string name="StartShortTodayAt">今天，HH:mm</string>
+	<string name="StartsTodayAt">今天 HH:mm 开始</string>
 	<string name="StartText">请确认您的国际电话区号并输入您的手机号码。</string>
-	<string name="StartTodayAt">'今天'HH:mm'开始'</string>
+	<string name="StartTodayAt">今天HH:mm开始</string>
 	<string name="StartVoipChannel">开始直播</string>
 	<string name="StartVoipChannelAlertText">您要在此频道中开始直播吗？</string>
 	<string name="StartVoipChannelTitle">直播</string>
